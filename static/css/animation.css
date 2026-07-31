@@ -352,3 +352,147 @@ html {
     box-shadow: 0 0 0 4px rgba(46, 204, 113, .15);
 
 }
+
+/* ==========================================
+        DASHBOARD ANIMATIONS
+========================================== */
+
+.welcome-card {
+    animation: slideUp .8s ease;
+}
+
+@keyframes slideUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.stat-card {
+
+    animation: cardFade .8s ease forwards;
+
+    opacity: 0;
+
+}
+
+.stat-card:nth-child(1) {
+    animation-delay: .2s;
+}
+
+.stat-card:nth-child(2) {
+    animation-delay: .4s;
+}
+
+.stat-card:nth-child(3) {
+    animation-delay: .6s;
+}
+
+.stat-card:nth-child(4) {
+    animation-delay: .8s;
+}
+
+@keyframes cardFade {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(35px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.stat-card {
+
+    transition: .35s;
+
+}
+
+.stat-card:hover {
+
+    transform: translateY(-10px) scale(1.03);
+
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .15);
+
+}
+
+.stat-icon {
+
+    transition: .4s;
+
+}
+
+.stat-card:hover .stat-icon {
+
+    transform: rotate(8deg) scale(1.15);
+
+}
+
+.book-service-btn {
+
+    transition: .35s;
+
+}
+
+.book-service-btn:hover {
+
+    transform: translateY(-5px) scale(1.05);
+
+    box-shadow: 0 20px 35px rgba(46, 204, 113, .35);
+
+}
+
+.search-box {
+
+    transition: .35s;
+
+}
+
+.search-box:focus-within {
+
+    border: 1px solid #2ECC71;
+
+    box-shadow: 0 0 0 5px rgba(46, 204, 113, .15);
+
+}
+
+.sidebar-menu a {
+
+    transition: .35s;
+
+}
+
+.sidebar-menu a:hover {
+
+    transform: translateX(8px);
+
+}
+
+.profile {
+
+    transition: .35s;
+
+}
+
+.profile:hover {
+
+    transform: scale(1.05);
+
+}

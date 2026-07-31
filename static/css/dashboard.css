@@ -592,3 +592,129 @@ body {
     background: #25b864;
 
 }
+
+/*==========================================
+            STATISTICS
+==========================================*/
+
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+
+}
+
+.stat-card {
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    box-shadow: var(--shadow);
+
+    transition: .35s;
+
+}
+
+.stat-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .10);
+
+}
+
+.stat-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 28px;
+
+    color: #fff;
+
+}
+
+.stat-booking {
+    background: #3B82F6;
+}
+
+.stat-favorite {
+    background: #EF4444;
+}
+
+.stat-wallet {
+    background: #10B981;
+}
+
+.stat-trust {
+    background: #F4B400;
+}
+
+.stat-content h3 {
+
+    margin: 0;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+}
+
+.stat-content p {
+
+    margin: 3px 0;
+
+    color: #64748B;
+
+}
+
+.stat-content span {
+
+    font-size: 13px;
+
+    color: #2ECC71;
+
+    font-weight: 600;
+
+}
+
+@media(max-width:1100px) {
+
+    .stats-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+@media(max-width:700px) {
+
+    .stats-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
