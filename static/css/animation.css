@@ -1,0 +1,282 @@
+/* ===========================================
+   TrustGrid Animation Library
+   Version : 1.0
+=========================================== */
+
+/* ---------- Smooth Scroll ---------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------- Default Transition ---------- */
+
+* {
+    transition: all .35s ease;
+}
+
+/* ===========================================
+                KEYFRAMES
+=========================================== */
+
+/* Fade Up */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* Fade Down */
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* Slide Left */
+
+@keyframes slideLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+/* Slide Right */
+
+@keyframes slideRight {
+
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+/* Zoom */
+
+@keyframes zoomIn {
+
+    from {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+/* Bell Pulse */
+
+@keyframes pulse {
+
+    0% {
+
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, .6);
+
+    }
+
+    70% {
+
+        box-shadow: 0 0 0 12px rgba(46, 204, 113, 0);
+
+    }
+
+    100% {
+
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+
+    }
+
+}
+
+/* Floating */
+
+@keyframes floating {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-8px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ===========================================
+            READY TO USE CLASSES
+=========================================== */
+
+.fade-up {
+
+    animation: fadeUp .8s ease forwards;
+
+}
+
+.fade-down {
+
+    animation: fadeDown .8s ease forwards;
+
+}
+
+.slide-left {
+
+    animation: slideLeft .8s ease forwards;
+
+}
+
+.slide-right {
+
+    animation: slideRight .8s ease forwards;
+
+}
+
+.zoom-in {
+
+    animation: zoomIn .7s ease forwards;
+
+}
+
+.float {
+
+    animation: floating 3s ease-in-out infinite;
+
+}
+
+/* ===========================================
+            HOVER EFFECTS
+=========================================== */
+
+.hover-lift:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 35px rgba(0, 0, 0, .15);
+
+}
+
+.hover-scale:hover {
+
+    transform: scale(1.04);
+
+}
+
+.hover-glow:hover {
+
+    box-shadow: 0 0 20px rgba(46, 204, 113, .35);
+
+}
+
+.hover-rotate:hover {
+
+    transform: rotate(-3deg);
+
+}
+
+/* ===========================================
+            BUTTON EFFECT
+=========================================== */
+
+.btn-animate {
+
+    transition: .35s;
+
+}
+
+.btn-animate:hover {
+
+    transform: translateY(-4px);
+
+}
+
+/* ===========================================
+            ICON BOUNCE
+=========================================== */
+
+.icon-hover:hover {
+
+    transform: scale(1.15);
+
+}
+
+/* ===========================================
+        NOTIFICATION ANIMATION
+=========================================== */
+
+.notification-btn {
+
+    animation: pulse 2.5s infinite;
+
+}
+
+/* ===========================================
+        CARD APPEAR DELAY
+=========================================== */
+
+.delay-1 {
+
+    animation-delay: .2s;
+
+}
+
+.delay-2 {
+
+    animation-delay: .4s;
+
+}
+
+.delay-3 {
+
+    animation-delay: .6s;
+
+}
+
+.delay-4 {
+
+    animation-delay: .8s;
+
+}

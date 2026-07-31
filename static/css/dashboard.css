@@ -1,0 +1,460 @@
+/* ==========================================
+   TrustGrid Dashboard CSS - Part 1B
+   Sidebar + Topbar + Layout
+========================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ---------- Root Variables ---------- */
+
+:root {
+
+    --primary: #0B1F3A;
+    --secondary: #2ECC71;
+    --gold: #F4B400;
+    --white: #ffffff;
+
+    --bg: #F5F7FB;
+
+    --text: #1E293B;
+
+    --light-text: #64748B;
+
+    --border: #E5E7EB;
+
+    --shadow: 0 12px 30px rgba(0, 0, 0, .08);
+
+    --radius: 18px;
+
+    --transition: .35s ease;
+
+}
+
+/* ---------- Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+}
+
+/* ---------- Dashboard Wrapper ---------- */
+
+.dashboard-wrapper {
+
+    display: flex;
+
+    min-height: 100vh;
+
+}
+
+/* ==========================================
+                SIDEBAR
+========================================== */
+
+.sidebar {
+
+    width: 270px;
+
+    background: var(--primary);
+
+    color: white;
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    height: 100vh;
+
+    padding: 30px 20px;
+
+    overflow-y: auto;
+
+    box-shadow: 6px 0 20px rgba(0, 0, 0, .12);
+
+}
+
+/* Logo */
+
+.logo {
+
+    margin-bottom: 40px;
+
+}
+
+.logo h2 {
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+}
+
+.logo span {
+
+    color: var(--secondary);
+
+}
+
+.logo p {
+
+    margin-top: 6px;
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+}
+
+/* Menu */
+
+.sidebar-menu {
+
+    list-style: none;
+
+}
+
+.sidebar-menu li {
+
+    margin-bottom: 10px;
+
+}
+
+.sidebar-menu a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    text-decoration: none;
+
+    color: white;
+
+    padding: 14px 18px;
+
+    border-radius: 14px;
+
+    transition: var(--transition);
+
+}
+
+.sidebar-menu a i {
+
+    font-size: 20px;
+
+}
+
+/* Hover */
+
+.sidebar-menu a:hover {
+
+    background: rgba(255, 255, 255, .10);
+
+    transform: translateX(6px);
+
+}
+
+/* Active */
+
+.sidebar-menu .active a {
+
+    background: var(--secondary);
+
+    color: white;
+
+    box-shadow: 0 10px 25px rgba(46, 204, 113, .35);
+
+}
+
+/* Logout */
+
+.logout {
+
+    margin-top: 35px;
+
+}
+
+/* ==========================================
+                MAIN CONTENT
+========================================== */
+
+.main-content {
+
+    margin-left: 270px;
+
+    width: calc(100% - 270px);
+
+    padding: 30px;
+
+}
+
+/* ==========================================
+                TOPBAR
+========================================== */
+
+.topbar {
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+    padding: 18px 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 35px;
+
+}
+
+/* Search */
+
+.search-box {
+
+    width: 420px;
+
+    background: #F8FAFC;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 18px;
+
+}
+
+.search-box i {
+
+    color: gray;
+
+}
+
+.search-box input {
+
+    border: none;
+
+    outline: none;
+
+    background: none;
+
+    width: 100%;
+
+    padding: 14px;
+
+    font-size: 15px;
+
+}
+
+/* Right Side */
+
+.top-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+/* Notification */
+
+.notification-btn {
+
+    width: 52px;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #F8FAFC;
+
+    cursor: pointer;
+
+    position: relative;
+
+    transition: var(--transition);
+
+}
+
+.notification-btn:hover {
+
+    background: var(--secondary);
+
+    color: white;
+
+}
+
+/* Red Dot */
+
+.badge-dot {
+
+    position: absolute;
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: red;
+
+    top: 14px;
+
+    right: 15px;
+
+}
+
+/* Profile */
+
+.profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    cursor: pointer;
+
+}
+
+.profile img {
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+}
+
+.profile h6 {
+
+    margin: 0;
+
+    font-weight: 600;
+
+}
+
+.profile small {
+
+    color: gray;
+
+}
+
+/* ==========================================
+            DASHBOARD BODY
+========================================== */
+
+.dashboard-body {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+@media(max-width:992px) {
+
+    .sidebar {
+
+        width: 90px;
+
+    }
+
+    .logo p {
+
+        display: none;
+
+    }
+
+    .logo h2 {
+
+        font-size: 22px;
+
+    }
+
+    .sidebar-menu a {
+
+        justify-content: center;
+
+    }
+
+    .sidebar-menu a span {
+
+        display: none;
+
+    }
+
+    .main-content {
+
+        margin-left: 90px;
+
+        width: calc(100% - 90px);
+
+    }
+
+    .search-box {
+
+        width: 250px;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .topbar {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+    .search-box {
+
+        width: 100%;
+
+    }
+
+    .main-content {
+
+        padding: 20px;
+
+    }
+
+}

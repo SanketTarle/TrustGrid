@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* LEFT PANEL */
+
+.left-panel {
+    background: #0B1F3A;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 60px;
+    padding-top: 70px;
+}
+
+.logo h1 {
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #2ECC71;
+}
+
+.logo p {
+    margin-top: 10px;
+    color: #dcdcdc;
+    font-size: 20px;
+}
+
+/* ROLE BUTTONS */
+
+.role-box {
+    display: flex;
+    gap: 15px;
+    margin: 40px 0;
+}
+
+.role-btn {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 50px;
+    background: #163154;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.role-btn.active {
+    background: #2ECC71;
+}
+
+.role-btn:hover {
+    background: #2ECC71;
+}
+
+/* FEATURE CARDS */
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 18px;
+    background: rgba(255, 255, 255, .08);
+    border-radius: 18px;
+    transition: .3s;
+}
+
+.feature-card:hover {
+    transform: translateX(8px);
+    background: rgba(255, 255, 255, .13);
+}
+
+.feature-card i {
+    font-size: 28px;
+    color: #2ECC71;
+}
+
+.feature-card h5 {
+    margin: 0;
+}
+
+.feature-card p {
+    margin: 0;
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* RIGHT PANEL */
+
+.right-panel {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+/* REGISTER CARD */
+
+.register-card {
+    width: 500px;
+    background: #fff;
+    padding: 45px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .10);
+}
+
+.register-card h1 {
+    font-size: 48px;
+    color: #0B1F3A;
+    font-weight: 700;
+}
+
+.register-card p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* FORM */
+
+.form-control {
+    height: 56px;
+    border-radius: 12px;
+    padding-left: 18px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+}
+
+.form-control:focus {
+    border-color: #2ECC71;
+    box-shadow: 0 0 10px rgba(46, 204, 113, .25);
+}
+
+/* PASSWORD */
+
+.password-box {
+    position: relative;
+}
+
+.password-box i {
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    color: #777;
+    cursor: pointer;
+}
+
+/* REGISTER BUTTON */
+
+.register-btn {
+    width: 100%;
+    height: 58px;
+    border: none;
+    border-radius: 12px;
+    margin-top: 15px;
+    background: linear-gradient(90deg, #2ECC71, #0B1F3A);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.register-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(46, 204, 113, .35);
+}
+
+/* LOGIN LINK */
+
+.login-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 16px;
+}
+
+.login-link a {
+    color: #2ECC71;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* MOBILE */
+
+@media(max-width:992px) {
+
+    .left-panel {
+        display: none;
+    }
+
+    .register-card {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .register-card h1 {
+        font-size: 38px;
+    }
+
+}
+
+.logo {
+    margin-bottom: 40px;
+}
