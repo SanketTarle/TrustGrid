@@ -718,3 +718,213 @@ body {
     }
 
 }
+
+/*==========================================
+      BOOKING & ACTIVITY
+==========================================*/
+
+#booking,
+#activity {
+
+    width: 100%;
+
+}
+
+.booking-card,
+.activity-card {
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    box-shadow: var(--shadow);
+
+    transition: .35s;
+
+}
+
+.booking-card:hover,
+.activity-card:hover {
+
+    transform: translateY(-6px);
+
+}
+
+.section-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+.section-header h3 {
+
+    margin: 0;
+
+    font-weight: 700;
+
+}
+
+.section-header a {
+
+    text-decoration: none;
+
+    color: #2ECC71;
+
+    font-weight: 600;
+
+}
+
+.worker-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 20px;
+
+}
+
+.worker-info img {
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 50%;
+
+}
+
+.worker-info h4 {
+
+    margin: 0;
+
+}
+
+.worker-info p {
+
+    margin: 5px 0 0;
+
+    color: #64748B;
+
+}
+
+.booking-details {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin: 20px 0;
+
+}
+
+.booking-details div {
+
+    background: #F8FAFC;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+}
+
+.status {
+
+    text-align: center;
+
+    color: #fff;
+
+}
+
+.confirmed {
+
+    background: #2ECC71 !important;
+
+}
+
+.booking-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+.view-btn,
+.track-btn {
+
+    flex: 1;
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+
+}
+
+.view-btn {
+
+    background: #0B1F3A;
+
+    color: #fff;
+
+}
+
+.track-btn {
+
+    background: #2ECC71;
+
+    color: #fff;
+
+}
+
+.activity-list {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+.activity-list li {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+.activity-list li:last-child {
+
+    border: none;
+
+}
+
+.activity-list span {
+
+    color: #64748B;
+
+    font-size: 14px;
+
+}

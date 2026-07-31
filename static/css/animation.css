@@ -496,3 +496,177 @@ html {
     transform: scale(1.05);
 
 }
+
+.booking-card {
+    animation: slideLeft .8s ease;
+}
+
+@keyframes slideLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.activity-card {
+    animation: slideRight .8s ease;
+}
+
+@keyframes slideRight {
+
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+.worker-info img {
+
+    transition: .4s;
+
+}
+
+.worker-info img:hover {
+
+    transform: scale(1.12) rotate(5deg);
+
+    box-shadow: 0 15px 30px rgba(46, 204, 113, .35);
+
+}
+
+.view-btn,
+.track-btn {
+
+    transition: .35s;
+
+}
+
+.view-btn:hover,
+.track-btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 18px 35px rgba(0, 0, 0, .15);
+
+}
+
+.booking-details div {
+
+    transition: .35s;
+
+}
+
+.booking-details div:hover {
+
+    background: #eef7ff;
+
+    transform: scale(1.03);
+
+}
+
+.activity-list li {
+
+    transition: .35s;
+
+}
+
+.activity-list li:hover {
+
+    padding-left: 15px;
+
+    color: #2ECC71;
+
+}
+
+.booking-card,
+.activity-card {
+
+    transition: .35s;
+
+}
+
+.booking-card:hover,
+.activity-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .12);
+
+}
+
+.confirmed {
+
+    animation: pulse 2s infinite;
+
+}
+
+@keyframes pulse {
+
+    0% {
+
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, .45);
+
+    }
+
+    70% {
+
+        box-shadow: 0 0 0 12px rgba(46, 204, 113, 0);
+
+    }
+
+    100% {
+
+        box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+
+    }
+
+}
+
+.section-header a {
+
+    transition: .3s;
+
+}
+
+.section-header a:hover {
+
+    letter-spacing: 1px;
+
+    color: #0B1F3A;
+
+}
+
+.dashboard-body {
+
+    animation: dashboardFade .7s ease;
+
+}
+
+@keyframes dashboardFade {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
