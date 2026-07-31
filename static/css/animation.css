@@ -1260,3 +1260,163 @@ footer {
     animation: fadeUp .8s ease;
 
 }
+
+.booking-title,
+.worker-card {
+
+    animation: fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+header {
+    animation: headerDown .8s ease;
+}
+
+.logo {
+    animation: logoZoom 1s ease;
+}
+
+.nav-links li {
+    animation: fadeDown .8s ease forwards;
+    opacity: 0;
+}
+
+.nav-links li:nth-child(1) {
+    animation-delay: .2s;
+}
+
+.nav-links li:nth-child(2) {
+    animation-delay: .3s;
+}
+
+.nav-links li:nth-child(3) {
+    animation-delay: .4s;
+}
+
+.nav-links li:nth-child(4) {
+    animation-delay: .5s;
+}
+
+.profile {
+    animation: fadeLeft 1s ease;
+}
+
+@keyframes headerDown {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(-60px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+@keyframes logoZoom {
+
+    from {
+
+        opacity: 0;
+        transform: scale(.5);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: scale(1);
+
+    }
+
+}
+
+@keyframes fadeDown {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(-30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+@keyframes fadeLeft {
+
+    from {
+
+        opacity: 0;
+        transform: translateX(50px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+
+}
+
+.nav-links a {
+
+    transition: .3s;
+
+}
+
+.nav-links a:hover {
+
+    transform: translateY(-3px);
+
+}
+
+.profile-img {
+
+    transition: .3s;
+
+    cursor: pointer;
+
+}
+
+.profile-img:hover {
+
+    transform: rotate(360deg);
+
+    background: #27AE60;
+
+}
