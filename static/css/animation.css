@@ -280,3 +280,75 @@ html {
     animation-delay: .8s;
 
 }
+
+.welcome-card {
+    animation: fadeUp .8s ease;
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.book-service-btn:hover {
+
+    transform: translateY(-5px) scale(1.04);
+
+    box-shadow: 0 15px 30px rgba(46, 204, 113, .35);
+
+}
+
+.info-box {
+
+    transition: .35s;
+
+}
+
+.info-box:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .12);
+
+}
+
+.notification-btn:hover {
+
+    transform: rotate(15deg);
+
+}
+
+.sidebar-menu a:hover {
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .18);
+
+}
+
+.search-box {
+
+    transition: .35s;
+
+}
+
+.search-box:focus-within {
+
+    border-color: #2ECC71;
+
+    box-shadow: 0 0 0 4px rgba(46, 204, 113, .15);
+
+}

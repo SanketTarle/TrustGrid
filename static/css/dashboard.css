@@ -458,3 +458,137 @@ body {
     }
 
 }
+
+/* ==========================================
+        WELCOME CARD
+==========================================*/
+
+#welcome-card {
+
+    width: 100%;
+
+}
+
+.welcome-card {
+
+    background: linear-gradient(135deg, #0B1F3A, #14345e);
+
+    border-radius: 22px;
+
+    padding: 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: white;
+
+    box-shadow: 0 15px 35px rgba(11, 31, 58, .18);
+
+}
+
+.welcome-left h2 {
+
+    margin-top: 15px;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+}
+
+.welcome-left p {
+
+    width: 520px;
+
+    margin: 15px 0 30px;
+
+    color: #dbeafe;
+
+    line-height: 1.7;
+
+}
+
+.welcome-badge {
+
+    display: inline-block;
+
+    background: rgba(255, 255, 255, .12);
+
+    padding: 8px 18px;
+
+    border-radius: 40px;
+
+    font-size: 14px;
+
+}
+
+.welcome-info {
+
+    display: flex;
+
+    gap: 18px;
+
+}
+
+.info-box {
+
+    background: white;
+
+    color: #1e293b;
+
+    border-radius: 16px;
+
+    padding: 15px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    min-width: 180px;
+
+}
+
+.info-box h5 {
+
+    margin: 0;
+
+    font-weight: 700;
+
+}
+
+.info-box small {
+
+    color: #64748b;
+
+}
+
+.book-service-btn {
+
+    background: #2ECC71;
+
+    color: white;
+
+    border: none;
+
+    padding: 16px 28px;
+
+    border-radius: 14px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.book-service-btn:hover {
+
+    transform: translateY(-3px);
+
+    background: #25b864;
+
+}
