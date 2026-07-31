@@ -928,3 +928,159 @@ body {
     font-size: 14px;
 
 }
+
+/*==========================================
+      PART 5
+==========================================*/
+
+.section-title h3 {
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+}
+
+/* Categories */
+
+.category-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 20px;
+
+}
+
+.category-card {
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+
+    transition: .35s;
+
+    cursor: pointer;
+
+}
+
+.category-card i {
+
+    font-size: 34px;
+
+    color: #2ECC71;
+
+}
+
+.category-card h5 {
+
+    margin-top: 15px;
+
+}
+
+.category-card:hover {
+
+    transform: translateY(-8px);
+
+    border: 2px solid #2ECC71;
+
+}
+
+/* Quick */
+
+.quick-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+.quick-card {
+
+    border: none;
+
+    padding: 22px;
+
+    border-radius: 18px;
+
+    background: #0B1F3A;
+
+    color: #fff;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    transition: .35s;
+
+}
+
+.quick-card i {
+
+    margin-right: 10px;
+
+}
+
+.quick-card:hover {
+
+    background: #2ECC71;
+
+    transform: translateY(-5px);
+
+}
+
+/* Offer */
+
+.offer-banner {
+
+    background: linear-gradient(135deg, #0B1F3A, #14345e);
+
+    color: #fff;
+
+    border-radius: 22px;
+
+    padding: 35px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.claim-btn {
+
+    border: none;
+
+    background: #2ECC71;
+
+    color: #fff;
+
+    padding: 16px 28px;
+
+    border-radius: 14px;
+
+    font-weight: 600;
+
+    transition: .35s;
+
+}
+
+.claim-btn:hover {
+
+    transform: scale(1.05);
+
+}
