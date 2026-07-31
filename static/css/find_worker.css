@@ -880,3 +880,131 @@ nav a.active::after {
     box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
 
 }
+
+/*==========================================
+                FOOTER
+==========================================*/
+
+.footer {
+    background: #0B1F3A;
+    color: #ffffff;
+    padding: 70px 0 25px;
+    margin-top: 80px;
+}
+
+.footer .row {
+    row-gap: 40px;
+}
+
+.footer .logo {
+    color: #2ECC71;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.footer .logo i {
+    color: #2ECC71;
+    margin-right: 8px;
+}
+
+.footer .tagline {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    color: #D1D5DB;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.footer h5 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.footer ul {
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    list-style: none;
+    margin-bottom: 14px;
+    color: #D1D5DB;
+    transition: .3s;
+}
+
+.footer ul li a {
+    color: #D1D5DB;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer ul li:hover {
+    transform: translateX(6px);
+}
+
+.footer ul li:hover a {
+    color: #2ECC71;
+}
+
+.footer p i {
+    color: #2ECC71;
+    margin-right: 10px;
+}
+
+.footer hr {
+    border-color: rgba(255, 255, 255, .15);
+    margin: 45px 0 20px;
+}
+
+.footer .text-center {
+    color: #D1D5DB;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.footer .text-center span {
+    color: #2ECC71;
+    font-weight: 600;
+}
+
+/*==========================================
+        RESPONSIVE FOOTER
+==========================================*/
+
+@media(max-width:991px) {
+
+    .footer {
+        padding: 60px 0 25px;
+    }
+
+    .footer .col-md-4,
+    .footer .col-md-3,
+    .footer .col-md-2 {
+        margin-bottom: 35px;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer ul li:hover {
+        transform: none;
+    }
+
+    .footer .logo {
+        justify-content: center;
+    }
+
+}
