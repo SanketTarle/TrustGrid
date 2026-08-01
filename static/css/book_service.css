@@ -1,0 +1,852 @@
+/*====================================================
+
+                TRUSTGRID BOOK SERVICE
+
+====================================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+
+    --primary: #0B1F3A;
+    --secondary: #2ECC71;
+    --bg: #F5F7FA;
+    --card: #ffffff;
+    --text: #1F2937;
+    --gray: #6B7280;
+    --shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+}
+
+body {
+
+    background: var(--bg);
+    color: var(--text);
+
+}
+
+.container {
+
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+
+}
+
+a {
+
+    text-decoration: none;
+
+}
+
+button {
+
+    cursor: pointer;
+    border: none;
+
+}
+
+header {
+
+    background: var(--primary);
+
+    padding: 18px 0;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+
+}
+
+header .container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    color: white;
+
+}
+
+.logo i {
+
+    color: var(--secondary);
+
+    font-size: 38px;
+
+}
+
+.nav-links {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 35px;
+
+}
+
+.nav-links a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 17px;
+
+    color: white;
+
+    transition: .3s;
+
+}
+
+.nav-links a:hover,
+
+.nav-links .active {
+
+    color: var(--secondary);
+
+}
+
+.profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: white;
+
+}
+
+.profile-img {
+
+    width: 55px;
+
+    height: 55px;
+
+    background: var(--secondary);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 22px;
+
+}
+
+.hero-card {
+
+    background: var(--card);
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    box-shadow: var(--shadow);
+
+    margin-bottom: 30px;
+
+}
+
+.hero-icon {
+
+    width: 90px;
+
+    height: 90px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(135deg, #0B1F3A, #2ECC71);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 42px;
+
+    color: white;
+
+}
+
+.hero-card h1 {
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+
+}
+
+.hero-card p {
+
+    color: var(--gray);
+
+    font-size: 18px;
+
+}
+
+.worker-card {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: var(--shadow);
+
+    text-align: center;
+
+    position: sticky;
+
+    top: 110px;
+
+    margin-bottom: 30px;
+
+}
+
+.worker-sticker {
+
+    width: 120px;
+
+    height: 120px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #0B1F3A, #2ECC71);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 55px;
+
+    color: white;
+
+    margin-bottom: 20px;
+
+}
+
+.verified {
+
+    display: inline-block;
+
+    margin: 15px 0;
+
+    padding: 8px 18px;
+
+    background: #EAF9F0;
+
+    color: #2ECC71;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+}
+
+.rating {
+
+    margin: 18px 0;
+
+    color: #F4B400;
+
+}
+
+.worker-card p {
+
+    margin: 12px 0;
+
+    color: #555;
+
+}
+
+/*====================================================
+                PART 2
+====================================================*/
+
+/* ---------- Common Cards ---------- */
+
+.customer-details,
+.datetime-card,
+.address-card,
+.problem-card,
+.payment-card,
+.summary-card,
+.confirm-card {
+
+    background: #fff;
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+
+}
+
+/* ---------- Section Title ---------- */
+
+.section-title {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+
+}
+
+.section-title i {
+
+    font-size: 28px;
+    color: var(--secondary);
+
+}
+
+.section-title h2 {
+
+    font-size: 28px;
+    color: var(--primary);
+
+}
+
+/* ---------- Form Grid ---------- */
+
+.form-grid {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+}
+
+.form-group {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.full-width {
+
+    grid-column: 1/-1;
+
+}
+
+.form-group label {
+
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #444;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    padding: 15px 18px;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: .3s;
+    outline: none;
+    background: #fff;
+
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: var(--secondary);
+
+}
+
+/* ---------- Date Buttons ---------- */
+
+.date-buttons {
+
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+
+}
+
+.date-buttons button {
+
+    padding: 12px 25px;
+    border-radius: 12px;
+    background: #EEF2F7;
+    transition: .3s;
+    font-weight: 600;
+
+}
+
+.date-buttons button.active,
+.date-buttons button:hover {
+
+    background: var(--secondary);
+    color: #fff;
+
+}
+
+/* ---------- Time Grid ---------- */
+
+.time-grid {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+
+}
+
+.time-grid button {
+
+    padding: 15px;
+    border-radius: 12px;
+    background: #fff;
+    border: 2px solid #E5E7EB;
+    transition: .3s;
+    font-weight: 600;
+
+}
+
+.time-grid button:hover,
+.time-grid button.active {
+
+    background: var(--secondary);
+    color: #fff;
+    border-color: var(--secondary);
+
+}
+
+/* ---------- Payment ---------- */
+
+.payment-options {
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+}
+
+.payment-options label {
+
+    padding: 15px 18px;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.payment-options label:hover {
+
+    border-color: var(--secondary);
+    background: #F5FFF9;
+
+}
+
+.payment-options input {
+
+    accent-color: #2ECC71;
+
+}
+
+/*====================================================
+                PART 3
+====================================================*/
+
+/* ---------- Booking Summary ---------- */
+
+.summary-card {
+
+    position: sticky;
+
+    top: 420px;
+
+}
+
+.summary-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #E5E7EB;
+
+    font-size: 16px;
+
+}
+
+.summary-row:last-child {
+
+    border: none;
+
+}
+
+.summary-row.total {
+
+    margin-top: 10px;
+
+    padding-top: 20px;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: var(--primary);
+
+}
+
+/* ---------- Confirm Button ---------- */
+
+.confirm-btn {
+
+    width: 100%;
+
+    padding: 18px;
+
+    background: linear-gradient(135deg, #2ECC71, #27AE60);
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    border: none;
+
+    border-radius: 14px;
+
+    transition: .35s;
+
+    box-shadow: 0 12px 25px rgba(46, 204, 113, .35);
+
+}
+
+.confirm-btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 18px 35px rgba(46, 204, 113, .45);
+
+}
+
+.booking-note {
+
+    margin-top: 18px;
+
+    font-size: 14px;
+
+    text-align: center;
+
+    line-height: 1.7;
+
+    color: #666;
+
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+
+    background: var(--primary);
+
+    color: white;
+
+    margin-top: 70px;
+
+    padding: 60px 0 20px;
+
+}
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 40px;
+
+}
+
+.footer-logo {
+
+    margin-bottom: 18px;
+
+}
+
+.footer-logo i {
+
+    color: var(--secondary);
+
+}
+
+.footer-grid h3 {
+
+    margin-bottom: 20px;
+
+}
+
+.footer-grid a {
+
+    display: block;
+
+    color: #d9d9d9;
+
+    margin-bottom: 12px;
+
+    transition: .3s;
+
+}
+
+.footer-grid a:hover {
+
+    color: var(--secondary);
+
+    padding-left: 5px;
+
+}
+
+.social-icons {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 15px;
+
+}
+
+.social-icons a {
+
+    width: 45px;
+
+    height: 45px;
+
+    background: #173154;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    font-size: 20px;
+
+    transition: .3s;
+
+}
+
+.social-icons a:hover {
+
+    background: var(--secondary);
+
+    transform: translateY(-5px);
+
+}
+
+footer hr {
+
+    margin: 35px 0 20px;
+
+    border: none;
+
+    border-top: 1px solid rgba(255, 255, 255, .15);
+
+}
+
+.copyright {
+
+    text-align: center;
+
+    color: #bbb;
+
+    font-size: 15px;
+
+}
+
+/* ---------- Animation ---------- */
+
+.hero-card,
+.customer-details,
+.datetime-card,
+.address-card,
+.problem-card,
+.payment-card,
+.worker-card,
+.summary-card,
+.confirm-card {
+
+    animation: fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:992px) {
+
+    .booking-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .worker-card,
+    .summary-card {
+
+        position: relative;
+
+        top: 0;
+
+    }
+
+    .footer-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+    .hero-card {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .time-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+    }
+
+    .social-icons {
+
+        justify-content: center;
+
+    }
+
+}
+
+@media(max-width:480px) {
+
+    .time-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .hero-card h1 {
+
+        font-size: 34px;
+
+    }
+
+    .section-title h2 {
+
+        font-size: 22px;
+
+    }
+
+}

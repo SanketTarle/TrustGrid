@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Service | TrustGrid</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/css/book_service.css">
+
+</head>
+
+<body>
+
+<!-- ========================================= -->
+<!-- HEADER -->
+<!-- ========================================= -->
+
+<header>
+
+    <div class="container">
+
+        <!-- Logo -->
+
+        <a href="dashboard.html" class="logo">
+
+            <i class="bi bi-shield-check"></i>
+
+            <span>TrustGrid</span>
+
+        </a>
+
+        <!-- Navigation -->
+
+        <nav>
+
+            <ul class="nav-links">
+
+                <li>
+
+                    <a href="dashboard.html">
+
+                        <i class="bi bi-grid"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="find_worker.html">
+
+                        <i class="bi bi-search"></i>
+
+                        Find Worker
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="my_bookings.html" class="active">
+
+                        <i class="bi bi-calendar-check"></i>
+
+                        My Bookings
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="favorites.html">
+
+                        <i class="bi bi-heart"></i>
+
+                        Favorites
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <!-- Profile -->
+
+        <div class="profile">
+
+            <div class="profile-img">
+
+                <i class="bi bi-person-fill"></i>
+
+            </div>
+
+            <div>
+
+                <h4>Sanket</h4>
+
+                <small>Customer</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ========================================= -->
+<!-- BREADCRUMB -->
+<!-- ========================================= -->
+
+<section class="breadcrumb-section">
+
+    <div class="container">
+
+        <div class="breadcrumb">
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <i class="bi bi-chevron-right"></i>
+
+            <a href="find_worker.html">Find Worker</a>
+
+            <i class="bi bi-chevron-right"></i>
+
+            <a href="worker_profile.html">Worker Profile</a>
+
+            <i class="bi bi-chevron-right"></i>
+
+            <span>Book Service</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- MAIN -->
+<!-- ========================================= -->
+
+<main>
+
+<section class="booking-page">
+
+<div class="container booking-grid">
+
+<!-- ========================================= -->
+<!-- LEFT SIDE -->
+<!-- ========================================= -->
+
+<div class="booking-left">
+
+    <!-- ========================================= -->
+    <!-- HERO CARD -->
+    <!-- ========================================= -->
+
+    <section class="hero-card">
+
+        <div class="hero-icon">
+
+            <i class="bi bi-calendar-check"></i>
+
+        </div>
+
+        <div>
+
+            <h1>Book Service</h1>
+
+            <p>
+
+                Fill all details below to confirm your booking.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- CUSTOMER DETAILS -->
+    <!-- ========================================= -->
+
+    <section class="customer-details">
+
+        <div class="section-title">
+
+            <i class="bi bi-person-lines-fill"></i>
+
+            <h2>Customer Details</h2>
+
+        </div>
+
+        <div class="form-grid">
+
+            <div class="form-group">
+
+                <label>Full Name</label>
+
+                <input type="text" placeholder="Enter your full name">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Mobile Number</label>
+
+                <input type="tel" placeholder="Enter mobile number">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Email Address</label>
+
+                <input type="email" placeholder="Enter your email">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Service Category</label>
+
+                <select>
+
+                    <option>Electrical Repair</option>
+                    <option>Fan Installation</option>
+                    <option>Switch Repair</option>
+                    <option>Home Wiring</option>
+                    <option>Other</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- PART 2 START -->
+         <!-- ========================================= -->
+    <!-- DATE & TIME -->
+    <!-- ========================================= -->
+
+    <section class="datetime-card">
+
+        <div class="section-title">
+
+            <i class="bi bi-calendar-event"></i>
+
+            <h2>Select Date & Time</h2>
+
+        </div>
+
+        <div class="date-buttons">
+
+            <button class="active">Today</button>
+
+            <button>Tomorrow</button>
+
+            <button>Sunday</button>
+
+            <button>Monday</button>
+
+        </div>
+
+        <div class="time-grid">
+
+            <button>09:00 AM</button>
+
+            <button class="active">10:30 AM</button>
+
+            <button>12:00 PM</button>
+
+            <button>02:00 PM</button>
+
+            <button>04:30 PM</button>
+
+            <button>06:00 PM</button>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- ADDRESS -->
+    <!-- ========================================= -->
+
+    <section class="address-card">
+
+        <div class="section-title">
+
+            <i class="bi bi-geo-alt-fill"></i>
+
+            <h2>Service Address</h2>
+
+        </div>
+
+        <div class="form-grid">
+
+            <div class="form-group full-width">
+
+                <label>Full Address</label>
+
+                <textarea rows="4" placeholder="Enter complete address"></textarea>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>City</label>
+
+                <input type="text" placeholder="City">
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Pincode</label>
+
+                <input type="text" placeholder="Pincode">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- PROBLEM DETAILS -->
+    <!-- ========================================= -->
+
+    <section class="problem-card">
+
+        <div class="section-title">
+
+            <i class="bi bi-tools"></i>
+
+            <h2>Problem Details</h2>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Describe Your Problem</label>
+
+            <textarea rows="6"
+                placeholder="Describe the issue in detail..."></textarea>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Upload Image (Optional)</label>
+
+            <input type="file">
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- PAYMENT -->
+    <!-- ========================================= -->
+
+    <section class="payment-card">
+
+        <div class="section-title">
+
+            <i class="bi bi-credit-card"></i>
+
+            <h2>Payment Method</h2>
+
+        </div>
+
+        <div class="payment-options">
+
+            <label>
+
+                <input type="radio" name="payment" checked>
+
+                Cash After Service
+
+            </label>
+
+            <label>
+
+                <input type="radio" name="payment">
+
+                UPI Payment
+
+            </label>
+
+            <label>
+
+                <input type="radio" name="payment">
+
+                Credit / Debit Card
+
+            </label>
+
+        </div>
+
+    </section>
+
+</div>
+
+<!-- ========================================= -->
+<!-- RIGHT SIDE -->
+<!-- ========================================= -->
+
+<aside class="booking-right">
+
+    <!-- Worker Card -->
+
+    <section class="worker-card">
+
+        <div class="worker-sticker">
+
+            <i class="bi bi-lightning-charge-fill"></i>
+
+        </div>
+
+        <h2>Rahul Sharma</h2>
+
+        <span class="verified">
+
+            <i class="bi bi-patch-check-fill"></i>
+
+            Verified Professional
+
+        </span>
+
+        <div class="rating">
+
+            ⭐⭐⭐⭐⭐
+
+            <span>4.9 (520 Reviews)</span>
+
+        </div>
+
+        <p>
+
+            <i class="bi bi-lightning-charge-fill"></i>
+
+            Electrician
+
+        </p>
+
+        <p>
+
+            <i class="bi bi-briefcase-fill"></i>
+
+            8 Years Experience
+
+        </p>
+
+        <p>
+
+            <i class="bi bi-geo-alt-fill"></i>
+
+            Nashik, Maharashtra
+
+        </p>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- BOOKING SUMMARY -->
+    <!-- ========================================= -->
+
+    <section class="summary-card">
+
+        <div class="section-title">
+
+            <i class="bi bi-receipt"></i>
+
+            <h2>Booking Summary</h2>
+
+        </div>
+
+        <div class="summary-row">
+
+            <span>Worker</span>
+
+            <strong>Rahul Sharma</strong>
+
+        </div>
+
+        <div class="summary-row">
+
+            <span>Service</span>
+
+            <strong>Electrical Repair</strong>
+
+        </div>
+
+        <div class="summary-row">
+
+            <span>Visit Charge</span>
+
+            <strong>₹199</strong>
+
+        </div>
+
+        <div class="summary-row total">
+
+            <span>Total</span>
+
+            <strong>₹199</strong>
+
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- PART 3 START -->
+         <!-- ========================================= -->
+    <!-- CONFIRM BOOKING -->
+    <!-- ========================================= -->
+
+    <section class="confirm-card">
+
+        <button class="confirm-btn">
+
+            <i class="bi bi-check-circle-fill"></i>
+
+            Confirm Booking
+
+        </button>
+
+        <p class="booking-note">
+
+            By confirming this booking, you agree to the
+            Terms & Conditions and Privacy Policy of TrustGrid.
+
+        </p>
+
+    </section>
+
+</aside>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h2 class="footer-logo">
+
+                    <i class="bi bi-shield-check"></i>
+
+                    TrustGrid
+
+                </h2>
+
+                <p>
+
+                    TrustGrid helps you connect with trusted and
+                    verified professionals for your daily services.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Company</h3>
+
+                <a href="#">About</a>
+
+                <a href="#">Services</a>
+
+                <a href="#">Contact</a>
+
+                <a href="#">Privacy Policy</a>
+
+            </div>
+
+            <div>
+
+                <h3>Support</h3>
+
+                <a href="#">Help Center</a>
+
+                <a href="#">Terms</a>
+
+                <a href="#">FAQs</a>
+
+                <a href="#">Report Issue</a>
+
+            </div>
+
+            <div>
+
+                <h3>Follow Us</h3>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+
+                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+
+            © 2026 TrustGrid. All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- JS -->
+
+<script src="../static/js/book_service.js"></script>
+
+</body>
+
+</html>
