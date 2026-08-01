@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | TrustGrid</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../static/css/settings.css">
+
+</head>
+
+<body>
+
+<!-- ========================================= -->
+<!-- HEADER -->
+<!-- ========================================= -->
+
+<header>
+
+    <div class="container">
+
+    <!-- Logo -->
+
+    <a href="dashboard.html" class="logo">
+
+        <i class="bi bi-shield-check"></i>
+
+        <span>TrustGrid</span>
+
+    </a>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <ul class="nav-links">
+
+            <li>
+
+                <a href="dashboard.html">
+
+                    <i class="bi bi-grid"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="find_worker.html">
+
+                    <i class="bi bi-search"></i>
+
+                    Find Worker
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="my_bookings.html">
+
+                    <i class="bi bi-calendar-check"></i>
+
+                    My Bookings
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="settings.html" class="active">
+
+                    <i class="bi bi-gear-fill"></i>
+
+                    Settings
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Profile -->
+
+    <div class="profile">
+
+        <div class="profile-img">
+
+            <i class="bi bi-person-fill"></i>
+
+        </div>
+
+        <div>
+
+            <h4>Sanket</h4>
+
+            <small>Customer</small>
+
+        </div>
+
+    </div>
+
+</div>
+
+</header>
+
+<!-- ========================================= -->
+<!-- BREADCRUMB -->
+<!-- ========================================= -->
+
+<section class="breadcrumb-section">
+
+    <div class="container">
+
+    <div class="breadcrumb">
+
+        <a href="dashboard.html">
+
+            Dashboard
+
+        </a>
+
+        <i class="bi bi-chevron-right"></i>
+
+        <span>
+
+            Settings
+
+        </span>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- MAIN -->
+<!-- ========================================= -->
+
+<main>
+
+<section class="settings-page">
+
+<div class="container">
+
+    <!-- ================================= -->
+    <!-- HERO -->
+    <!-- ================================= -->
+
+    <section class="hero-card">
+
+        <div class="hero-left">
+
+    <div class="hero-icon">
+
+        <i class="bi bi-gear-fill"></i>
+
+    </div>
+
+    <div>
+
+        <h1>
+
+            Account Settings
+
+        </h1>
+
+        <p>
+
+            Manage your profile, security, notifications and account preferences from one place.
+
+        </p>
+
+    </div>
+
+</div>
+
+<div class="hero-right">
+
+    <div class="settings-summary">
+
+        <h2>
+
+            8
+
+        </h2>
+
+        <span>
+
+            Active Preferences
+
+        </span>
+
+    </div>
+
+</div>
+    </section>
+
+    <!-- ================================= -->
+    <!-- PROFILE SETTINGS -->
+    <!-- ================================= -->
+
+    <section class="profile-settings">
+
+        <div class="section-title">
+
+    <i class="bi bi-person-circle"></i>
+
+    <h2>Profile Settings</h2>
+
+</div>
+
+<div class="profile-card">
+
+    <div class="input-group">
+
+        <label>Full Name</label>
+
+        <input
+            type="text"
+            value="Sanket">
+
+    </div>
+
+    <div class="input-group">
+
+        <label>Email Address</label>
+
+        <input
+            type="email"
+            value="sanket@example.com">
+
+    </div>
+
+    <div class="input-group">
+
+        <label>Mobile Number</label>
+
+        <input
+            type="tel"
+            value="+91 9876543210">
+
+    </div>
+
+    <div class="input-group">
+
+        <label>City</label>
+
+        <input
+            type="text"
+            value="Nashik">
+
+    </div>
+
+    <button class="save-profile-btn">
+
+        <i class="bi bi-check-circle-fill"></i>
+
+        Save Changes
+
+    </button>
+
+</div>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- SECURITY & NOTIFICATIONS -->
+    <!-- ================================= -->
+
+    <section class="settings-grid">
+
+        <!-- ========================= -->
+<!-- SECURITY -->
+<!-- ========================= -->
+
+<div class="settings-card">
+
+    <div class="section-title">
+
+        <i class="bi bi-shield-lock-fill"></i>
+
+        <h2>Security</h2>
+
+    </div>
+
+    <div class="setting-item">
+
+        <div>
+
+            <h3>Change Password</h3>
+
+            <p>Update your account password regularly.</p>
+
+        </div>
+
+        <button class="setting-btn">
+
+            Change
+
+        </button>
+
+    </div>
+
+    <div class="setting-item">
+
+        <div>
+
+            <h3>Two-Factor Authentication</h3>
+
+            <p>Extra security for your account.</p>
+
+        </div>
+
+        <label class="switch">
+
+            <input type="checkbox" checked>
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+    <div class="setting-item">
+
+        <div>
+
+            <h3>Login Alerts</h3>
+
+            <p>Receive alerts for new logins.</p>
+
+        </div>
+
+        <label class="switch">
+
+            <input type="checkbox" checked>
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- NOTIFICATIONS -->
+<!-- ========================= -->
+
+<div class="settings-card">
+
+    <div class="section-title">
+
+        <i class="bi bi-bell-fill"></i>
+
+        <h2>Notifications</h2>
+
+    </div>
+
+    <div class="setting-item">
+
+        <div>
+
+            <h3>Email Notifications</h3>
+
+            <p>Receive booking updates by email.</p>
+
+        </div>
+
+        <label class="switch">
+
+            <input type="checkbox" checked>
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+    <div class="setting-item">
+
+        <div>
+
+            <h3>SMS Notifications</h3>
+
+            <p>Receive SMS alerts.</p>
+
+        </div>
+
+        <label class="switch">
+
+            <input type="checkbox">
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+    <div class="setting-item">
+
+        <div>
+
+            <h3>Push Notifications</h3>
+
+            <p>Receive instant app notifications.</p>
+
+        </div>
+
+        <label class="switch">
+
+            <input type="checkbox" checked>
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+</div>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- APPEARANCE & DANGER ZONE -->
+    <!-- ================================= -->
+
+    <section class="advanced-settings">
+
+        <!-- ========================= -->
+<!-- APPEARANCE -->
+<!-- ========================= -->
+
+<div class="settings-card">
+
+    <div class="section-title">
+
+        <i class="bi bi-moon-stars-fill"></i>
+
+        <h2>Appearance</h2>
+
+    </div>
+
+    <div class="setting-item">
+
+        <div>
+
+            <h3>Dark Mode</h3>
+
+            <p>Enable dark theme for TrustGrid.</p>
+
+        </div>
+
+        <label class="switch">
+
+            <input type="checkbox">
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+    <div class="setting-item">
+
+        <div>
+
+            <h3>Compact Layout</h3>
+
+            <p>Reduce spacing for more content.</p>
+
+        </div>
+
+        <label class="switch">
+
+            <input type="checkbox">
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- DANGER ZONE -->
+<!-- ========================= -->
+
+<div class="settings-card danger-card">
+
+    <div class="section-title">
+
+        <i class="bi bi-exclamation-triangle-fill"></i>
+
+        <h2>Danger Zone</h2>
+
+    </div>
+
+    <p>
+
+        Permanently delete your TrustGrid account and all associated data.
+        This action cannot be undone.
+
+    </p>
+
+    <button class="delete-account-btn">
+
+        <i class="bi bi-trash-fill"></i>
+
+        Delete Account
+
+    </button>
+
+</div>
+
+    </section>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer>
+
+    <div class="container">
+
+    <div class="footer-grid">
+
+        <!-- About -->
+
+        <div class="footer-about">
+
+            <h2 class="footer-logo">
+
+                <i class="bi bi-shield-check"></i>
+
+                TrustGrid
+
+            </h2>
+
+            <p>
+
+                TrustGrid helps customers manage their profile,
+                security settings and account preferences with a
+                secure and user-friendly experience.
+
+            </p>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="dashboard.html">Dashboard</a>
+
+            <a href="my_bookings.html">My Bookings</a>
+
+            <a href="wallet.html">Wallet</a>
+
+            <a href="settings.html">Settings</a>
+
+        </div>
+
+        <!-- Support -->
+
+        <div>
+
+            <h3>Support</h3>
+
+            <a href="#">Help Center</a>
+
+            <a href="#">Terms & Conditions</a>
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Contact Us</a>
+
+        </div>
+
+        <!-- Social -->
+
+        <div>
+
+            <h3>Follow Us</h3>
+
+            <div class="social-icons">
+
+                <a href="#">
+
+                    <i class="bi bi-facebook"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="bi bi-instagram"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="bi bi-linkedin"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="bi bi-twitter-x"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+
+        © 2026 TrustGrid. All Rights Reserved.
+
+    </p>
+
+</div>
+
+</footer>
+
+<!-- JS -->
+
+<script src="../static/js/settings.js"></script>
+
+</body>
+
+</html>
