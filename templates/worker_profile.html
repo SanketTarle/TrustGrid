@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!-- ========================================= -->
+
+    <!-- META INFORMATION -->
+
+    <!-- ========================================= -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TrustGrid | Worker Profile</title>
+
+    <!-- ========================================= -->
+
+    <!-- GOOGLE FONTS -->
+
+    <!-- ========================================= -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- ========================================= -->
+
+    <!-- BOOTSTRAP ICONS -->
+
+    <!-- ========================================= -->
+
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- ========================================= -->
+
+    <!-- CSS FILE -->
+
+    <!-- ========================================= -->
+
+    <link rel="stylesheet"
+    href="../static/css/worker_profile.css">
+
+</head>
+
+<body>
+
+    <!-- ========================================= -->
+
+    <!-- SIDEBAR -->
+
+    <!-- ========================================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-top">
+
+            <div class="logo">
+
+                <i class="bi bi-shield-check"></i>
+
+                <span>TrustGrid</span>
+
+            </div>
+
+            <div class="worker-profile">
+
+                <div class="profile-image">
+
+                    <i class="bi bi-person-circle"></i>
+
+                </div>
+
+                <h3>Rahul Sharma</h3>
+
+                <p>Verified Electrician</p>
+
+                <span class="verify-badge">
+
+                    <i class="bi bi-patch-check-fill"></i>
+
+                    Verified
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- ========================================= -->
+
+        <!-- SIDEBAR MENU -->
+
+        <!-- ========================================= -->
+
+        <nav class="sidebar-menu">
+
+            <a href="worker_dashboard.html">
+
+                <i class="bi bi-grid-fill"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+            <a href="worker_jobs.html">
+
+                <i class="bi bi-briefcase-fill"></i>
+
+                <span>My Jobs</span>
+
+            </a>
+
+            <a href="worker_earnings.html">
+
+                <i class="bi bi-wallet2"></i>
+
+                <span>Earnings</span>
+
+            </a>
+
+            <a href="worker_availability.html">
+
+                <i class="bi bi-calendar-check-fill"></i>
+
+                <span>Availability</span>
+
+            </a>
+
+            <a href="worker_reviews.html">
+
+                <i class="bi bi-star-fill"></i>
+
+                <span>Reviews</span>
+
+            </a>
+
+            <a href="worker_messages.html">
+
+                <i class="bi bi-chat-dots-fill"></i>
+
+                <span>Messages</span>
+
+            </a>
+
+            <a href="worker_notifications.html">
+
+                <i class="bi bi-bell-fill"></i>
+
+                <span>Notifications</span>
+
+            </a>
+
+            <a href="worker_profile.html" class="active">
+
+                <i class="bi bi-person-badge-fill"></i>
+
+                <span>Profile</span>
+
+            </a>
+
+            <a href="worker_settings.html">
+
+                <i class="bi bi-gear-fill"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+        </nav>
+
+        <!-- ========================================= -->
+
+        <!-- SIDEBAR FOOTER -->
+
+        <!-- ========================================= -->
+
+        <div class="sidebar-bottom">
+
+            <a href="login.html" class="logout-btn">
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                <span>Logout</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+        <!-- ========================================= -->
+
+    <!-- MAIN CONTENT -->
+
+    <!-- ========================================= -->
+
+    <div class="main-content">
+
+        <!-- ========================================= -->
+
+        <!-- HEADER -->
+
+        <!-- ========================================= -->
+
+        <header>
+
+            <div class="header-left">
+
+                <h1>
+
+                    Worker Profile
+
+                </h1>
+
+                <p>
+
+                    Manage your professional profile and account information.
+
+                </p>
+
+            </div>
+
+            <div class="header-center">
+
+                <div class="search-box">
+
+                    <i class="bi bi-search"></i>
+
+                    <input type="text"
+                    placeholder="Search profile...">
+
+                </div>
+
+            </div>
+
+            <div class="header-right">
+
+                <button class="icon-btn">
+
+                    <i class="bi bi-chat-dots-fill"></i>
+
+                    <span class="count">
+
+                        4
+
+                    </span>
+
+                </button>
+
+                <button class="icon-btn">
+
+                    <i class="bi bi-bell-fill"></i>
+
+                    <span class="count">
+
+                        12
+
+                    </span>
+
+                </button>
+
+                <div class="header-profile">
+
+                    <div class="header-avatar">
+
+                        <i class="bi bi-person-circle"></i>
+
+                    </div>
+
+                    <div class="header-info">
+
+                        <h4>
+
+                            Rahul Sharma
+
+                        </h4>
+
+                        <p>
+
+                            Electrician
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ========================================= -->
+
+        <!-- MAIN -->
+
+        <!-- ========================================= -->
+
+        <main>
+                        <!-- ========================================= -->
+
+            <!-- PAGE INTRO -->
+
+            <!-- ========================================= -->
+
+            <section class="page-intro">
+
+                <div>
+
+                    <h2>
+
+                        Professional Profile
+
+                    </h2>
+
+                    <p>
+
+                        Showcase your skills, experience and achievements to build customer trust.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- ========================================= -->
+
+            <!-- PROFILE BANNER -->
+
+            <!-- ========================================= -->
+
+            <section class="profile-banner">
+
+                <div class="profile-left">
+
+                    <div class="large-profile">
+
+                        <i class="bi bi-person-circle"></i>
+
+                    </div>
+
+                    <div class="profile-details">
+
+                        <span class="verified-badge">
+
+                            <i class="bi bi-patch-check-fill"></i>
+
+                            TrustGrid Verified Worker
+
+                        </span>
+
+                        <h2>
+
+                            Rahul Sharma
+
+                        </h2>
+
+                        <h4>
+
+                            Senior Electrician
+
+                        </h4>
+
+                        <p>
+
+                            Professional Electrical Repair • Installation • Maintenance
+
+                        </p>
+
+                        <div class="profile-stats">
+
+                            <div class="stat-box">
+
+                                <h3>4.9 ⭐</h3>
+
+                                <span>Rating</span>
+
+                            </div>
+
+                            <div class="stat-box">
+
+                                <h3>97</h3>
+
+                                <span>Trust Score</span>
+
+                            </div>
+
+                            <div class="stat-box">
+
+                                <h3>425</h3>
+
+                                <span>Jobs Done</span>
+
+                            </div>
+
+                            <div class="stat-box">
+
+                                <h3>₹2.8L</h3>
+
+                                <span>Total Earnings</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="profile-actions">
+
+                            <button class="edit-btn">
+
+                                <i class="bi bi-pencil-square"></i>
+
+                                Edit Profile
+
+                            </button>
+
+                            <button class="upload-btn">
+
+                                <i class="bi bi-cloud-upload-fill"></i>
+
+                                Upload Photo
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="profile-right">
+
+                    <div class="completion-card">
+
+                        <h3>
+
+                            Profile Completion
+
+                        </h3>
+
+                        <h1>
+
+                            95%
+
+                        </h1>
+
+                        <div class="completion-bar">
+
+                            <div class="completion-fill">
+
+                            </div>
+
+                        </div>
+
+                        <p>
+
+                            Complete your profile to receive more job requests.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+                        <!-- ========================================= -->
+
+            <!-- PROFILE INFORMATION -->
+
+            <!-- ========================================= -->
+
+            <section class="profile-grid">
+
+                <div class="info-card">
+
+                    <h3>
+
+                        <i class="bi bi-person-vcard-fill"></i>
+
+                        Personal Information
+
+                    </h3>
+
+                    <div class="info-row">
+
+                        <span>Full Name</span>
+
+                        <strong>Rahul Sharma</strong>
+
+                    </div>
+
+                    <div class="info-row">
+
+                        <span>Email</span>
+
+                        <strong>rahul@email.com</strong>
+
+                    </div>
+
+                    <div class="info-row">
+
+                        <span>Phone</span>
+
+                        <strong>+91 9876543210</strong>
+
+                    </div>
+
+                    <div class="info-row">
+
+                        <span>Location</span>
+
+                        <strong>Nashik, Maharashtra</strong>
+
+                    </div>
+
+                    <div class="info-row">
+
+                        <span>Experience</span>
+
+                        <strong>5+ Years</strong>
+
+                    </div>
+
+                </div>
+
+                <div class="info-card">
+
+                    <h3>
+
+                        <i class="bi bi-tools"></i>
+
+                        Professional Skills
+
+                    </h3>
+
+                    <div class="skill">
+
+                        <p>Electrical Repair</p>
+
+                        <div class="progress">
+
+                            <div class="progress-fill fill1"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="skill">
+
+                        <p>House Wiring</p>
+
+                        <div class="progress">
+
+                            <div class="progress-fill fill2"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="skill">
+
+                        <p>Switch Installation</p>
+
+                        <div class="progress">
+
+                            <div class="progress-fill fill3"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="skill">
+
+                        <p>Maintenance</p>
+
+                        <div class="progress">
+
+                            <div class="progress-fill fill4"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ========================================= -->
+
+            <!-- EXPERIENCE -->
+
+            <!-- ========================================= -->
+
+            <section class="experience-card">
+
+                <h3>
+
+                    <i class="bi bi-briefcase-fill"></i>
+
+                    Professional Experience
+
+                </h3>
+
+                <div class="experience-item">
+
+                    <h4>
+
+                        Senior Electrician
+
+                    </h4>
+
+                    <p>
+
+                        TrustGrid Partner
+
+                    </p>
+
+                    <span>
+
+                        2021 - Present
+
+                    </span>
+
+                </div>
+
+                <div class="experience-item">
+
+                    <h4>
+
+                        Electrical Technician
+
+                    </h4>
+
+                    <p>
+
+                        ABC Electrical Services
+
+                    </p>
+
+                    <span>
+
+                        2018 - 2021
+
+                    </span>
+
+                </div>
+
+            </section>
+                        <!-- ========================================= -->
+
+            <!-- CERTIFICATES -->
+
+            <!-- ========================================= -->
+
+            <section class="certificate-card">
+
+                <h3>
+
+                    <i class="bi bi-award-fill"></i>
+
+                    Professional Certificates
+
+                </h3>
+
+                <div class="certificate-list">
+
+                    <div class="certificate-item">
+
+                        <i class="bi bi-patch-check-fill"></i>
+
+                        <div>
+
+                            <h4>Government Certified Electrician</h4>
+
+                            <p>Maharashtra Skill Development Board</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="certificate-item">
+
+                        <i class="bi bi-patch-check-fill"></i>
+
+                        <div>
+
+                            <h4>Electrical Safety Certification</h4>
+
+                            <p>National Safety Council</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="certificate-item">
+
+                        <i class="bi bi-patch-check-fill"></i>
+
+                        <div>
+
+                            <h4>TrustGrid Verified Professional</h4>
+
+                            <p>Identity & Background Verified</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ========================================= -->
+
+            <!-- PORTFOLIO GALLERY -->
+
+            <!-- ========================================= -->
+
+            <section class="portfolio-card">
+
+                <h3>
+
+                    <i class="bi bi-images"></i>
+
+                    Portfolio Gallery
+
+                </h3>
+
+                <div class="portfolio-grid">
+
+                    <div class="portfolio-item">
+
+                        <i class="bi bi-image-fill"></i>
+
+                        <p>House Wiring Project</p>
+
+                    </div>
+
+                    <div class="portfolio-item">
+
+                        <i class="bi bi-image-fill"></i>
+
+                        <p>Switch Board Installation</p>
+
+                    </div>
+
+                    <div class="portfolio-item">
+
+                        <i class="bi bi-image-fill"></i>
+
+                        <p>Commercial Wiring</p>
+
+                    </div>
+
+                    <div class="portfolio-item">
+
+                        <i class="bi bi-image-fill"></i>
+
+                        <p>Lighting Installation</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ========================================= -->
+
+            <!-- SERVICE DETAILS -->
+
+            <!-- ========================================= -->
+
+            <section class="service-card">
+
+                <h3>
+
+                    <i class="bi bi-tools"></i>
+
+                    Service Information
+
+                </h3>
+
+                <div class="info-row">
+
+                    <span>Base Service Charge</span>
+
+                    <strong>₹500</strong>
+
+                </div>
+
+                <div class="info-row">
+
+                    <span>Emergency Visit</span>
+
+                    <strong>₹800</strong>
+
+                </div>
+
+                <div class="info-row">
+
+                    <span>Working Hours</span>
+
+                    <strong>09:00 AM - 08:00 PM</strong>
+
+                </div>
+
+                <div class="info-row">
+
+                    <span>Current Status</span>
+
+                    <strong class="status-online">
+
+                        🟢 Available
+
+                    </strong>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- ========================================= -->
+
+        <!-- FOOTER -->
+
+        <!-- ========================================= -->
+
+        <footer class="dashboard-footer">
+
+            <div>
+
+                © 2026 TrustGrid • Worker Profile Dashboard
+
+            </div>
+
+            <div>
+
+                Building Trust Through Verified Professionals 🛡️
+
+            </div>
+
+        </footer>
+
+    </div>
+
+    <!-- ========================================= -->
+
+    <!-- JAVASCRIPT -->
+
+    <!-- ========================================= -->
+
+    <script src="../static/js/worker_profile.js"></script>
+
+</body>
+
+</html>
