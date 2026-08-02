@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!-- Meta -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TrustGrid | Worker Notifications</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../static/css/worker_notifications.css">
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="sidebar-top">
+
+    <div class="logo">
+
+        <i class="bi bi-shield-check"></i>
+
+        <span>TrustGrid</span>
+
+    </div>
+
+    <div class="worker-profile">
+
+        <div class="profile-image">
+
+            <i class="bi bi-person-circle"></i>
+
+        </div>
+
+        <h3>Rahul Sharma</h3>
+
+        <p>Verified Electrician</p>
+
+        <span class="verify-badge">
+
+            <i class="bi bi-patch-check-fill"></i>
+
+            Verified
+
+        </span>
+
+    </div>
+
+</div>
+
+<nav class="sidebar-menu">
+
+    <a href="worker_dashboard.html">
+
+        <i class="bi bi-grid-fill"></i>
+
+        <span>Dashboard</span>
+
+    </a>
+
+    <a href="worker_jobs.html">
+
+        <i class="bi bi-briefcase-fill"></i>
+
+        <span>My Jobs</span>
+
+    </a>
+
+    <a href="worker_earnings.html">
+
+        <i class="bi bi-wallet2"></i>
+
+        <span>Earnings</span>
+
+    </a>
+
+    <a href="worker_availability.html">
+
+        <i class="bi bi-calendar-check-fill"></i>
+
+        <span>Availability</span>
+
+    </a>
+
+    <a href="worker_reviews.html">
+
+        <i class="bi bi-star-fill"></i>
+
+        <span>Reviews</span>
+
+    </a>
+
+    <a href="worker_messages.html">
+
+        <i class="bi bi-chat-dots-fill"></i>
+
+        <span>Messages</span>
+
+    </a>
+
+    <a href="worker_notifications.html" class="active">
+
+        <i class="bi bi-bell-fill"></i>
+
+        <span>Notifications</span>
+
+    </a>
+
+    <a href="worker_profile.html">
+
+        <i class="bi bi-person-badge-fill"></i>
+
+        <span>Profile</span>
+
+    </a>
+
+    <a href="worker_settings.html">
+
+        <i class="bi bi-gear-fill"></i>
+
+        <span>Settings</span>
+
+    </a>
+
+</nav>
+
+<div class="sidebar-bottom">
+
+    <a href="login.html" class="logout-btn">
+
+        <i class="bi bi-box-arrow-right"></i>
+
+        <span>Logout</span>
+
+    </a>
+
+</div>
+
+</aside>
+
+<!-- MAIN CONTENT -->
+
+<div class="main-content">
+
+<header>
+
+    <div class="header-left">
+
+    <h1>
+
+        Notifications
+
+    </h1>
+
+    <p>
+
+        Stay updated with bookings, payments, reviews and important alerts.
+
+    </p>
+
+</div>
+
+<div class="header-center">
+
+    <div class="search-box">
+
+        <i class="bi bi-search"></i>
+
+        <input type="text" placeholder="Search notifications...">
+
+    </div>
+
+</div>
+
+<div class="header-right">
+
+    <button class="icon-btn">
+
+        <i class="bi bi-chat-dots-fill"></i>
+
+        <span class="count">4</span>
+
+    </button>
+
+    <button class="icon-btn active-bell">
+
+        <i class="bi bi-bell-fill"></i>
+
+        <span class="count">12</span>
+
+    </button>
+
+    <div class="header-profile">
+
+        <div class="header-avatar">
+
+            <i class="bi bi-person-circle"></i>
+
+        </div>
+
+        <div>
+
+            <h4>Rahul Sharma</h4>
+
+            <span>Electrician</span>
+
+        </div>
+
+    </div>
+
+</div>
+
+</header>
+
+<main>
+
+    <!-- ========================================= -->
+<!-- PAGE INTRO -->
+<!-- ========================================= -->
+
+<section class="page-intro">
+
+    <div>
+
+        <h2>Notification Center</h2>
+
+        <p>
+
+            Stay updated with your latest activities, bookings and important alerts.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- SUMMARY CARDS -->
+<!-- ========================================= -->
+
+<section class="notification-summary">
+
+    <div class="summary-card booking">
+
+        <i class="bi bi-briefcase-fill"></i>
+
+        <h3>12</h3>
+
+        <p>New Bookings</p>
+
+    </div>
+
+    <div class="summary-card payment">
+
+        <i class="bi bi-wallet2"></i>
+
+        <h3>5</h3>
+
+        <p>Payments</p>
+
+    </div>
+
+    <div class="summary-card review">
+
+        <i class="bi bi-star-fill"></i>
+
+        <h3>3</h3>
+
+        <p>New Reviews</p>
+
+    </div>
+
+    <div class="summary-card trust">
+
+        <i class="bi bi-shield-check"></i>
+
+        <h3>97</h3>
+
+        <p>AI Trust Score</p>
+
+    </div>
+
+</section>
+
+    <!-- ========================================= -->
+<!-- NOTIFICATION LIST -->
+<!-- ========================================= -->
+
+<section class="notification-list">
+
+    <div class="notification-card booking-card">
+
+        <div class="notification-icon">
+
+            <i class="bi bi-briefcase-fill"></i>
+
+        </div>
+
+        <div class="notification-content">
+
+            <h4>New Booking Received</h4>
+
+            <p>
+
+                Amit Patil booked Electrical Repair service.
+
+            </p>
+
+            <small>2 Minutes Ago</small>
+
+        </div>
+
+    </div>
+
+    <div class="notification-card payment-card">
+
+        <div class="notification-icon">
+
+            <i class="bi bi-cash-stack"></i>
+
+        </div>
+
+        <div class="notification-content">
+
+            <h4>Payment Received</h4>
+
+            <p>
+
+                ₹1,200 has been credited successfully.
+
+            </p>
+
+            <small>15 Minutes Ago</small>
+
+        </div>
+
+    </div>
+
+    <div class="notification-card review-card">
+
+        <div class="notification-icon">
+
+            <i class="bi bi-star-fill"></i>
+
+        </div>
+
+        <div class="notification-content">
+
+            <h4>New Review</h4>
+
+            <p>
+
+                Sneha Joshi rated you ⭐⭐⭐⭐⭐.
+
+            </p>
+
+            <small>35 Minutes Ago</small>
+
+        </div>
+
+    </div>
+
+    <div class="notification-card trust-card">
+
+        <div class="notification-icon">
+
+            <i class="bi bi-cpu-fill"></i>
+
+        </div>
+
+        <div class="notification-content">
+
+            <h4>AI Trust Score Updated</h4>
+
+            <p>
+
+                Congratulations! Your Trust Score increased to 97.
+
+            </p>
+
+            <small>Today</small>
+
+        </div>
+
+    </div>
+
+    <div class="notification-card alert-card">
+
+        <div class="notification-icon">
+
+            <i class="bi bi-exclamation-triangle-fill"></i>
+
+        </div>
+
+        <div class="notification-content">
+
+            <h4>Upcoming Job Reminder</h4>
+
+            <p>
+
+                You have a scheduled booking at 3:00 PM today.
+
+            </p>
+
+            <small>Today</small>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ========================================= -->
+<!-- ACTIONS -->
+<!-- ========================================= -->
+
+<section class="notification-actions">
+
+    <button class="mark-read-btn">
+
+        <i class="bi bi-check2-all"></i>
+
+        Mark All as Read
+
+    </button>
+
+    <button class="clear-btn">
+
+        <i class="bi bi-trash-fill"></i>
+
+        Clear Notifications
+
+    </button>
+
+</section>
+
+<!-- ========================================= -->
+<!-- FILTERS -->
+<!-- ========================================= -->
+
+<section class="filter-section">
+
+    <h3>
+
+        <i class="bi bi-funnel-fill"></i>
+
+        Filter Notifications
+
+    </h3>
+
+    <div class="filter-buttons">
+
+        <button class="filter-btn active">
+
+            All
+
+        </button>
+
+        <button class="filter-btn">
+
+            Bookings
+
+        </button>
+
+        <button class="filter-btn">
+
+            Payments
+
+        </button>
+
+        <button class="filter-btn">
+
+            Reviews
+
+        </button>
+
+        <button class="filter-btn">
+
+            AI Alerts
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="dashboard-footer">
+
+    <div>
+
+        © 2026 TrustGrid • Worker Notifications Dashboard
+
+    </div>
+
+    <div>
+
+        Stay Updated • Stay Productive 🔔
+
+    </div>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="../static/js/worker_notifications.js"></script>
+
+</body>
+
+</html>
