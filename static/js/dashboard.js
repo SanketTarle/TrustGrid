@@ -1,130 +1,325 @@
-/* ===========================================
-   TrustGrid Dashboard JS
-   Part 1D
-=========================================== */
+/*==================================================
 
-document.addEventListener("DOMContentLoaded", () => {
+        TRUSTGRID DASHBOARD
 
-    console.log("✅ TrustGrid Dashboard Loaded");
+==================================================*/
 
-    /* =====================================
-            ACTIVE SIDEBAR MENU
-    ===================================== */
+/*=========================================
+        NAVIGATION HOVER
+=========================================*/
 
-    const menuItems = document.querySelectorAll(".sidebar-menu li");
+const navLinks = document.querySelectorAll(".nav-links a");
 
-    menuItems.forEach(item => {
+navLinks.forEach(link => {
 
-        item.addEventListener("click", () => {
+    link.addEventListener("mouseenter", () => {
 
-            menuItems.forEach(menu => {
-                menu.classList.remove("active");
-            });
-
-            item.classList.add("active");
-
-        });
+        link.style.transform = "translateY(-3px)";
 
     });
 
-    /* =====================================
-            SEARCH BOX EFFECT
-    ===================================== */
+    link.addEventListener("mouseleave", () => {
 
-    const searchInput = document.querySelector(".search-box input");
-    const searchBox = document.querySelector(".search-box");
+        link.style.transform = "translateY(0)";
 
-    if (searchInput) {
+    });
 
-        searchInput.addEventListener("focus", () => {
+});
 
-            searchBox.style.boxShadow =
-                "0 0 18px rgba(46,204,113,.35)";
+/*=========================================
+        HERO BUTTON
+=========================================*/
 
-            searchBox.style.borderColor = "#2ECC71";
+const heroBtn = document.querySelector(".hero-btn");
 
-        });
+if (heroBtn) {
 
-        searchInput.addEventListener("blur", () => {
+    heroBtn.addEventListener("click", () => {
 
-            searchBox.style.boxShadow = "none";
+        window.location.href = "book_service.html";
 
-            searchBox.style.borderColor = "#E5E7EB";
+    });
 
-        });
+}
 
-    }
+/*=========================================
+        QUICK ACTIONS
+=========================================*/
 
-    /* =====================================
-        PROFILE HOVER
-    ===================================== */
+document.querySelectorAll(".quick-card").forEach(card => {
 
-    const profile = document.querySelector(".profile");
+    card.addEventListener("mouseenter", () => {
 
-    if (profile) {
+        card.style.transform = "translateY(-8px)";
 
-        profile.addEventListener("mouseenter", () => {
+    });
 
-            profile.style.transform = "translateY(-2px)";
+    card.addEventListener("mouseleave", () => {
 
-        });
+        card.style.transform = "translateY(0)";
 
-        profile.addEventListener("mouseleave", () => {
+    });
 
-            profile.style.transform = "translateY(0)";
+});
+/*==================================================
 
-        });
+                PART 2
 
-    }
+====================================================*/
 
-    /* =====================================
-        NOTIFICATION BUTTON
-    ===================================== */
+/*=========================================
+        STATS COUNTER
+=========================================*/
 
-    const bell = document.querySelector(".notification-btn");
+const stats = document.querySelectorAll(".stat-card h2");
 
-    if (bell) {
+stats.forEach(stat => {
 
-        bell.addEventListener("click", () => {
+    const original = stat.innerText;
 
-            bell.style.transform = "scale(.90)";
+    const number = parseInt(original.replace(/[^\d]/g, ""));
 
-            setTimeout(() => {
+    if (isNaN(number)) return;
 
-                bell.style.transform = "scale(1)";
+    let start = 0;
 
-            }, 120);
+    const increment = Math.ceil(number / 40);
 
-        });
+    const timer = setInterval(() => {
 
-    }
+        start += increment;
 
-    /* =====================================
-        GREETING
-    ===================================== */
+        if (start >= number) {
 
-    const hour = new Date().getHours();
+            stat.innerText = original;
 
-    let greeting = "";
+            clearInterval(timer);
 
-    if (hour < 12) {
+        } else {
 
-        greeting = "Good Morning ☀️";
+            if (original.includes("₹")) {
 
-    }
+                stat.innerText = "₹" + start;
 
-    else if (hour < 17) {
+            } else {
 
-        greeting = "Good Afternoon 🌤️";
+                stat.innerText = start;
 
-    }
+            }
 
-    else {
+        }
 
-        greeting = "Good Evening 🌙";
+    }, 30);
 
-    }
+});
 
-    console.log(greeting);
+/*=========================================
+        BOOKING BUTTONS
+=========================================*/
+
+const bookingBtn = document.querySelector(".primary-btn");
+
+if (bookingBtn) {
+
+    bookingBtn.addEventListener("click", (e) => {
+
+        e.preventDefault();
+
+        window.location.href = "my_bookings.html";
+
+    });
+
+}
+
+const messageBtn = document.querySelector(".secondary-btn");
+
+if (messageBtn) {
+
+    messageBtn.addEventListener("click", (e) => {
+
+        e.preventDefault();
+
+        window.location.href = "messages.html";
+
+    });
+
+}
+/*==================================================
+
+                PART 3
+
+====================================================*/
+
+/*=========================================
+        PAGE LOAD
+=========================================*/
+
+window.addEventListener("load", () => {
+
+    document.querySelectorAll(
+
+        ".hero-card,.stat-card,.booking-card,.activity-card,.wallet-card,.notification-card,.category-card,.offer-banner"
+
+    ).forEach((card, index) => {
+
+        card.style.opacity = "0";
+
+        card.style.transform = "translateY(30px)";
+
+        setTimeout(() => {
+
+            card.style.transition = ".6s";
+
+            card.style.opacity = "1";
+
+            card.style.transform = "translateY(0)";
+
+        }, index * 120);
+
+    });
+
+});
+
+/*=========================================
+        TOAST
+=========================================*/
+
+function showToast(message) {
+
+    const toast = document.createElement("div");
+
+    toast.innerText = message;
+
+    toast.style.position = "fixed";
+
+    toast.style.bottom = "25px";
+
+    toast.style.right = "25px";
+
+    toast.style.background = "#2ECC71";
+
+    toast.style.color = "white";
+
+    toast.style.padding = "15px 22px";
+
+    toast.style.borderRadius = "12px";
+
+    toast.style.fontWeight = "600";
+
+    toast.style.boxShadow = "0 10px 30px rgba(0,0,0,.2)";
+
+    toast.style.opacity = "0";
+
+    toast.style.transition = ".3s";
+
+    toast.style.zIndex = "9999";
+
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+
+        toast.style.opacity = "1";
+
+    }, 100);
+
+    setTimeout(() => {
+
+        toast.style.opacity = "0";
+
+        setTimeout(() => {
+
+            toast.remove();
+
+        }, 300);
+
+    }, 2500);
+
+}
+
+/*=========================================
+        CATEGORY CLICK
+=========================================*/
+
+document.querySelectorAll(".category-card").forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        showToast("Opening workers list...");
+
+    });
+
+});
+
+/*=========================================
+        OFFER BUTTON
+=========================================*/
+
+const claimBtn = document.querySelector(".claim-btn");
+
+if (claimBtn) {
+
+    claimBtn.addEventListener("click", (e) => {
+
+        e.preventDefault();
+
+        showToast("Coupon TRUST20 Applied 🎉");
+
+        setTimeout(() => {
+
+            window.location.href = "book_service.html";
+
+        }, 1000);
+
+    });
+
+}
+
+/*=========================================
+        RIPPLE EFFECT
+=========================================*/
+
+document.querySelectorAll("button").forEach(button => {
+
+    button.addEventListener("click", function (e) {
+
+        const ripple = document.createElement("span");
+
+        const rect = this.getBoundingClientRect();
+
+        const size = Math.max(rect.width, rect.height);
+
+        ripple.style.width = size + "px";
+
+        ripple.style.height = size + "px";
+
+        ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+
+        ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
+
+        ripple.style.position = "absolute";
+
+        ripple.style.borderRadius = "50%";
+
+        ripple.style.background = "rgba(255,255,255,.35)";
+
+        ripple.style.transform = "scale(0)";
+
+        ripple.style.animation = "ripple .6s linear";
+
+        ripple.style.pointerEvents = "none";
+
+        this.style.position = "relative";
+
+        this.style.overflow = "hidden";
+
+        this.appendChild(ripple);
+
+        setTimeout(() => {
+
+            ripple.remove();
+
+        }, 600);
+
+    });
 
 });
