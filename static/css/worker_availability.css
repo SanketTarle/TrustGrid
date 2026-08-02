@@ -1,0 +1,961 @@
+/*========================================
+
+        TRUSTGRID WORKER AVAILABILITY
+
+========================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+
+    --primary: #0B1F3A;
+    --secondary: #2ECC71;
+    --accent: #3B82F6;
+    --light: #F5F7FA;
+    --dark: #1F2937;
+    --white: #FFFFFF;
+    --shadow: 0 10px 30px rgba(0, 0, 0, .08);
+
+}
+
+body {
+
+    background: var(--light);
+    display: flex;
+    min-height: 100vh;
+    color: var(--dark);
+
+}
+
+a {
+
+    text-decoration: none;
+
+}
+
+/*========================
+
+SIDEBAR
+
+========================*/
+
+.sidebar {
+
+    width: 280px;
+    background: var(--primary);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+
+}
+
+.sidebar-top {
+
+    text-align: center;
+
+}
+
+.logo {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 35px;
+
+}
+
+.logo i {
+
+    color: var(--secondary);
+
+}
+
+.worker-profile {
+
+    background: rgba(255, 255, 255, .08);
+    padding: 20px;
+    border-radius: 18px;
+
+}
+
+.profile-image {
+
+    font-size: 70px;
+    margin-bottom: 15px;
+
+}
+
+.worker-profile h3 {
+
+    margin-bottom: 6px;
+
+}
+
+.worker-profile p {
+
+    font-size: 14px;
+    opacity: .8;
+    margin-bottom: 15px;
+
+}
+
+.verify-badge {
+
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--secondary);
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 600;
+
+}
+
+.sidebar-menu {
+
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+}
+
+.sidebar-menu a {
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    color: white;
+    border-radius: 12px;
+    transition: .3s;
+
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu .active {
+
+    background: rgba(255, 255, 255, .15);
+
+}
+
+.sidebar-menu i {
+
+    font-size: 20px;
+
+}
+
+.logout-btn {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background: #dc3545;
+    color: white;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: .3s;
+
+}
+
+.logout-btn:hover {
+
+    background: #b91c1c;
+
+}
+
+.main-content {
+
+    margin-left: 280px;
+    width: calc(100% - 280px);
+    padding: 30px;
+
+}
+
+/*========================
+
+HEADER
+
+========================*/
+
+header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+
+}
+
+.header-left h1 {
+
+    font-size: 32px;
+    color: var(--primary);
+
+}
+
+.header-left p {
+
+    color: #666;
+    margin-top: 5px;
+
+}
+
+.header-center {
+
+    flex: 1;
+
+}
+
+.search-box {
+
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+
+}
+
+.search-box i {
+
+    margin-right: 10px;
+    color: #666;
+
+}
+
+.search-box input {
+
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 15px;
+
+}
+
+.header-right {
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+}
+
+.icon-btn {
+
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: .3s;
+
+}
+
+.icon-btn:hover {
+
+    background: var(--secondary);
+    color: white;
+
+}
+
+.count {
+
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #ef4444;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+
+}
+
+.header-profile {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 10px 18px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+
+}
+
+.header-avatar {
+
+    font-size: 42px;
+    color: var(--secondary);
+
+}
+
+/*========================
+
+PAGE INTRO
+
+========================*/
+
+.page-intro {
+
+    margin-bottom: 25px;
+
+}
+
+.page-intro h2 {
+
+    font-size: 30px;
+    color: var(--primary);
+    margin-bottom: 8px;
+
+}
+
+.page-intro p {
+
+    color: #666;
+
+}
+
+/*========================
+
+STATUS CARDS
+
+========================*/
+
+.availability-grid {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+
+}
+
+.status-card {
+
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: .3s;
+
+}
+
+.status-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+.status-card i {
+
+    font-size: 42px;
+    color: var(--secondary);
+    margin-bottom: 15px;
+
+}
+
+.status-card h3 {
+
+    margin-bottom: 12px;
+    color: var(--primary);
+
+}
+
+.online-status,
+.auto-status {
+
+    display: inline-block;
+    padding: 8px 18px;
+    background: #D9F8E8;
+    color: #16A34A;
+    border-radius: 25px;
+    font-weight: 600;
+
+}
+
+/*========================
+
+SETTINGS
+
+========================*/
+
+.availability-settings {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+
+}
+
+.setting-card {
+
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.setting-card h3 {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary);
+
+}
+
+.switch {
+
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+
+}
+
+.switch input {
+
+    display: none;
+
+}
+
+.slider {
+
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ccc;
+    border-radius: 34px;
+    transition: .4s;
+
+}
+
+.slider:before {
+
+    content: "";
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: white;
+    border-radius: 50%;
+    transition: .4s;
+
+}
+
+.switch input:checked+.slider {
+
+    background: var(--secondary);
+
+}
+
+.switch input:checked+.slider:before {
+
+    transform: translateX(26px);
+
+}
+
+/*========================================
+
+        WORKING HOURS & SERVICE AREA
+
+========================================*/
+
+.schedule-grid {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 30px;
+
+}
+
+.working-hours,
+.service-area {
+
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+
+}
+
+.working-hours h3,
+.service-area h3 {
+
+    margin-bottom: 25px;
+    color: var(--primary);
+
+}
+
+.time-row {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.time-row label {
+
+    font-weight: 600;
+    color: #555;
+
+}
+
+.time-row input {
+
+    width: 180px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+
+}
+
+.service-area input {
+
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+
+}
+
+.service-area small {
+
+    color: #777;
+
+}
+
+/*========================
+
+WEEKLY SCHEDULE
+
+========================*/
+
+.weekly-schedule {
+
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+
+}
+
+.weekly-schedule h3 {
+
+    margin-bottom: 25px;
+    color: var(--primary);
+
+}
+
+.day-row {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #eee;
+
+}
+
+.day-row:last-child {
+
+    border-bottom: none;
+
+}
+
+.day-row span {
+
+    font-weight: 500;
+
+}
+
+.day-row input {
+
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+
+}
+
+/*========================================
+
+        LEAVE MANAGEMENT
+
+========================================*/
+
+.leave-management,
+.upcoming-leaves {
+
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+
+}
+
+.leave-form {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.form-group {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-group label {
+
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--primary);
+
+}
+
+.form-group input,
+.form-group textarea {
+
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+
+}
+
+.save-section {
+
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.save-btn {
+
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+
+}
+
+.save-btn:hover {
+
+    background: #27AE60;
+    transform: translateY(-3px);
+
+}
+
+.save-btn.large {
+
+    padding: 18px 45px;
+    font-size: 16px;
+
+}
+
+/*========================
+
+TABLE
+
+========================*/
+
+.upcoming-leaves table {
+
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.upcoming-leaves th {
+
+    background: #EEF4FF;
+    padding: 16px;
+    text-align: left;
+    color: var(--primary);
+
+}
+
+.upcoming-leaves td {
+
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+
+}
+
+.approved {
+
+    background: #D9F8E8;
+    color: #16A34A;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+
+}
+
+.pending {
+
+    background: #FFF4D6;
+    color: #E6A700;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+
+}
+
+/*========================
+
+FOOTER
+
+========================*/
+
+.dashboard-footer {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    color: #666;
+
+}
+
+/*========================
+
+RESPONSIVE
+
+========================*/
+
+@media(max-width:1200px) {
+
+    .availability-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .schedule-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .sidebar {
+
+        width: 90px;
+
+    }
+
+    .logo span,
+    .worker-profile h3,
+    .worker-profile p,
+    .verify-badge,
+    .sidebar-menu span,
+    .logout-btn span {
+
+        display: none;
+
+    }
+
+    .main-content {
+
+        margin-left: 90px;
+        width: calc(100% - 90px);
+        padding: 20px;
+
+    }
+
+    header {
+
+        flex-direction: column;
+        align-items: stretch;
+
+    }
+
+    .header-right {
+
+        justify-content: space-between;
+
+    }
+
+    .availability-grid,
+    .availability-settings {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .setting-card {
+
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    .dashboard-footer {
+
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+
+    }
+
+    .header-profile {
+
+        display: none;
+
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .page-intro h2 {
+
+        font-size: 24px;
+
+    }
+
+    .time-row {
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+
+    }
+
+    .time-row input {
+
+        width: 100%;
+
+    }
+
+}
+
+/*========================
+
+ANIMATIONS
+
+========================*/
+
+.status-card,
+.setting-card,
+.working-hours,
+.service-area,
+.weekly-schedule,
+.leave-management,
+.upcoming-leaves {
+
+    transition: .35s;
+
+}
+
+.status-card:hover,
+.setting-card:hover,
+.working-hours:hover,
+.service-area:hover,
+.weekly-schedule:hover,
+.leave-management:hover,
+.upcoming-leaves:hover {
+
+    transform: translateY(-5px);
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+/*========================
+
+TOAST
+
+========================*/
+
+.toast {
+
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--secondary);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: .3s;
+    z-index: 9999;
+
+}
+
+.toast.show {
+
+    opacity: 1;
+    transform: translateY(0);
+
+}
