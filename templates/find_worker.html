@@ -3,7 +3,10 @@
 
 <head>
 
+    <!-- Meta -->
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Find Worker | TrustGrid</title>
@@ -16,14 +19,10 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap -->
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Bootstrap Icons -->
 
     <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- CSS -->
 
@@ -32,19 +31,461 @@
 </head>
 
 <body>
-    <!--====================================
-            HEADER
-=====================================-->
 
-<header class="header">
+<!-- ========================================= -->
+<!-- HEADER -->
+<!-- ========================================= -->
 
-    <div class="container nav-container">
+<header>
 
-        <!-- Logo -->
+    <div class="container">
 
-        <div class="logo">
+    <a href="dashboard.html" class="logo">
 
-            <h2>
+        <i class="bi bi-shield-check"></i>
+
+        <span>TrustGrid</span>
+
+    </a>
+
+
+    <div class="profile">
+
+        <div class="profile-img">
+
+            <i class="bi bi-person-fill"></i>
+
+        </div>
+
+        <div>
+
+            <h4>Sanket</h4>
+
+            <small>Founder</small>
+
+        </div>
+
+    </div>
+
+</div>
+
+</header>
+
+<!-- ========================================= -->
+<!-- BREADCRUMB -->
+<!-- ========================================= -->
+
+<section class="breadcrumb-section">
+
+    <div class="container">
+
+    <div class="breadcrumb">
+
+        <a href="dashboard.html">
+
+            Dashboard
+
+        </a>
+
+        <i class="bi bi-chevron-right"></i>
+
+        <span>
+
+            Find Worker
+
+        </span>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- MAIN -->
+<!-- ========================================= -->
+
+<main>
+
+<section class="find-worker-page">
+
+<div class="container">
+
+    <!-- ================================ -->
+    <!-- HERO -->
+    <!-- ================================ -->
+
+    <section class="hero-card">
+
+        <div class="hero-left">
+
+    <div class="hero-icon">
+
+        <i class="bi bi-search-heart-fill"></i>
+
+    </div>
+
+    <div>
+
+        <h1>
+
+            Find Trusted Professionals
+
+        </h1>
+
+        <p>
+
+            Explore verified electricians, plumbers, painters, cleaners and skilled professionals near your location.
+
+        </p>
+
+    </div>
+
+</div>
+
+<div class="hero-right">
+
+    <div class="hero-stats">
+
+        <h2>
+
+            1,250+
+
+        </h2>
+
+        <span>
+
+            Verified Workers
+
+        </span>
+
+    </div>
+
+</div>
+
+    </section>
+
+    <!-- ================================ -->
+    <!-- SEARCH BAR -->
+    <!-- ================================ -->
+
+    <section class="search-section">
+
+        <div class="search-box">
+
+    <i class="bi bi-search"></i>
+
+    <input
+        type="text"
+        placeholder="Search electricians, plumbers, painters...">
+
+    <button>
+
+        Search
+
+    </button>
+
+</div>
+
+    </section>
+
+    <!-- ================================ -->
+    <!-- FILTERS -->
+    <!-- ================================ -->
+
+    <section class="filter-section">
+
+        <div class="filter-grid">
+
+    <select>
+
+        <option>All Categories</option>
+
+        <option>Electrician</option>
+
+        <option>Plumber</option>
+
+        <option>Painter</option>
+
+        <option>Carpenter</option>
+
+        <option>Cleaner</option>
+
+    </select>
+
+    <select>
+
+        <option>Location</option>
+
+        <option>Nashik</option>
+
+        <option>Pune</option>
+
+        <option>Mumbai</option>
+
+    </select>
+
+    <select>
+
+        <option>Rating</option>
+
+        <option>⭐ 5.0</option>
+
+        <option>⭐ 4.5+</option>
+
+        <option>⭐ 4.0+</option>
+
+    </select>
+
+    <select>
+
+        <option>Price Range</option>
+
+        <option>₹0 - ₹500</option>
+
+        <option>₹500 - ₹1000</option>
+
+        <option>₹1000+</option>
+
+    </select>
+
+    <button class="filter-btn">
+
+        <i class="bi bi-funnel-fill"></i>
+
+        Apply Filters
+
+    </button>
+
+</div>
+
+    </section>
+
+    <!-- ================================ -->
+    <!-- FEATURED WORKERS -->
+    <!-- ================================ -->
+
+    <section class="workers-section">
+
+        <!-- PART 3 -->
+<div class="filter-grid">
+
+    <select>
+
+        <option>All Categories</option>
+
+        <option>Electrician</option>
+
+        <option>Plumber</option>
+
+        <option>Painter</option>
+
+        <option>Carpenter</option>
+
+        <option>Cleaner</option>
+
+    </select>
+
+    <select>
+
+        <option>Location</option>
+
+        <option>Nashik</option>
+
+        <option>Pune</option>
+
+        <option>Mumbai</option>
+
+    </select>
+
+    <select>
+
+        <option>Rating</option>
+
+        <option>⭐ 5.0</option>
+
+        <option>⭐ 4.5+</option>
+
+        <option>⭐ 4.0+</option>
+
+    </select>
+
+    <select>
+
+        <option>Price Range</option>
+
+        <option>₹0 - ₹500</option>
+
+        <option>₹500 - ₹1000</option>
+
+        <option>₹1000+</option>
+
+    </select>
+
+    <button class="filter-btn">
+
+        <i class="bi bi-funnel-fill"></i>
+
+        Apply Filters
+
+    </button>
+
+</div>
+    </section>
+
+    <!-- ================================ -->
+    <!-- POPULAR CATEGORIES -->
+    <!-- ================================ -->
+
+    <section class="categories-section">
+
+        <div class="section-title">
+
+    <i class="bi bi-grid-3x3-gap-fill"></i>
+
+    <h2>Popular Categories</h2>
+
+</div>
+
+<div class="category-grid">
+
+    <div class="category-card">
+
+        <i class="bi bi-lightning-charge-fill"></i>
+
+        <span>Electrician</span>
+
+    </div>
+
+    <div class="category-card">
+
+        <i class="bi bi-droplet-fill"></i>
+
+        <span>Plumber</span>
+
+    </div>
+
+    <div class="category-card">
+
+        <i class="bi bi-hammer"></i>
+
+        <span>Carpenter</span>
+
+    </div>
+
+    <div class="category-card">
+
+        <i class="bi bi-brush-fill"></i>
+
+        <span>Painter</span>
+
+    </div>
+
+    <div class="category-card">
+
+        <i class="bi bi-house-gear-fill"></i>
+
+        <span>Cleaner</span>
+
+    </div>
+
+    <div class="category-card">
+
+        <i class="bi bi-snow"></i>
+
+        <span>AC Repair</span>
+
+    </div>
+
+</div>
+
+    </section>
+
+    <!-- ================================ -->
+    <!-- WHY TRUSTGRID -->
+    <!-- ================================ -->
+
+    <section class="why-section">
+
+        <section class="why-section">
+
+    <div class="section-title">
+
+        <i class="bi bi-shield-check"></i>
+
+        <h2>Why Choose TrustGrid?</h2>
+
+    </div>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+
+            <i class="bi bi-patch-check-fill"></i>
+
+            <h3>Verified Workers</h3>
+
+            <p>Every professional is verified before joining TrustGrid.</p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="bi bi-star-fill"></i>
+
+            <h3>Top Rated</h3>
+
+            <p>Choose workers based on genuine ratings and reviews.</p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="bi bi-lightning-charge-fill"></i>
+
+            <h3>Quick Booking</h3>
+
+            <p>Book trusted professionals in just a few clicks.</p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="bi bi-headset"></i>
+
+            <h3>24×7 Support</h3>
+
+            <p>Our support team is always ready to help you.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </section>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer>
+
+    <div class="container">
+
+    <div class="footer-grid">
+
+        <!-- About -->
+
+        <div class="footer-about">
+
+            <h2 class="footer-logo">
 
                 <i class="bi bi-shield-check"></i>
 
@@ -54,488 +495,75 @@
 
             <p>
 
+                TrustGrid connects customers with verified professionals for secure, reliable and hassle-free home services across India.
 
             </p>
 
         </div>
 
-        <!-- Navigation -->
+        <!-- Quick Links -->
 
-        <nav>
+        <div>
 
-            <a href="#">Dashboard</a>
+            <h3>Quick Links</h3>
 
-            <a href="#" class="active">Find Worker</a>
+            <a href="dashboard.html">Dashboard</a>
 
-            <a href="#">My Bookings</a>
+            <a href="find_worker.html">Find Worker</a>
 
-            <a href="#">Favorites</a>
+            <a href="my_bookings.html">My Bookings</a>
 
-            <a href="#">Profile</a>
-
-        </nav>
-
-    </div>
-
-</header>
-    <!--==============================
-            HERO
-===============================-->
-
-    <section class="hero">
-
-        <div class="container">
-
-            <span class="hero-badge">
-
-                <i class="bi bi-patch-check-fill"></i>
-
-                100% Verified Professionals
-
-            </span>
-
-            <h1>
-
-                Find Trusted Service Professionals
-
-            </h1>
-
-            <p>
-
-                Book verified electricians, plumbers, painters,
-                cleaners and many more trusted experts near you.
-
-            </p>
-
-            <!-- Search -->
-
-            <div class="search-box">
-
-                <input type="text"
-                    placeholder="Search Electrician, Plumber, Carpenter...">
-
-                <button>
-
-                    <i class="bi bi-search"></i>
-
-                    Search
-
-                </button>
-
-            </div>
-
-        </div>
-        <!-- ==========================
-        FILTER SECTION
-========================== -->
-
-<section class="filter-section">
-
-    <div class="container">
-
-        <div class="filter-bar">
-
-            <select>
-                <option>All Categories</option>
-                <option>Electrician</option>
-                <option>Plumber</option>
-                <option>Painter</option>
-                <option>Carpenter</option>
-                <option>Cleaner</option>
-            </select>
-
-            <select>
-                <option>Location</option>
-                <option>Nashik</option>
-                <option>Pune</option>
-                <option>Mumbai</option>
-            </select>
-
-            <select>
-                <option>Rating</option>
-                <option>⭐ 5.0</option>
-                <option>⭐ 4.5+</option>
-                <option>⭐ 4.0+</option>
-            </select>
-
-            <select>
-                <option>Price</option>
-                <option>₹0 - ₹500</option>
-                <option>₹500 - ₹1000</option>
-                <option>₹1000+</option>
-            </select>
-
-            <button class="filter-btn">
-
-                <i class="bi bi-funnel-fill"></i>
-
-                Apply
-
-            </button>
+            <a href="wallet.html">Wallet</a>
 
         </div>
 
-    </div>
+        <!-- Support -->
 
-</section>
+        <div>
 
-    </section>
-    <!--=====================================
-        WORKER SECTION
-======================================-->
+            <h3>Support</h3>
 
-<section class="workers-section">
+            <a href="help_support.html">Help Center</a>
 
-    <div class="container">
+            <a href="#">Privacy Policy</a>
 
-        <div class="section-heading">
+            <a href="#">Terms & Conditions</a>
 
-            <h2>Popular Professionals</h2>
-
-            <p>Choose from our top-rated verified service providers.</p>
+            <a href="settings.html">Settings</a>
 
         </div>
 
-        <div class="worker-grid">
+        <!-- Social -->
 
-            <!-- ================= Card 1 ================= -->
+        <div>
 
-            <div class="worker-card">
+            <h3>Follow Us</h3>
 
-                <span class="verified-badge">
-                    <i class="bi bi-patch-check-fill"></i>
-                    Verified
-                </span>
+            <div class="social-icons">
 
-                <div class="worker-avatar electrician">
+                <a href="#">
 
-                    <i class="bi bi-lightning-charge-fill"></i>
+                    <i class="bi bi-facebook"></i>
 
-                </div>
+                </a>
 
-                <h3>Rahul Sharma</h3>
+                <a href="#">
 
-                <span class="profession">
-                    Electrician
-                </span>
+                    <i class="bi bi-instagram"></i>
 
-                <div class="rating">
+                </a>
 
-                    ⭐ 4.9
+                <a href="#">
 
-                    <small>(248 Reviews)</small>
+                    <i class="bi bi-linkedin"></i>
 
-                </div>
+                </a>
 
-                <div class="worker-details">
+                <a href="#">
 
-                    <span>
-                        <i class="bi bi-geo-alt-fill"></i>
-                        Nashik
-                    </span>
+                    <i class="bi bi-twitter-x"></i>
 
-                    <span>
-                        <i class="bi bi-briefcase-fill"></i>
-                        5 Years
-                    </span>
-
-                </div>
-
-                <div class="trust-box">
-
-                    <span>🏆 Trust Score</span>
-
-                    <strong>98%</strong>
-
-                </div>
-
-                <div class="price">
-
-                    ₹499
-
-                    <small>/ Visit</small>
-
-                </div>
-
-                <div class="card-buttons">
-
-                    <button class="view-btn">
-
-                        View Profile
-
-                    </button>
-
-                    <button class="book-btn">
-
-                        Book Now
-
-                    </button>
-
-                </div>
-
-            </div>
-
-            <!-- ================= Card 2 ================= -->
-
-            <div class="worker-card">
-
-                <span class="verified-badge">
-
-                    <i class="bi bi-patch-check-fill"></i>
-
-                    Verified
-
-                </span>
-
-                <div class="worker-avatar plumber">
-
-                    <i class="bi bi-wrench-adjustable"></i>
-
-                </div>
-
-                <h3>Amit Patil</h3>
-
-                <span class="profession">
-
-                    Plumber
-
-                </span>
-
-                <div class="rating">
-
-                    ⭐ 4.8
-
-                    <small>(189 Reviews)</small>
-
-                </div>
-
-                <div class="worker-details">
-
-                    <span>
-
-                        <i class="bi bi-geo-alt-fill"></i>
-
-                        Pune
-
-                    </span>
-
-                    <span>
-
-                        <i class="bi bi-briefcase-fill"></i>
-
-                        7 Years
-
-                    </span>
-
-                </div>
-
-                <div class="trust-box">
-
-                    <span>🏆 Trust Score</span>
-
-                    <strong>96%</strong>
-
-                </div>
-
-                <div class="price">
-
-                    ₹399
-
-                    <small>/ Visit</small>
-
-                </div>
-
-                <div class="card-buttons">
-
-                    <button class="view-btn">
-
-                        View Profile
-
-                    </button>
-
-                    <button class="book-btn">
-
-                        Book Now
-
-                    </button>
-
-                </div>
-
-            </div>
-
-            <!-- ================= Card 3 ================= -->
-
-            <div class="worker-card">
-
-                <span class="verified-badge">
-
-                    <i class="bi bi-patch-check-fill"></i>
-
-                    Verified
-
-                </span>
-
-                <div class="worker-avatar painter">
-
-                    <i class="bi bi-palette-fill"></i>
-
-                </div>
-
-                <h3>Priya Deshmukh</h3>
-
-                <span class="profession">
-
-                    Painter
-
-                </span>
-
-                <div class="rating">
-
-                    ⭐ 5.0
-
-                    <small>(321 Reviews)</small>
-
-                </div>
-
-                <div class="worker-details">
-
-                    <span>
-
-                        <i class="bi bi-geo-alt-fill"></i>
-
-                        Mumbai
-
-                    </span>
-
-                    <span>
-
-                        <i class="bi bi-briefcase-fill"></i>
-
-                        6 Years
-
-                    </span>
-
-                </div>
-
-                <div class="trust-box">
-
-                    <span>🏆 Trust Score</span>
-
-                    <strong>99%</strong>
-
-                </div>
-
-                <div class="price">
-
-                    ₹699
-
-                    <small>/ Visit</small>
-
-                </div>
-
-                <div class="card-buttons">
-
-                    <button class="view-btn">
-
-                        View Profile
-
-                    </button>
-
-                    <button class="book-btn">
-
-                        Book Now
-
-                    </button>
-
-                </div>
-
-            </div>
-
-            <!-- ================= Card 4 ================= -->
-
-            <div class="worker-card">
-
-                <span class="verified-badge">
-
-                    <i class="bi bi-patch-check-fill"></i>
-
-                    Verified
-
-                </span>
-
-                <div class="worker-avatar cleaner">
-
-                    <i class="bi bi-stars"></i>
-
-                </div>
-
-                <h3>Sneha More</h3>
-
-                <span class="profession">
-
-                    Home Cleaner
-
-                </span>
-
-                <div class="rating">
-
-                    ⭐ 4.7
-
-                    <small>(205 Reviews)</small>
-
-                </div>
-
-                <div class="worker-details">
-
-                    <span>
-
-                        <i class="bi bi-geo-alt-fill"></i>
-
-                        Nashik
-
-                    </span>
-
-                    <span>
-
-                        <i class="bi bi-briefcase-fill"></i>
-
-                        4 Years
-
-                    </span>
-
-                </div>
-
-                <div class="trust-box">
-
-                    <span>🏆 Trust Score</span>
-
-                    <strong>95%</strong>
-
-                </div>
-
-                <div class="price">
-
-                    ₹299
-
-                    <small>/ Visit</small>
-
-                </div>
-
-                <div class="card-buttons">
-
-                    <button class="view-btn">
-
-                        View Profile
-
-                    </button>
-
-                    <button class="book-btn">
-
-                        Book Now
-
-                    </button>
-
-                </div>
+                </a>
 
             </div>
 
@@ -543,100 +571,21 @@
 
     </div>
 
-</section>
-<footer class="footer">
+    <hr>
 
-    <div class="container">
+    <p class="copyright">
 
-        <div class="row">
+        © 2026 TrustGrid. All Rights Reserved.
 
-            <!-- About -->
-            <div class="col-md-4">
+    </p>
 
-                <h3 class="logo">
-                    <i class="bi bi-shield-check-fill"></i> 🛡️ TrustGrid
-                </h3>
-
-                <p class="tagline">
-                    Trust. Verify. Book.
-                </p>
-
-                <p>
-                    TrustGrid helps customers find verified and trusted
-                    service professionals quickly, safely and securely.
-                </p>
-
-            </div>
-
-            <!-- Quick Links -->
-            <div class="col-md-2">
-
-                <h5>Quick Links</h5>
-
-                <ul class="list-unstyled">
-
-                    <li><a href="#">Dashboard</a></li>
-
-                    <li><a href="#">Find Worker</a></li>
-
-                    <li><a href="#">My Bookings</a></li>
-
-                    <li><a href="#">Favorites</a></li>
-
-                    <li><a href="#">Profile</a></li>
-
-                </ul>
-
-            </div>
-
-            <!-- Services -->
-            <div class="col-md-3">
-
-                <h5>Services</h5>
-
-                <ul class="list-unstyled">
-
-                    <li>Electrician</li>
-
-                    <li>Plumber</li>
-
-                    <li>Painter</li>
-
-                    <li>Home Cleaner</li>
-
-                </ul>
-
-            </div>
-
-            <!-- Contact -->
-            <div class="col-md-3">
-
-                <h5>Contact</h5>
-
-                <p><i class="bi bi-envelope-fill"></i> support@trustgrid.com</p>
-
-                <p><i class="bi bi-telephone-fill"></i> +91 9146227184</p>
-
-                <p><i class="bi bi-geo-alt-fill"></i> Nashik, Maharashtra</p>
-
-            </div>
-
-        </div>
-
-        <hr>
-
-        <div class="text-center">
-
-            © 2026 TrustGrid. All Rights Reserved.
-            <br>
-            <span>Trust. Verify. Book.</span>
-
-        </div>
-
-    </div>
+</div>
 
 </footer>
 
+<!-- JS -->
+
+<script src="../static/js/find_worker.js"></script>
 
 </body>
 
