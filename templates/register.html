@@ -1,222 +1,589 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
+    <!-- Meta -->
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TrustGrid | Register</title>
+    <title>Register | TrustGrid</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font -->
 
-    <!-- Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- CSS -->
+
     <link rel="stylesheet" href="../static/css/register.css">
 
 </head>
 
 <body>
 
-<div class="container-fluid">
+<!-- ========================================= -->
+<!-- MAIN REGISTER -->
+<!-- ========================================= -->
 
-<div class="row min-vh-100">
+<section class="register-page">
 
-<!-- ================= LEFT PANEL ================= -->
+<div class="container">
 
-<div class="col-lg-5 left-panel">
+    <!-- ================================ -->
+    <!-- LEFT PANEL -->
+    <!-- ================================ -->
 
-<div class="logo">
+    <div class="left-panel">
 
-<h1>Trust<span>Grid</span></h1>
+        <div class="logo-area">
 
-<p>🛡️ TrustGrid Trust. Verify. Book.</p>
+    <div class="logo">
 
-</div>
+        <i class="bi bi-shield-check"></i>
 
-<div class="role-box">
+        <span>TrustGrid</span>
 
-<button class="role-btn active">
+    </div>
 
-<i class="fa-solid fa-user"></i>
+    <h1>
 
-Customer
+        Create Your TrustGrid Account
 
-</button>
+    </h1>
 
-<button class="role-btn">
+    <p>
 
-<i class="fa-solid fa-user-gear"></i>
+        Join thousands of customers and verified professionals. Book trusted home services with confidence.
 
-Worker
-
-</button>
-
-</div>
-
-<div class="features">
-
-<div class="feature-card">
-
-<i class="fa-solid fa-shield-halved"></i>
-
-<div>
-
-<h5>Verified Workers</h5>
-
-<p>Every professional is verified.</p>
+    </p>
 
 </div>
 
-</div>
+<div class="role-selection">
 
-<div class="feature-card">
+    <button class="role-btn active">
 
-<i class="fa-solid fa-star"></i>
+        <i class="bi bi-person-fill"></i>
 
-<div>
+        Customer
 
-<h5>AI Trust Score</h5>
+    </button>
 
-<p>Choose trusted professionals.</p>
+    <button class="role-btn">
 
-</div>
+        <i class="bi bi-person-workspace"></i>
 
-</div>
+        Worker
 
-<div class="feature-card">
-
-<i class="fa-solid fa-credit-card"></i>
-
-<div>
-
-<h5>Secure Payments</h5>
-
-<p>100% safe online transactions.</p>
+    </button>
 
 </div>
 
-</div>
+<div class="feature-list">
 
-<div class="feature-card">
+    <div class="feature-item">
 
-<i class="fa-solid fa-bolt"></i>
+        <i class="bi bi-patch-check-fill"></i>
 
-<div>
+        <div>
 
-<h5>Instant Booking</h5>
+            <h3>Verified Workers</h3>
 
-<p>Book services within minutes.</p>
+            <p>Every professional is verified before joining TrustGrid.</p>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
-</div>
+    <div class="feature-item">
 
-</div>
+        <i class="bi bi-stars"></i>
 
-<!-- ================= RIGHT PANEL ================= -->
+        <div>
 
-<div class="col-lg-7 right-panel">
+            <h3>AI Trust Score</h3>
 
-<div class="register-card">
+            <p>Choose workers using our intelligent trust rating system.</p>
 
-<h1>Create Account 🚀</h1>
+        </div>
 
-<p>Join TrustGrid and start booking trusted services.</p>
+    </div>
 
-<form>
+    <div class="feature-item">
 
-<div class="mb-3">
+        <i class="bi bi-credit-card-2-front-fill"></i>
 
-<label>Full Name</label>
+        <div>
 
-<input type="text"
-class="form-control"
-placeholder="Enter your full name">
+            <h3>Secure Payments</h3>
 
-</div>
+            <p>Fast and protected online payment experience.</p>
 
-<div class="mb-3">
+        </div>
 
-<label>Email</label>
+    </div>
 
-<input type="email"
-class="form-control"
-placeholder="Enter your email">
+    <div class="feature-item">
 
-</div>
+        <i class="bi bi-lightning-charge-fill"></i>
 
-<div class="mb-3">
+        <div>
 
-<label>Mobile Number</label>
+            <h3>Instant Booking</h3>
 
-<input type="tel"
-class="form-control"
-placeholder="Enter mobile number">
+            <p>Book trusted professionals within minutes.</p>
+
+        </div>
+
+    </div>
 
 </div>
 
-<div class="mb-3">
+    </div>
 
-<label>Password</label>
+    <!-- ================================ -->
+    <!-- RIGHT PANEL -->
+    <!-- ================================ -->
 
-<div class="password-box">
+    <div class="right-panel">
 
-<input type="password"
-class="form-control"
-placeholder="Create password">
+        <div class="register-card">
 
-<i class="fa-solid fa-eye"></i>
+    <div class="form-header">
+
+        <h1>Create Account 🚀</h1>
+
+        <p>
+
+            Register now and start booking trusted professionals.
+
+        </p>
+
+    </div>
+
+    <form>
+
+        <div class="input-group">
+
+            <label>Full Name</label>
+
+            <div class="input-box">
+
+                <i class="bi bi-person-fill"></i>
+
+                <input type="text" placeholder="Enter your full name">
+
+            </div>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Email Address</label>
+
+            <div class="input-box">
+
+                <i class="bi bi-envelope-fill"></i>
+
+                <input type="email" placeholder="Enter your email">
+
+            </div>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Mobile Number</label>
+
+            <div class="input-box">
+
+                <i class="bi bi-telephone-fill"></i>
+
+                <input type="tel" placeholder="Enter mobile number">
+
+            </div>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Password</label>
+
+            <div class="input-box">
+
+                <i class="bi bi-lock-fill"></i>
+
+                <input type="password" placeholder="Create password">
+
+                <i class="bi bi-eye-fill toggle-password"></i>
+
+            </div>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Confirm Password</label>
+
+            <div class="input-box">
+
+                <i class="bi bi-shield-lock-fill"></i>
+
+                <input type="password" placeholder="Confirm password">
+
+                <i class="bi bi-eye-fill toggle-password"></i>
+
+            </div>
+
+        </div>
+
+        <div class="terms">
+
+            <input type="checkbox">
+
+            <span>
+
+                I agree to the
+
+                <a href="#">Terms & Conditions</a>
+
+                and
+
+                <a href="#">Privacy Policy</a>
+
+            </span>
+
+        </div>
+
+        <button class="register-btn">
+
+            <i class="bi bi-person-plus-fill"></i>
+
+            Create Account
+
+        </button>
+
+        <div class="divider">
+
+            <span>OR</span>
+
+        </div>
+
+        <button type="button" class="google-btn">
+
+            <i class="bi bi-google"></i>
+
+            Continue with Google
+
+        </button>
+
+        <div class="login-link">
+
+            Already have an account?
+
+            <a href="login.html">
+
+                Login
+
+            </a>
+
+        </div>
+
+    </form>
 
 </div>
 
-</div>
-
-<div class="mb-3">
-
-<label>Confirm Password</label>
-
-<div class="password-box">
-
-<input type="password"
-class="form-control"
-placeholder="Confirm password">
-
-<i class="fa-solid fa-eye"></i>
+    </div>
 
 </div>
 
+</section>
+
+<!-- ========================================= -->
+<!-- FEATURES -->
+<!-- ========================================= -->
+
+<section class="feature-section">
+
+   <div class="container">
+
+    <div class="section-title">
+
+        <i class="bi bi-stars"></i>
+
+        <h2>Why People Love TrustGrid</h2>
+
+    </div>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="bi bi-patch-check-fill"></i>
+
+            <h3>Verified Professionals</h3>
+
+            <p>
+
+                Every worker is verified before joining the platform.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="bi bi-lightning-charge-fill"></i>
+
+            <h3>Instant Booking</h3>
+
+            <p>
+
+                Find and book professionals within a few clicks.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="bi bi-star-fill"></i>
+
+            <h3>Top Rated Services</h3>
+
+            <p>
+
+                Choose workers based on genuine customer reviews.
+
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="bi bi-credit-card-fill"></i>
+
+            <h3>Secure Payments</h3>
+
+            <p>
+
+                Fast, safe and encrypted payment experience.
+
+            </p>
+
+        </div>
+
+    </div>
+
 </div>
 
-<button class="register-btn">
+</section>
 
-Create Account
+<!-- ========================================= -->
+<!-- WHY TRUSTGRID -->
+<!-- ========================================= -->
 
-</button>
+<section class="why-section">
 
-<div class="login-link">
+    <div class="container">
 
-Already have an account?
+    <div class="section-title">
 
-<a href="login.html">Login</a>
+        <i class="bi bi-shield-check"></i>
+
+        <h2>Why Choose TrustGrid?</h2>
+
+    </div>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+
+            <i class="bi bi-person-check-fill"></i>
+
+            <h3>Trusted Professionals</h3>
+
+            <p>
+
+                Every worker goes through identity verification and skill validation before joining TrustGrid.
+
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="bi bi-star-fill"></i>
+
+            <h3>Transparent Reviews</h3>
+
+            <p>
+
+                Real customer ratings and reviews help you choose the right professional every time.
+
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="bi bi-shield-lock-fill"></i>
+
+            <h3>Secure Platform</h3>
+
+            <p>
+
+                Your personal information and payments remain safe with advanced security protection.
+
+            </p>
+
+        </div>
+
+        <div class="why-card">
+
+            <i class="bi bi-headset"></i>
+
+            <h3>24×7 Support</h3>
+
+            <p>
+
+                Our support team is available anytime to help with bookings and service-related issues.
+
+            </p>
+
+        </div>
+
+    </div>
 
 </div>
 
-</form>
+</section>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer>
+
+    <div class="container">
+
+    <div class="footer-grid">
+
+        <!-- About -->
+
+        <div class="footer-about">
+
+            <h2 class="footer-logo">
+
+                <i class="bi bi-shield-check"></i>
+
+                TrustGrid
+
+            </h2>
+
+            <p>
+
+                TrustGrid connects customers with trusted and verified professionals for secure, reliable and hassle-free home services across India.
+
+            </p>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="login.html">Login</a>
+
+            <a href="register.html">Register</a>
+
+            <a href="dashboard.html">Dashboard</a>
+
+        </div>
+
+        <!-- Support -->
+
+        <div>
+
+            <h3>Support</h3>
+
+            <a href="help_support.html">Help Center</a>
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms & Conditions</a>
+
+            <a href="settings.html">Settings</a>
+
+        </div>
+
+        <!-- Follow Us -->
+
+        <div>
+
+            <h3>Follow Us</h3>
+
+            <div class="social-icons">
+
+                <a href="#">
+
+                    <i class="bi bi-facebook"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="bi bi-instagram"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="bi bi-linkedin"></i>
+
+                </a>
+
+                <a href="#">
+
+                    <i class="bi bi-twitter-x"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+
+        © 2026 TrustGrid. All Rights Reserved.
+
+    </p>
 
 </div>
 
-</div>
+</footer>
 
-</div>
-
-</div>
+<!-- JavaScript -->
 
 <script src="../static/js/register.js"></script>
 
