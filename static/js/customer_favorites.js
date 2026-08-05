@@ -1,119 +1,76 @@
-/*==================================================
+/* ==========================================
+   TRUSTGRID
+   CUSTOMER FAVORITES
+   JAVASCRIPT
+========================================== */
 
-            TRUSTGRID FAVORITES
+/* ==========================================
+   ACTIVE NAVIGATION
+========================================== */
 
-==================================================*/
+const currentPage = window.location.pathname.split("/").pop();
 
-/*=========================================
-        NAVIGATION HOVER
-=========================================*/
+document.querySelectorAll(".navbar a").forEach(link => {
 
-const navLinks = document.querySelectorAll(".nav-links a");
+    if (link.getAttribute("href") === currentPage) {
 
-navLinks.forEach(link => {
+        link.classList.add("active");
 
-    link.addEventListener("mouseenter", () => {
-
-        link.style.transform = "translateY(-3px)";
-
-    });
-
-    link.addEventListener("mouseleave", () => {
-
-        link.style.transform = "translateY(0px)";
-
-    });
+    }
 
 });
 
-/*=========================================
-        SEARCH WORKER
-=========================================*/
+/* ==========================================
+   HEADER SHADOW
+========================================== */
 
-const searchInput = document.querySelector(".search-box input");
+window.addEventListener("scroll", () => {
 
-const cards = document.querySelectorAll(".favorite-card");
+    const header = document.querySelector(".header");
 
-if (searchInput) {
+    if (window.scrollY > 40) {
 
-    searchInput.addEventListener("keyup", () => {
+        header.style.boxShadow = "0 15px 35px rgba(0,0,0,.12)";
 
-        const value = searchInput.value.toLowerCase();
+    }
 
-        cards.forEach(card => {
+    else {
 
-            if (card.innerText.toLowerCase().includes(value)) {
+        header.style.boxShadow = "0 5px 20px rgba(0,0,0,.08)";
 
-                card.style.display = "block";
-
-            } else {
-
-                card.style.display = "none";
-
-            }
-
-        });
-
-    });
-
-}
-
-/*=========================================
-        FILTER BUTTON
-=========================================*/
-
-const filterButtons = document.querySelectorAll(".filter-buttons button");
-
-filterButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        filterButtons.forEach(btn => btn.classList.remove("active"));
-
-        button.classList.add("active");
-
-    });
+    }
 
 });
-/*==================================================
 
-                PART 2
+/* ==========================================
+   REMOVE FAVORITE
+========================================== */
 
-==================================================*/
+document.querySelectorAll(".remove-btn").forEach(button => {
 
-/*=========================================
-        FAVORITE TOGGLE
-=========================================*/
+    button.addEventListener("click", function () {
 
-const favoriteButtons = document.querySelectorAll(".favorite-btn");
+        const card = this.closest(".favorite-card");
 
-favoriteButtons.forEach(button => {
+        const confirmRemove = confirm(
 
-    button.addEventListener("click", () => {
+            "Remove this worker from Favorites?"
 
-        button.classList.toggle("active");
+        );
 
-        const icon = button.querySelector("i");
+        if (confirmRemove) {
 
-        if (button.classList.contains("active")) {
+            card.style.opacity = "0";
 
-            icon.className = "bi bi-heart-fill";
+            card.style.transform = "translateX(100px)";
 
-            button.style.background = "#FF4D6D";
+            card.style.transition = ".5s";
 
-            button.style.color = "white";
+            setTimeout(() => {
 
-            showToast("Added to Favorites ❤️");
+                card.remove();
 
-        } else {
-
-            icon.className = "bi bi-heart";
-
-            button.style.background = "#FFE8EC";
-
-            button.style.color = "#FF4D6D";
-
-            showToast("Removed from Favorites");
+            }, 500);
 
         }
 
@@ -121,128 +78,37 @@ favoriteButtons.forEach(button => {
 
 });
 
-/*=========================================
-        VIEW PROFILE
-=========================================*/
+/* ==========================================
+   VIEW PROFILE
+========================================== */
 
 document.querySelectorAll(".view-btn").forEach(button => {
 
     button.addEventListener("click", () => {
 
-        window.location.href = "worker_profile.html";
+        console.log("Opening Worker Profile...");
 
     });
 
 });
 
-/*=========================================
-        BOOK NOW
-=========================================*/
+/* ==========================================
+   BOOK SERVICE
+========================================== */
 
 document.querySelectorAll(".book-btn").forEach(button => {
 
     button.addEventListener("click", () => {
 
-        window.location.href = "book_service.html";
-
-    });
-
-});
-/*==================================================
-
-                PART 3
-
-==================================================*/
-
-/*=========================================
-        PAGE LOAD
-=========================================*/
-
-window.addEventListener("load", () => {
-
-    document.querySelectorAll(
-
-        ".hero-card,.search-filter-card,.favorite-card"
-
-    ).forEach((card, index) => {
-
-        card.style.opacity = "0";
-
-        card.style.transform = "translateY(30px)";
-
-        setTimeout(() => {
-
-            card.style.transition = ".6s";
-
-            card.style.opacity = "1";
-
-            card.style.transform = "translateY(0px)";
-
-        }, index * 120);
+        console.log("Redirecting to Booking Page...");
 
     });
 
 });
 
-/*=========================================
-        TOAST
-=========================================*/
-
-function showToast(message) {
-
-    const toast = document.createElement("div");
-
-    toast.innerText = message;
-
-    toast.style.position = "fixed";
-
-    toast.style.right = "25px";
-
-    toast.style.bottom = "25px";
-
-    toast.style.background = "#2ECC71";
-
-    toast.style.color = "#fff";
-
-    toast.style.padding = "15px 20px";
-
-    toast.style.borderRadius = "10px";
-
-    toast.style.fontWeight = "600";
-
-    toast.style.boxShadow = "0 10px 30px rgba(0,0,0,.2)";
-
-    toast.style.zIndex = "9999";
-
-    toast.style.opacity = "0";
-
-    toast.style.transition = ".3s";
-
-    document.body.appendChild(toast);
-
-    setTimeout(() => {
-
-        toast.style.opacity = "1";
-
-    }, 100);
-
-    setTimeout(() => {
-
-        toast.style.opacity = "0";
-
-        setTimeout(() => {
-
-            toast.remove();
-
-        }, 300);
-
-    }, 2200);
-
-}
-
-/*=========================================
-        RIPPLE EFFECT
-=========================================*/
+/* ==========================================
+   RIPPLE EFFECT
+========================================== */
 
 document.querySelectorAll("button").forEach(button => {
 
@@ -250,33 +116,23 @@ document.querySelectorAll("button").forEach(button => {
 
         const ripple = document.createElement("span");
 
-        const rect = this.getBoundingClientRect();
+        const size = Math.max(
 
-        const size = Math.max(rect.width, rect.height);
+            this.clientWidth,
+
+            this.clientHeight
+
+        );
+
+        ripple.classList.add("ripple");
 
         ripple.style.width = size + "px";
 
         ripple.style.height = size + "px";
 
-        ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+        ripple.style.left = e.offsetX - size / 2 + "px";
 
-        ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
-
-        ripple.style.position = "absolute";
-
-        ripple.style.background = "rgba(255,255,255,.35)";
-
-        ripple.style.borderRadius = "50%";
-
-        ripple.style.pointerEvents = "none";
-
-        ripple.style.transform = "scale(0)";
-
-        ripple.style.animation = "ripple .6s linear";
-
-        this.style.position = "relative";
-
-        this.style.overflow = "hidden";
+        ripple.style.top = e.offsetY - size / 2 + "px";
 
         this.appendChild(ripple);
 
@@ -290,26 +146,60 @@ document.querySelectorAll("button").forEach(button => {
 
 });
 
-/*=========================================
-        LOGO SCROLL
-=========================================*/
+/* ==========================================
+   SCROLL REVEAL
+========================================== */
 
-const logo = document.querySelector(".logo");
+const cards = document.querySelectorAll(
 
-if (logo) {
+    ".favorite-card,.empty-favorites"
 
-    logo.addEventListener("click", (e) => {
+);
 
-        e.preventDefault();
+const observer = new IntersectionObserver(entries => {
 
-        window.scrollTo({
+    entries.forEach(entry => {
 
-            top: 0,
+        if (entry.isIntersecting) {
 
-            behavior: "smooth"
+            entry.target.style.opacity = "1";
 
-        });
+            entry.target.style.transform = "translateY(0)";
+
+        }
 
     });
 
-}
+});
+
+cards.forEach(card => {
+
+    card.style.opacity = "0";
+
+    card.style.transform = "translateY(35px)";
+
+    card.style.transition = ".6s ease";
+
+    observer.observe(card);
+
+});
+
+/* ==========================================
+   PAGE LOAD
+========================================== */
+
+window.addEventListener("load", () => {
+
+    document.body.style.opacity = "1";
+
+    console.log(
+
+        "Customer Favorites Loaded Successfully"
+
+    );
+
+});
+
+/* ==========================================
+   END
+========================================== */
