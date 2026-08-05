@@ -5,209 +5,144 @@
 <head>
 
     <!-- ========================================= -->
-
     <!-- META INFORMATION -->
-
     <!-- ========================================= -->
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="TrustGrid Worker Profile">
 
     <title>TrustGrid | Worker Profile</title>
 
     <!-- ========================================= -->
-
-    <!-- GOOGLE FONTS -->
-
+    <!-- GOOGLE FONT -->
     <!-- ========================================= -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
     <!-- ========================================= -->
-
     <!-- BOOTSTRAP ICONS -->
-
     <!-- ========================================= -->
 
     <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- ========================================= -->
-
-    <!-- CSS FILE -->
-
+    <!-- CSS -->
     <!-- ========================================= -->
 
     <link rel="stylesheet"
-    href="../static/css/customer_worker_profile.css">
+          href="../static/css/customer_worker_profile.css">
 
 </head>
 
 <body>
 
-    <!-- ========================================= -->
+<!-- ========================================= -->
+<!-- HEADER -->
+<!-- ========================================= -->
 
-    <!-- HEADER -->
+<header class="header">
 
-    <!-- ========================================= -->
+    <div class="container">
 
-    <header class="header">
-
-        <div class="logo">
+        <a href="customer_dashboard.html"
+           class="logo">
 
             <i class="bi bi-shield-check"></i>
 
             <span>TrustGrid</span>
 
-        </div>
+        </a>
 
         <nav class="navbar">
 
-            <a href="dashboard.html">Dashboard</a>
+            <a href="customer_dashboard.html">
 
-            <a href="find_worker.html" class="active">
+                Dashboard
+
+            </a>
+
+            <a href="customer_find_worker.html">
 
                 Find Worker
 
             </a>
 
-            <a href="my_bookings.html">
+            <a href="customer_my_bookings.html">
 
                 My Bookings
 
             </a>
 
-            <a href="messages.html">
+            <a href="customer_help_support.html">
 
-                Messages
+                Help
 
             </a>
 
         </nav>
 
-        <div class="header-right">
+        <div class="header-actions">
 
-            <div class="search-box">
-
-                <i class="bi bi-search"></i>
-
-                <input
-                type="text"
-                placeholder="Search workers...">
-
-            </div>
-
-            <button class="icon-btn">
-
-                <i class="bi bi-chat-dots-fill"></i>
-
-            </button>
-
-            <button class="icon-btn">
+            <a href="customer_notifications.html">
 
                 <i class="bi bi-bell-fill"></i>
 
-            </button>
+            </a>
 
-            <div class="customer-profile">
+            <a href="customer_messages.html">
 
-                <i class="bi bi-person-circle"></i>
+                <i class="bi bi-chat-dots-fill"></i>
 
-                <span>
+            </a>
 
-                    Sanket
+            <a href="customer_settings.html">
 
-                </span>
+                <i class="bi bi-gear-fill"></i>
 
-            </div>
+            </a>
 
         </div>
 
-    </header>
+    </div>
 
-    <!-- ========================================= -->
+</header>
 
-    <!-- MAIN CONTENT -->
+<!-- ========================================= -->
+<!-- HERO PROFILE -->
+<!-- ========================================= -->
 
-    <!-- ========================================= -->
+<section class="profile-hero">
 
-    <main class="container">
-                <!-- ========================================= -->
+    <div class="container">
 
-        <!-- BREADCRUMB -->
+        <div class="profile-card">
 
-        <!-- ========================================= -->
+            <div class="profile-image">
 
-        <section class="breadcrumb-section">
-
-            <button
-            class="back-btn"
-            onclick="history.back()">
-
-                <i class="bi bi-arrow-left"></i>
-
-                Back
-
-            </button>
-
-            <div class="breadcrumb">
-
-                <a href="dashboard.html">
-
-                    Dashboard
-
-                </a>
-
-                <i class="bi bi-chevron-right"></i>
-
-                <a href="find_worker.html">
-
-                    Find Worker
-
-                </a>
-
-                <i class="bi bi-chevron-right"></i>
-
-                <span>
-
-                    Worker Profile
-
-                </span>
+                <i class="bi bi-person-circle"></i>
 
             </div>
 
-        </section>
+            <div class="profile-info">
 
-        <!-- ========================================= -->
-
-        <!-- WORKER HERO SECTION -->
-
-        <!-- ========================================= -->
-
-        <section class="worker-hero">
-
-            <div class="worker-left">
-
-                <div class="worker-image">
-
-                    <i class="bi bi-person-circle"></i>
-
-                </div>
-
-                <div class="worker-info">
-
-                    <span class="verified-badge">
-
-                        <i class="bi bi-patch-check-fill"></i>
-
-                        Verified Professional
-
-                    </span>
+                <div class="verified">
 
                     <h1>
 
@@ -215,25 +150,53 @@
 
                     </h1>
 
-                    <p>
+                    <span>
 
-                        Senior Electrician • 5+ Years Experience
+                        <i class="bi bi-patch-check-fill"></i>
 
-                    </p>
+                        Verified Professional
 
-                    <div class="rating">
+                    </span>
 
-                        <i class="bi bi-star-fill"></i>
+                </div>
 
-                        <span>
+                <h3>
 
-                            4.9 (248 Reviews)
+                    Senior Electrician
 
-                        </span>
+                </h3>
+
+                <div class="rating">
+
+                    ⭐ 4.9
+
+                    <span>
+
+                        (248 Reviews)
+
+                    </span>
+
+                </div>
+
+                <div class="profile-details">
+
+                    <div>
+
+                        <i class="bi bi-briefcase-fill"></i>
+
+                        8+ Years Experience
 
                     </div>
 
-                    <div class="location">
+                    <div>
+
+                        <i class="bi bi-check-circle-fill"></i>
+
+                        850+ Jobs Completed
+
+                    </div>
+
+                    <div>
 
                         <i class="bi bi-geo-alt-fill"></i>
 
@@ -241,54 +204,164 @@
 
                     </div>
 
+                    <div>
+
+                        <i class="bi bi-clock-fill"></i>
+
+                        Available Today
+
+                    </div>
+
+                </div>
+
+                <div class="action-buttons">
+
+                    <button class="favorite-btn">
+
+                        <i class="bi bi-heart"></i>
+
+                        Favorite
+
+                    </button>
+
+                    <button class="message-btn">
+
+                        <i class="bi bi-chat-dots-fill"></i>
+
+                        Message
+
+                    </button>
+
+                    <a href="customer_book_service.html"
+                       class="book-btn">
+
+                        Book Service
+
+                    </a>
+
                 </div>
 
             </div>
 
-            <div class="worker-right">
+        </div>
 
-                <div class="availability-card">
+    </div>
 
-                    <h3>
+</section>
 
-                        Available Today
+<!-- ========================================= -->
+<!-- MAIN -->
+<!-- ========================================= -->
 
-                    </h3>
+<main>
 
-                    <p>
+<section class="worker-profile">
 
-                        09:00 AM - 08:00 PM
+<div class="container">
+    <!-- ========================================= -->
+<!-- ABOUT WORKER -->
+<!-- ========================================= -->
 
-                    </p>
+<div class="profile-section">
 
-                    <span class="online-status">
+    <div class="section-card">
 
-                        <i class="bi bi-circle-fill"></i>
+        <h2>
 
-                        Online
+            About Worker
 
-                    </span>
+        </h2>
 
-                    <div class="action-buttons">
+        <p>
 
-                        <a
-                        href="book_service.html"
-                        class="book-btn">
+            Rahul Sharma is a highly skilled and certified electrician with
+            more than 8 years of professional experience. He specializes in
+            residential, commercial and industrial electrical work. Known for
+            timely service, quality workmanship and customer satisfaction.
 
-                            <i class="bi bi-calendar-check"></i>
+        </p>
 
-                            Book Now
+        <div class="about-grid">
 
-                        </a>
+            <div>
 
-                        <button
-                        class="message-btn">
+                <i class="bi bi-telephone-fill"></i>
 
-                            <i class="bi bi-chat-dots"></i>
+                <span>
 
-                            Message
+                    +91 98765 43210
 
-                        </button>
+                </span>
+
+            </div>
+
+            <div>
+
+                <i class="bi bi-envelope-fill"></i>
+
+                <span>
+
+                    rahul@trustgrid.in
+
+                </span>
+
+            </div>
+
+            <div>
+
+                <i class="bi bi-translate"></i>
+
+                <span>
+
+                    Marathi, Hindi, English
+
+                </span>
+
+            </div>
+
+            <div>
+
+                <i class="bi bi-clock-history"></i>
+
+                <span>
+
+                    09:00 AM - 08:00 PM
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- SKILLS -->
+<!-- ========================================= -->
+
+<div class="profile-section">
+
+    <div class="section-card">
+
+        <h2>
+
+            Professional Skills
+
+        </h2>
+
+        <div class="skills">
+
+            <div class="skill">
+
+                <span>Electrical Wiring</span>
+
+                <div class="progress">
+
+                    <div class="progress-bar width-95">
+
+                        95%
 
                     </div>
 
@@ -296,336 +369,340 @@
 
             </div>
 
-        </section>
-                <!-- ========================================= -->
+            <div class="skill">
 
-        <!-- ABOUT WORKER -->
+                <span>House Wiring</span>
 
-        <!-- ========================================= -->
+                <div class="progress">
 
-        <section class="profile-grid">
+                    <div class="progress-bar width-90">
 
-            <div class="profile-card">
+                        90%
 
-                <h2>
+                    </div>
 
-                    About Worker
+                </div>
 
-                </h2>
+            </div>
+
+            <div class="skill">
+
+                <span>Fan Installation</span>
+
+                <div class="progress">
+
+                    <div class="progress-bar width-92">
+
+                        92%
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <span>MCB & Distribution Board</span>
+
+                <div class="progress">
+
+                    <div class="progress-bar width-88">
+
+                        88%
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <span>Inverter Installation</span>
+
+                <div class="progress">
+
+                    <div class="progress-bar width-85">
+
+                        85%
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- STATISTICS -->
+<!-- ========================================= -->
+
+<div class="stats-grid">
+
+    <div class="stat-card">
+
+        <i class="bi bi-star-fill"></i>
+
+        <h3>
+
+            4.9
+
+        </h3>
+
+        <p>
+
+            Average Rating
+
+        </p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="bi bi-briefcase-fill"></i>
+
+        <h3>
+
+            850+
+
+        </h3>
+
+        <p>
+
+            Jobs Completed
+
+        </p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="bi bi-people-fill"></i>
+
+        <h3>
+
+            650+
+
+        </h3>
+
+        <p>
+
+            Happy Customers
+
+        </p>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="bi bi-award-fill"></i>
+
+        <h3>
+
+            8+
+
+        </h3>
+
+        <p>
+
+            Years Experience
+
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ========================================= -->
+<!-- CERTIFICATES -->
+<!-- ========================================= -->
+
+<div class="profile-section">
+
+    <div class="section-card">
+
+        <h2>
+
+            Verification & Certificates
+
+        </h2>
+
+        <div class="certificate-grid">
+
+            <div class="certificate-card">
+
+                <i class="bi bi-patch-check-fill"></i>
+
+                <h4>
+
+                    Government Verified
+
+                </h4>
+
+            </div>
+
+            <div class="certificate-card">
+
+                <i class="bi bi-shield-check"></i>
+
+                <h4>
+
+                    Police Verified
+
+                </h4>
+
+            </div>
+
+            <div class="certificate-card">
+
+                <i class="bi bi-person-vcard-fill"></i>
+
+                <h4>
+
+                    Aadhaar Verified
+
+                </h4>
+
+            </div>
+
+            <div class="certificate-card">
+
+                <i class="bi bi-award-fill"></i>
+
+                <h4>
+
+                    Skill Certified
+
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ========================================= -->
+<!-- WORK GALLERY -->
+<!-- ========================================= -->
+
+<div class="profile-section">
+
+    <div class="section-card">
+
+        <h2>
+
+            Recent Work Gallery
+
+        </h2>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-card">
+
+                <i class="bi bi-image-fill"></i>
 
                 <p>
 
-                    Rahul Sharma is a highly experienced electrician with over
-                    five years of professional experience in residential,
-                    commercial and industrial electrical services. He is known
-                    for timely service, quality workmanship and excellent
-                    customer satisfaction.
+                    Home Wiring
 
                 </p>
 
             </div>
 
-            <div class="profile-card">
+            <div class="gallery-card">
 
-                <h2>
+                <i class="bi bi-image-fill"></i>
 
-                    Professional Skills
+                <p>
 
-                </h2>
+                    Switch Board Installation
 
-                <div class="skill">
-
-                    <span>House Wiring</span>
-
-                    <div class="progress">
-
-                        <div class="progress-fill skill1"></div>
-
-                    </div>
-
-                </div>
-
-                <div class="skill">
-
-                    <span>Electrical Repair</span>
-
-                    <div class="progress">
-
-                        <div class="progress-fill skill2"></div>
-
-                    </div>
-
-                </div>
-
-                <div class="skill">
-
-                    <span>Installation</span>
-
-                    <div class="progress">
-
-                        <div class="progress-fill skill3"></div>
-
-                    </div>
-
-                </div>
-
-                <div class="skill">
-
-                    <span>Maintenance</span>
-
-                    <div class="progress">
-
-                        <div class="progress-fill skill4"></div>
-
-                    </div>
-
-                </div>
+                </p>
 
             </div>
 
-        </section>
+            <div class="gallery-card">
 
-        <!-- ========================================= -->
+                <i class="bi bi-image-fill"></i>
 
-        <!-- WORKER STATISTICS -->
+                <p>
 
-        <!-- ========================================= -->
+                    Fan Installation
 
-        <section class="statistics-grid">
-
-            <div class="stat-card">
-
-                <i class="bi bi-star-fill"></i>
-
-                <h2>4.9</h2>
-
-                <p>Average Rating</p>
+                </p>
 
             </div>
 
-            <div class="stat-card">
+            <div class="gallery-card">
 
-                <i class="bi bi-briefcase-fill"></i>
+                <i class="bi bi-image-fill"></i>
 
-                <h2>520+</h2>
+                <p>
 
-                <p>Completed Jobs</p>
+                    MCB Panel
 
-            </div>
-
-            <div class="stat-card">
-
-                <i class="bi bi-clock-history"></i>
-
-                <h2>5+</h2>
-
-                <p>Years Experience</p>
+                </p>
 
             </div>
 
-            <div class="stat-card">
+            <div class="gallery-card">
 
-                <i class="bi bi-emoji-smile-fill"></i>
+                <i class="bi bi-image-fill"></i>
 
-                <h2>248</h2>
+                <p>
 
-                <p>Happy Customers</p>
+                    LED Lighting
 
-            </div>
-
-        </section>
-                <!-- ========================================= -->
-
-        <!-- PORTFOLIO -->
-
-        <!-- ========================================= -->
-
-        <section class="profile-grid">
-
-            <div class="profile-card">
-
-                <h2>
-
-                    Recent Work Portfolio
-
-                </h2>
-
-                <div class="portfolio-grid">
-
-                    <div class="portfolio-item">
-
-                        <i class="bi bi-image-fill"></i>
-
-                        <p>House Wiring</p>
-
-                    </div>
-
-                    <div class="portfolio-item">
-
-                        <i class="bi bi-image-fill"></i>
-
-                        <p>Office Installation</p>
-
-                    </div>
-
-                    <div class="portfolio-item">
-
-                        <i class="bi bi-image-fill"></i>
-
-                        <p>Panel Repair</p>
-
-                    </div>
-
-                </div>
+                </p>
 
             </div>
 
-            <div class="profile-card">
+            <div class="gallery-card">
 
-                <h2>
+                <i class="bi bi-image-fill"></i>
 
-                    Certificates
+                <p>
 
-                </h2>
+                    Inverter Connection
 
-                <ul class="certificate-list">
-
-                    <li>
-
-                        <i class="bi bi-patch-check-fill"></i>
-
-                        Government Certified Electrician
-
-                    </li>
-
-                    <li>
-
-                        <i class="bi bi-patch-check-fill"></i>
-
-                        Industrial Safety Certificate
-
-                    </li>
-
-                    <li>
-
-                        <i class="bi bi-patch-check-fill"></i>
-
-                        Electrical Maintenance Training
-
-                    </li>
-
-                </ul>
+                </p>
 
             </div>
 
-        </section>
+        </div>
 
-        <!-- ========================================= -->
+    </div>
 
-        <!-- AVAILABILITY -->
+</div>
 
-        <!-- ========================================= -->
+<!-- ========================================= -->
+<!-- CUSTOMER REVIEWS -->
+<!-- ========================================= -->
 
-        <section class="profile-grid">
+<div class="profile-section">
 
-            <div class="profile-card">
+    <div class="section-card">
 
-                <h2>
+        <h2>
 
-                    Working Hours
+            Customer Reviews
 
-                </h2>
+        </h2>
 
-                <table class="availability-table">
+        <div class="review-list">
 
-                    <tr>
-
-                        <td>Monday - Friday</td>
-
-                        <td>09:00 AM - 08:00 PM</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>Saturday</td>
-
-                        <td>09:00 AM - 06:00 PM</td>
-
-                    </tr>
-
-                    <tr>
-
-                        <td>Sunday</td>
-
-                        <td>Emergency Only</td>
-
-                    </tr>
-
-                </table>
-
-            </div>
-
-            <div class="profile-card">
-
-                <h2>
-
-                    Service Pricing
-
-                </h2>
-
-                <div class="price-item">
-
-                    <span>Home Visit</span>
-
-                    <strong>₹300</strong>
-
-                </div>
-
-                <div class="price-item">
-
-                    <span>Electrical Repair</span>
-
-                    <strong>₹500</strong>
-
-                </div>
-
-                <div class="price-item">
-
-                    <span>New Installation</span>
-
-                    <strong>₹800</strong>
-
-                </div>
-
-                <div class="price-item">
-
-                    <span>Emergency Service</span>
-
-                    <strong>₹1200</strong>
-
-                </div>
-
-            </div>
-
-        </section>
-                <!-- ========================================= -->
-
-        <!-- CUSTOMER REVIEWS -->
-
-        <!-- ========================================= -->
-
-        <section class="profile-card reviews-section">
-
-            <h2>
-
-                Customer Reviews
-
-            </h2>
-
-            <div class="review-item">
+            <div class="review-card">
 
                 <div class="review-header">
+
+                    <i class="bi bi-person-circle"></i>
 
                     <div>
 
@@ -635,262 +712,425 @@
 
                         </h4>
 
-                        <span>
+                        <small>
 
-                            ⭐⭐⭐⭐⭐
+                            02 August 2026
 
-                        </span>
+                        </small>
 
                     </div>
 
-                    <small>
+                </div>
 
-                        2 Days Ago
+                <div class="review-rating">
 
-                    </small>
+                    ⭐⭐⭐⭐⭐
 
                 </div>
 
                 <p>
 
-                    Excellent electrician. Arrived on time, completed the work
-                    professionally and explained everything clearly.
+                    Excellent service. Completed the work on time with proper
+                    safety measures. Highly recommended.
 
                 </p>
 
             </div>
 
-            <div class="review-item">
+            <div class="review-card">
 
                 <div class="review-header">
+
+                    <i class="bi bi-person-circle"></i>
 
                     <div>
 
                         <h4>
 
-                            Sneha Joshi
+                            Priya Sharma
 
                         </h4>
 
-                        <span>
+                        <small>
 
-                            ⭐⭐⭐⭐⭐
+                            28 July 2026
 
-                        </span>
+                        </small>
 
                     </div>
 
-                    <small>
+                </div>
 
-                        Last Week
+                <div class="review-rating">
 
-                    </small>
+                    ⭐⭐⭐⭐⭐
 
                 </div>
 
                 <p>
 
-                    Very polite and skilled worker. Highly recommended for
-                    electrical repair services.
+                    Very professional electrician. Fixed all electrical issues
+                    quickly and explained everything clearly.
 
                 </p>
 
             </div>
 
-        </section>
+            <div class="review-card">
 
-        <!-- ========================================= -->
-
-        <!-- SIMILAR WORKERS -->
-
-        <!-- ========================================= -->
-
-        <section class="profile-card">
-
-            <h2>
-
-                Similar Professionals
-
-            </h2>
-
-            <div class="similar-workers">
-
-                <div class="worker-card">
+                <div class="review-header">
 
                     <i class="bi bi-person-circle"></i>
 
-                    <h3>
+                    <div>
 
-                        Rohan Patil
+                        <h4>
 
-                    </h3>
+                            Rohan Deshmukh
 
-                    <p>
+                        </h4>
 
-                        Electrician
+                        <small>
 
-                    </p>
+                            20 July 2026
 
-                    <span>
+                        </small>
 
-                        ⭐ 4.8
-
-                    </span>
-
-                    <a
-                    href="customer_worker_profile.html"
-                    class="view-profile-btn">
-
-                        View Profile
-
-                    </a>
+                    </div>
 
                 </div>
 
-                <div class="worker-card">
+                <div class="review-rating">
 
-                    <i class="bi bi-person-circle"></i>
-
-                    <h3>
-
-                        Ajay More
-
-                    </h3>
-
-                    <p>
-
-                        Electrician
-
-                    </p>
-
-                    <span>
-
-                        ⭐ 4.9
-
-                    </span>
-
-                    <a
-                    href="customer_worker_profile.html"
-                    class="view-profile-btn">
-
-                        View Profile
-
-                    </a>
+                    ⭐⭐⭐⭐☆
 
                 </div>
 
-                <div class="worker-card">
+                <p>
 
-                    <i class="bi bi-person-circle"></i>
+                    Good experience overall. Arrived on time and completed the
+                    work neatly.
 
-                    <h3>
-
-                        Sagar Shinde
-
-                    </h3>
-
-                    <p>
-
-                        Electrician
-
-                    </p>
-
-                    <span>
-
-                        ⭐ 4.7
-
-                    </span>
-
-                    <a
-                    href="customer_worker_profile.html"
-                    class="view-profile-btn">
-
-                        View Profile
-
-                    </a>
-
-                </div>
+                </p>
 
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </div>
 
-    <!-- ========================================= -->
+</div>
 
-    <!-- FOOTER -->
+<!-- ========================================= -->
+<!-- BOOK SERVICE CTA -->
+<!-- ========================================= -->
 
-    <!-- ========================================= -->
+<div class="booking-banner">
 
-    <footer class="footer">
+    <div class="booking-content">
 
-        <div class="footer-content">
+        <h2>
 
-            <div class="footer-logo">
+            Ready to Book This Professional?
 
-                <i class="bi bi-shield-check"></i>
+        </h2>
 
-                <span>
+        <p>
 
-                    TrustGrid
+            Secure your booking in just a few clicks and get trusted service at
+            your preferred date and time.
 
-                </span>
+        </p>
 
-            </div>
+        <a href="customer_book_service.html"
+           class="book-service-btn">
+
+            <i class="bi bi-calendar-check-fill"></i>
+
+            Book Service
+
+        </a>
+
+    </div>
+
+</div>
+<!-- ========================================= -->
+<!-- RECOMMENDED WORKERS -->
+<!-- ========================================= -->
+
+<section class="recommended-workers">
+
+    <h2>
+
+        Similar Professionals
+
+    </h2>
+
+    <div class="recommended-grid">
+
+        <div class="recommended-card">
+
+            <i class="bi bi-person-circle"></i>
+
+            <h3>
+
+                Amit Patil
+
+            </h3>
 
             <p>
 
-                Connecting customers with trusted and verified professionals
-                across India.
+                Electrician
 
             </p>
 
-            <div class="footer-links">
+            <span>
 
-                <a href="dashboard.html">
+                ⭐ 4.8
+
+            </span>
+
+            <a href="customer_worker_profile.html">
+
+                View Profile
+
+            </a>
+
+        </div>
+
+        <div class="recommended-card">
+
+            <i class="bi bi-person-circle"></i>
+
+            <h3>
+
+                Suresh More
+
+            </h3>
+
+            <p>
+
+                Electrician
+
+            </p>
+
+            <span>
+
+                ⭐ 4.9
+
+            </span>
+
+            <a href="customer_worker_profile.html">
+
+                View Profile
+
+            </a>
+
+        </div>
+
+        <div class="recommended-card">
+
+            <i class="bi bi-person-circle"></i>
+
+            <h3>
+
+                Rohan Jadhav
+
+            </h3>
+
+            <p>
+
+                Electrician
+
+            </p>
+
+            <span>
+
+                ⭐ 4.7
+
+            </span>
+
+            <a href="customer_worker_profile.html">
+
+                View Profile
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- BACK BUTTON -->
+<!-- ========================================= -->
+
+<div class="back-section">
+
+    <a href="customer_find_worker.html"
+       class="back-btn">
+
+        <i class="bi bi-arrow-left-circle-fill"></i>
+
+        Back to Find Workers
+
+    </a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h2>
+
+                    TrustGrid
+
+                </h2>
+
+                <p>
+
+                    Connecting customers with trusted and verified professionals
+                    across India.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>
+
+                    Quick Links
+
+                </h3>
+
+                <a href="customer_dashboard.html">
 
                     Dashboard
 
                 </a>
 
-                <a href="find_worker.html">
+                <a href="customer_find_worker.html">
 
                     Find Worker
 
                 </a>
 
-                <a href="my_bookings.html">
+                <a href="customer_my_bookings.html">
 
                     My Bookings
 
                 </a>
 
-                <a href="help_support.html">
+                <a href="customer_wallet.html">
 
-                    Help
+                    Wallet
 
                 </a>
 
             </div>
 
-            <p class="copyright">
+            <div>
 
-                © 2026 TrustGrid. All Rights Reserved.
+                <h3>
 
-            </p>
+                    Support
+
+                </h3>
+
+                <a href="customer_help_support.html">
+
+                    Help Center
+
+                </a>
+
+                <a href="customer_settings.html">
+
+                    Settings
+
+                </a>
+
+                <a href="login.html">
+
+                    Logout
+
+                </a>
+
+            </div>
+
+            <div>
+
+                <h3>
+
+                    Follow Us
+
+                </h3>
+
+                <div class="social-links">
+
+                    <a href="#">
+
+                        <i class="bi bi-facebook"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="bi bi-instagram"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="bi bi-linkedin"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="bi bi-twitter-x"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </footer>
+        <hr>
 
-    <!-- ========================================= -->
+        <p class="copyright">
 
-    <!-- JAVASCRIPT -->
+            © 2026 TrustGrid. All Rights Reserved.
 
-    <!-- ========================================= -->
+        </p>
 
-    <script src="../static/js/customer_worker_profile.js"></script>
+    </div>
+
+</footer>
+
+<!-- ========================================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================================= -->
+
+<script src="../static/js/customer_worker_profile.js"></script>
 
 </body>
 

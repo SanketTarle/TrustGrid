@@ -1,14 +1,12 @@
-/*========================================
+/* ==========================================================
+   TRUSTGRID
+   CUSTOMER WORKER PROFILE
+   JS PART 1
+========================================================== */
 
-        TRUSTGRID CUSTOMER WORKER PROFILE
-
-========================================*/
-
-/*========================================
-
-ACTIVE NAVIGATION
-
-========================================*/
+/* ==========================================================
+   ACTIVE NAVIGATION
+========================================================== */
 
 const currentPage = window.location.pathname.split("/").pop();
 
@@ -22,95 +20,55 @@ document.querySelectorAll(".navbar a").forEach(link => {
 
 });
 
-/*========================================
+/* ==========================================================
+   HEADER SHADOW
+========================================================== */
 
-BACK BUTTON
+window.addEventListener("scroll", () => {
 
-========================================*/
+    const header = document.querySelector(".header");
 
-const backButton = document.querySelector(".back-btn");
+    if (window.scrollY > 40) {
 
-if (backButton) {
+        header.style.boxShadow =
+            "0 12px 30px rgba(0,0,0,.15)";
 
-    backButton.addEventListener("click", () => {
+    }
 
-        history.back();
+    else {
 
-    });
-
-}
-/*========================================
-
-        TRUSTGRID CUSTOMER WORKER PROFILE
-
-========================================*/
-
-/*========================================
-
-ACTIVE NAVIGATION
-
-========================================*/
-
-const currentPage = window.location.pathname.split("/").pop();
-
-document.querySelectorAll(".navbar a").forEach(link => {
-
-    if (link.getAttribute("href") === currentPage) {
-
-        link.classList.add("active");
+        header.style.boxShadow =
+            "0 8px 20px rgba(0,0,0,.08)";
 
     }
 
 });
 
-/*========================================
+/* ==========================================================
+   FAVORITE BUTTON
+========================================================== */
 
-BACK BUTTON
+const favoriteButton = document.querySelector(".favorite-btn");
 
-========================================*/
+if (favoriteButton) {
 
-const backButton = document.querySelector(".back-btn");
+    favoriteButton.addEventListener("click", () => {
 
-if (backButton) {
+        const icon = favoriteButton.querySelector("i");
 
-    backButton.addEventListener("click", () => {
+        icon.classList.toggle("bi-heart");
 
-        history.back();
+        icon.classList.toggle("bi-heart-fill");
 
-    });
-
-}
-/*========================================
-
-BOOK NOW BUTTON
-
-========================================*/
-
-const bookButton = document.querySelector(".book-btn");
-
-if (bookButton) {
-
-    bookButton.addEventListener("click", (event) => {
-
-        event.preventDefault();
-
-        showToast("Redirecting to Booking Page...");
-
-        setTimeout(() => {
-
-            window.location.href = "customer_booking.html";
-
-        }, 1000);
+        favoriteButton.classList.toggle("active");
 
     });
 
 }
 
-/*========================================
-
-MESSAGE BUTTON
-
-========================================*/
+/* ==========================================================
+   MESSAGE BUTTON
+========================================================== */
 
 const messageButton = document.querySelector(".message-btn");
 
@@ -118,30 +76,308 @@ if (messageButton) {
 
     messageButton.addEventListener("click", () => {
 
-        showToast("Opening Messages...");
-
-        setTimeout(() => {
-
-            window.location.href = "customer_messages.html";
-
-        }, 1000);
+        window.location.href =
+            "customer_messages.html";
 
     });
 
 }
 
-/*========================================
+/* ==========================================================
+   PAGE LOAD ANIMATION
+========================================================== */
 
-SIMILAR WORKERS
+window.addEventListener("load", () => {
 
-========================================*/
+    document.body.style.opacity = "1";
 
-document.querySelectorAll(".view-profile-btn").forEach(button => {
+    console.log(
+        "✅ Customer Worker Profile Loaded Successfully"
+    );
 
-    button.addEventListener("click", () => {
+});
+/* ==========================================================
+   TRUSTGRID
+   CUSTOMER WORKER PROFILE
+   JS PART 2
+========================================================== */
 
-        showToast("Loading Worker Profile...");
+/* ==========================================================
+   STATISTICS COUNTER
+========================================================== */
+
+const statCards = document.querySelectorAll(".stat-card h3");
+
+statCards.forEach(card => {
+
+    const target = parseInt(card.innerText.replace(/\D/g, "")) || 0;
+
+    if (target === 0) return;
+
+    let count = 0;
+
+    const speed = Math.ceil(target / 50);
+
+    const counter = setInterval(() => {
+
+        count += speed;
+
+        if (count >= target) {
+
+            count = target;
+
+            clearInterval(counter);
+
+        }
+
+        if (card.innerText.includes("+")) {
+
+            card.innerText = count + "+";
+
+        }
+
+        else {
+
+            card.innerText = count;
+
+        }
+
+    }, 30);
+
+});
+
+/* ==========================================================
+   PROGRESS BAR ANIMATION
+========================================================== */
+
+const progressBars = document.querySelectorAll(".progress-bar");
+
+window.addEventListener("load", () => {
+
+    progressBars.forEach(bar => {
+
+        const width = bar.className.match(/width-(\d+)/);
+
+        if (width) {
+
+            bar.style.width = width[1] + "%";
+
+        }
 
     });
+
+});
+
+/* ==========================================================
+   BOOK SERVICE BUTTON
+========================================================== */
+
+const bookButton = document.querySelector(".book-btn");
+
+if (bookButton) {
+
+    bookButton.addEventListener("click", () => {
+
+        window.location.href = "customer_book_service.html";
+
+    });
+
+}
+/* ==========================================================
+   TRUSTGRID
+   CUSTOMER WORKER PROFILE
+   JS PART 2
+========================================================== */
+
+/* ==========================================================
+   STATISTICS COUNTER
+========================================================== */
+
+const statCards = document.querySelectorAll(".stat-card h3");
+
+statCards.forEach(card => {
+
+    const target = parseInt(card.innerText.replace(/\D/g, "")) || 0;
+
+    if (target === 0) return;
+
+    let count = 0;
+
+    const speed = Math.ceil(target / 50);
+
+    const counter = setInterval(() => {
+
+        count += speed;
+
+        if (count >= target) {
+
+            count = target;
+
+            clearInterval(counter);
+
+        }
+
+        if (card.innerText.includes("+")) {
+
+            card.innerText = count + "+";
+
+        }
+
+        else {
+
+            card.innerText = count;
+
+        }
+
+    }, 30);
+
+});
+
+/* ==========================================================
+   PROGRESS BAR ANIMATION
+========================================================== */
+
+const progressBars = document.querySelectorAll(".progress-bar");
+
+window.addEventListener("load", () => {
+
+    progressBars.forEach(bar => {
+
+        const width = bar.className.match(/width-(\d+)/);
+
+        if (width) {
+
+            bar.style.width = width[1] + "%";
+
+        }
+
+    });
+
+});
+
+/* ==========================================================
+   BOOK SERVICE BUTTON
+========================================================== */
+
+const bookButton = document.querySelector(".book-btn");
+
+if (bookButton) {
+
+    bookButton.addEventListener("click", () => {
+
+        window.location.href = "customer_book_service.html";
+
+    });
+
+}
+/* ==========================================================
+   TRUSTGRID
+   CUSTOMER WORKER PROFILE
+   JS PART 3
+========================================================== */
+
+/* ==========================================================
+   SCROLL REVEAL
+========================================================== */
+
+const revealElements = document.querySelectorAll(
+
+    ".section-card, .stat-card, .gallery-card, .review-card, .recommended-card"
+
+);
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.style.opacity = "1";
+
+            entry.target.style.transform = "translateY(0)";
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.15
+
+});
+
+revealElements.forEach(element => {
+
+    element.style.opacity = "0";
+
+    element.style.transform = "translateY(40px)";
+
+    element.style.transition = ".6s ease";
+
+    observer.observe(element);
+
+});
+
+/* ==========================================================
+   SCROLL TO TOP
+========================================================== */
+
+const scrollButton = document.querySelector(".scroll-top-btn");
+
+window.addEventListener("scroll", () => {
+
+    if (!scrollButton) return;
+
+    if (window.scrollY > 300) {
+
+        scrollButton.style.display = "flex";
+
+    }
+
+    else {
+
+        scrollButton.style.display = "none";
+
+    }
+
+});
+
+if (scrollButton) {
+
+    scrollButton.addEventListener("click", () => {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+}
+
+/* ==========================================================
+   GALLERY CLICK
+========================================================== */
+
+document.querySelectorAll(".gallery-card").forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        console.log("Gallery Image Clicked");
+
+    });
+
+});
+
+/* ==========================================================
+   PAGE READY
+========================================================== */
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    console.log("🚀 TrustGrid Worker Profile Ready");
 
 });
