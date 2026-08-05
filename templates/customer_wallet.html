@@ -1,30 +1,53 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
+    <!-- ========================================= -->
+    <!-- META INFORMATION -->
+    <!-- ========================================= -->
+
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
 
-    <title>Wallet & Payments | TrustGrid</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font -->
+    <meta name="description"
+          content="TrustGrid Customer Wallet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>TrustGrid | Wallet</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- ========================================= -->
+    <!-- GOOGLE FONT -->
+    <!-- ========================================= -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-    <!-- Bootstrap Icons -->
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- ========================================= -->
+    <!-- BOOTSTRAP ICONS -->
+    <!-- ========================================= -->
 
     <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- ========================================= -->
     <!-- CSS -->
+    <!-- ========================================= -->
 
-    <link rel="stylesheet" href="../static/css/wallet.css">
+    <link rel="stylesheet"
+          href="../static/css/customer_wallet.css">
 
 </head>
 
@@ -34,112 +57,116 @@
 <!-- HEADER -->
 <!-- ========================================= -->
 
-<header>
+<header class="header">
 
     <div class="container">
 
-    <!-- Logo -->
+        <a href="customer_dashboard.html"
+           class="logo">
 
-    <a href="dashboard.html" class="logo">
+            <i class="bi bi-shield-check"></i>
 
-        <i class="bi bi-shield-check"></i>
+            <span>TrustGrid</span>
 
-        <span>TrustGrid</span>
+        </a>
 
-    </a>
+        <nav class="navbar">
 
-    <!-- Navigation -->
+            <a href="customer_dashboard.html">
 
-    <nav>
+                Dashboard
 
-        <ul class="nav-links">
+            </a>
 
-            <li>
+            <a href="customer_find_worker.html">
 
-                <a href="dashboard.html">
+                Find Worker
 
-                    <i class="bi bi-grid"></i>
+            </a>
 
-                    Dashboard
+            <a href="customer_my_bookings.html">
 
-                </a>
+                My Bookings
 
-            </li>
+            </a>
 
-            <li>
+            <a href="customer_wallet.html">
 
-                <a href="find_worker.html">
+                Wallet
 
-                    <i class="bi bi-search"></i>
+            </a>
 
-                    Find Worker
+        </nav>
 
-                </a>
+        <div class="header-actions">
 
-            </li>
+            <a href="customer_notifications.html">
 
-            <li>
+                <i class="bi bi-bell-fill"></i>
 
-                <a href="my_bookings.html">
+            </a>
 
-                    <i class="bi bi-calendar-check"></i>
+            <a href="customer_messages.html">
 
-                    My Bookings
+                <i class="bi bi-chat-dots-fill"></i>
 
-                </a>
+            </a>
 
-            </li>
+            <a href="customer_settings.html">
 
-            <li>
+                <i class="bi bi-gear-fill"></i>
 
-                <a href="wallet.html" class="active">
-
-                    <i class="bi bi-wallet2"></i>
-
-                    Wallet
-
-                </a>
-
-            </li>
-
-        </ul>
-
-    </nav>
-
-    <!-- Profile -->
-
-    <div class="profile">
-
-        <div class="profile-img">
-
-            <i class="bi bi-person-fill"></i>
-
-        </div>
-
-        <div>
-
-            <h4>Sanket</h4>
-
-            <small>Customer</small>
+            </a>
 
         </div>
 
     </div>
 
-</div>
 </header>
 
 <!-- ========================================= -->
-<!-- BREADCRUMB -->
+<!-- HERO -->
 <!-- ========================================= -->
 
-<section class="breadcrumb-section">
+<section class="wallet-hero">
 
-    <section class="breadcrumb-section">
+    <div class="container">
 
-    <!-- PART 1 -->
+        <h1>
 
-</section>
+            My Wallet
+
+        </h1>
+
+        <p>
+
+            Manage your TrustGrid Wallet, add money and view all transactions.
+
+        </p>
+
+        <div class="wallet-balance-card">
+
+            <small>
+
+                Available Balance
+
+            </small>
+
+            <h2>
+
+                ₹5,250.00
+
+            </h2>
+
+            <span>
+
+                Last Updated : Today 10:45 AM
+
+            </span>
+
+        </div>
+
+    </div>
 
 </section>
 
@@ -153,132 +180,95 @@
 
 <div class="container">
 
-    <!-- ================================= -->
-    <!-- HERO -->
-    <!-- ================================= -->
+<!-- ========================================= -->
+<!-- QUICK ACTIONS -->
+<!-- ========================================= -->
 
-    <section class="hero-card">
+<div class="wallet-actions">
 
-        <div class="hero-left">
+    <button class="add-money-btn">
 
-    <div class="hero-icon">
+        <i class="bi bi-plus-circle-fill"></i>
 
-        <i class="bi bi-wallet2"></i>
+        Add Money
 
-    </div>
+    </button>
 
-    <div>
+    <button class="withdraw-btn">
 
-        <h1>
+        <i class="bi bi-cash-stack"></i>
 
-            Wallet & Payments
+        Withdraw
 
-        </h1>
+    </button>
 
-        <p>
+    <button class="history-btn">
 
-            Manage your wallet balance, payment methods and transaction history securely.
+        <i class="bi bi-clock-history"></i>
 
-        </p>
+        Transaction History
 
-    </div>
-
-</div>
-
-<div class="hero-right">
-
-    <div class="wallet-summary">
-
-        <h2>
-
-            ₹2,450
-
-        </h2>
-
-        <span>
-
-            Available Balance
-
-        </span>
-
-    </div>
+    </button>
 
 </div>
 
-    </section>
-
-    <!-- ================================= -->
-    <!-- WALLET BALANCE -->
-    <!-- ================================= -->
-
-    <section class="wallet-balance-card">
-
-        <div class="section-title">
-
-    <i class="bi bi-wallet-fill"></i>
-
-    <h2>Wallet Balance</h2>
-
-</div>
-
-<div class="wallet-card">
-
-    <div class="wallet-info">
-
-        <h3>Available Balance</h3>
-
-        <h1>₹2,450</h1>
-
-        <p>
-
-            Last Updated:
-            <strong>01 August 2026</strong>
-
-        </p>
-
-    </div>
-
-    <div class="wallet-actions">
-
-        <button class="add-money-btn">
-
-            <i class="bi bi-plus-circle-fill"></i>
-
-            Add Money
-
-        </button>
-
-        <button class="withdraw-btn">
-
-            <i class="bi bi-arrow-up-circle-fill"></i>
-
-            Withdraw
-
-        </button>
-
-    </div>
-
-</div>
+<!-- ========================================= -->
+<!-- WALLET STATS -->
+<!-- ========================================= -->
 
 <div class="wallet-stats">
 
     <div class="stat-card">
 
-        <i class="bi bi-arrow-down-circle-fill"></i>
+        <i class="bi bi-wallet2"></i>
 
-        <h3>₹5,800</h3>
+        <h3>
 
-        <span>Total Credits</span>
+            ₹12,450
+
+        </h3>
+
+        <span>
+
+            Total Added
+
+        </span>
 
     </div>
 
     <div class="stat-card">
 
-        <i class="bi bi-arrow-up-circle-fill"></i>
+        <i class="bi bi-arrow-down-circle-fill"></i>
 
-        <h3>₹3,350</h3>
+        <h3>
 
-        <span>Total Debits</span>
+            ₹7,200
+
+        </h3>
+
+        <span>
+
+            Total Spent
+
+        </span>
+
+    </div>
+
+    <div class="stat-card">
+
+        <i class="bi bi-gift-fill"></i>
+
+        <h3>
+
+            ₹550
+
+        </h3>
+
+        <span>
+
+            Cashback Earned
+
+        </span>
 
     </div>
 
@@ -286,311 +276,299 @@
 
         <i class="bi bi-percent"></i>
 
-        <h3>₹500</h3>
+        <h3>
 
-        <span>Cashback Earned</span>
+            12
+
+        </h3>
+
+        <span>
+
+            Offers Used
+
+        </span>
 
     </div>
 
 </div>
+<!-- ========================================= -->
+<!-- ADD MONEY -->
+<!-- ========================================= -->
 
-    </section>
+<div class="wallet-card">
 
-    <!-- ================================= -->
-    <!-- PAYMENT METHODS -->
-    <!-- ================================= -->
+    <h2>
 
-    <section class="payment-methods">
+        Add Money
 
-        <div class="section-title">
+    </h2>
 
-    <i class="bi bi-credit-card-2-front-fill"></i>
+    <form class="wallet-form">
 
-    <h2>Payment Methods</h2>
+        <div class="form-group">
 
-</div>
+            <label>
 
-<div class="payment-grid">
+                Enter Amount
 
-    <!-- VISA CARD -->
+            </label>
 
-    <div class="payment-card">
-
-        <div class="payment-icon">
-
-            <i class="bi bi-credit-card-fill"></i>
+            <input type="number"
+                   placeholder="Enter amount">
 
         </div>
 
-        <div class="payment-info">
+        <div class="quick-amounts">
 
-            <h3>Visa Card</h3>
+            <button type="button">₹500</button>
 
-            <p>**** **** **** 4567</p>
+            <button type="button">₹1000</button>
 
-            <span class="default-badge">
+            <button type="button">₹2000</button>
 
-                Default
-
-            </span>
+            <button type="button">₹5000</button>
 
         </div>
 
-        <button class="edit-payment-btn">
+        <div class="payment-method">
 
-            <i class="bi bi-pencil-square"></i>
+            <h3>
 
-            Edit
+                Payment Method
+
+            </h3>
+
+            <label>
+
+                <input type="radio"
+                       name="payment"
+                       checked>
+
+                UPI
+
+            </label>
+
+            <label>
+
+                <input type="radio"
+                       name="payment">
+
+                Debit / Credit Card
+
+            </label>
+
+            <label>
+
+                <input type="radio"
+                       name="payment">
+
+                Net Banking
+
+            </label>
+
+        </div>
+
+        <button class="pay-btn">
+
+            <i class="bi bi-wallet-fill"></i>
+
+            Add Money
 
         </button>
 
-    </div>
-
-    <!-- MASTERCARD -->
-
-    <div class="payment-card">
-
-        <div class="payment-icon mastercard">
-
-            <i class="bi bi-credit-card-2-front-fill"></i>
-
-        </div>
-
-        <div class="payment-info">
-
-            <h3>MasterCard</h3>
-
-            <p>**** **** **** 8921</p>
-
-        </div>
-
-        <button class="edit-payment-btn">
-
-            <i class="bi bi-pencil-square"></i>
-
-            Edit
-
-        </button>
-
-    </div>
-
-    <!-- UPI -->
-
-    <div class="payment-card">
-
-        <div class="payment-icon upi">
-
-            <i class="bi bi-phone-fill"></i>
-
-        </div>
-
-        <div class="payment-info">
-
-            <h3>UPI</h3>
-
-            <p>sanket@upi</p>
-
-        </div>
-
-        <button class="edit-payment-btn">
-
-            <i class="bi bi-pencil-square"></i>
-
-            Change
-
-        </button>
-
-    </div>
-
-    <!-- BANK ACCOUNT -->
-
-    <div class="payment-card">
-
-        <div class="payment-icon bank">
-
-            <i class="bi bi-bank"></i>
-
-        </div>
-
-        <div class="payment-info">
-
-            <h3>Bank Account</h3>
-
-            <p>State Bank of India</p>
-
-            <small>A/C Ending •••• 2048</small>
-
-        </div>
-
-        <button class="edit-payment-btn">
-
-            <i class="bi bi-pencil-square"></i>
-
-            Manage
-
-        </button>
-
-    </div>
+    </form>
 
 </div>
 
-    </section>
+<!-- ========================================= -->
+<!-- RECENT TRANSACTIONS -->
+<!-- ========================================= -->
 
-    <!-- ================================= -->
-    <!-- TRANSACTION HISTORY -->
-    <!-- ================================= -->
+<div class="wallet-card">
 
-    <section class="transaction-history">
+    <h2>
 
-        <div class="section-title">
+        Recent Transactions
 
-    <i class="bi bi-clock-history"></i>
+    </h2>
+    <!-- ========================================= -->
+<!-- TRANSACTION HISTORY -->
+<!-- ========================================= -->
 
-    <h2>Recent Transactions</h2>
+<table class="transaction-table">
+
+    <thead>
+
+        <tr>
+
+            <th>Date</th>
+
+            <th>Transaction ID</th>
+
+            <th>Type</th>
+
+            <th>Amount</th>
+
+            <th>Status</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+
+            <td>08 Aug 2026</td>
+
+            <td>TG20260801</td>
+
+            <td>Wallet Recharge</td>
+
+            <td class="credit">
+
+                + ₹1000
+
+            </td>
+
+            <td>
+
+                <span class="success">
+
+                    Success
+
+                </span>
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td>05 Aug 2026</td>
+
+            <td>TG20260782</td>
+
+            <td>Service Payment</td>
+
+            <td class="debit">
+
+                - ₹649
+
+            </td>
+
+            <td>
+
+                <span class="success">
+
+                    Success
+
+                </span>
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td>01 Aug 2026</td>
+
+            <td>TG20260741</td>
+
+            <td>Cashback</td>
+
+            <td class="credit">
+
+                + ₹100
+
+            </td>
+
+            <td>
+
+                <span class="success">
+
+                    Success
+
+                </span>
+
+            </td>
+
+        </tr>
+
+    </tbody>
+
+</table>
 
 </div>
 
-<div class="transaction-list">
+<!-- ========================================= -->
+<!-- OFFERS -->
+<!-- ========================================= -->
 
-    <!-- Transaction 1 -->
+<div class="wallet-card">
 
-    <div class="transaction-card credit">
+    <h2>
 
-        <div class="transaction-icon">
+        Cashback Offers
 
-            <i class="bi bi-arrow-down-circle-fill"></i>
+    </h2>
 
-        </div>
+    <div class="offer-grid">
 
-        <div class="transaction-info">
+        <div class="offer-card">
 
-            <h3>Cashback Received</h3>
+            <h3>
 
-            <p>Wallet Cashback Reward</p>
+                Get 10% Cashback
 
-            <small>01 Aug 2026 • 10:30 AM</small>
+            </h3>
 
-        </div>
+            <p>
 
-        <div class="transaction-amount">
+                Recharge ₹1000 or above.
 
-            <span class="credit-text">
-
-                + ₹500
-
-            </span>
-
-            <small>Success</small>
+            </p>
 
         </div>
 
-    </div>
+        <div class="offer-card">
 
-    <!-- Transaction 2 -->
+            <h3>
 
-    <div class="transaction-card debit">
+                Flat ₹200 Bonus
 
-        <div class="transaction-icon">
+            </h3>
 
-            <i class="bi bi-lightning-charge-fill"></i>
+            <p>
 
-        </div>
+                First Wallet Recharge.
 
-        <div class="transaction-info">
-
-            <h3>Electrician Booking</h3>
-
-            <p>Rahul Sharma</p>
-
-            <small>31 Jul 2026 • 05:20 PM</small>
+            </p>
 
         </div>
 
-        <div class="transaction-amount">
+        <div class="offer-card">
 
-            <span class="debit-text">
+            <h3>
 
-                - ₹850
+                ₹100 Referral Bonus
 
-            </span>
+            </h3>
 
-            <small>Paid</small>
+            <p>
 
-        </div>
+                Invite your friends.
 
-    </div>
-
-    <!-- Transaction 3 -->
-
-    <div class="transaction-card debit">
-
-        <div class="transaction-icon">
-
-            <i class="bi bi-droplet-fill"></i>
-
-        </div>
-
-        <div class="transaction-info">
-
-            <h3>Plumbing Service</h3>
-
-            <p>Amit Patil</p>
-
-            <small>29 Jul 2026 • 11:10 AM</small>
-
-        </div>
-
-        <div class="transaction-amount">
-
-            <span class="debit-text">
-
-                - ₹1,200
-
-            </span>
-
-            <small>Paid</small>
-
-        </div>
-
-    </div>
-
-    <!-- Transaction 4 -->
-
-    <div class="transaction-card refund">
-
-        <div class="transaction-icon">
-
-            <i class="bi bi-arrow-repeat"></i>
-
-        </div>
-
-        <div class="transaction-info">
-
-            <h3>Refund Processed</h3>
-
-            <p>Cancelled Booking</p>
-
-            <small>27 Jul 2026 • 09:15 AM</small>
-
-        </div>
-
-        <div class="transaction-amount">
-
-            <span class="refund-text">
-
-                + ₹250
-
-            </span>
-
-            <small>Refund</small>
+            </p>
 
         </div>
 
     </div>
 
 </div>
-
-    </section>
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
 
 </div>
 
@@ -598,123 +576,141 @@
 
 </main>
 
-<!-- ========================================= -->
-<!-- FOOTER -->
-<!-- ========================================= -->
-
-<footer>
+<footer class="footer">
 
     <div class="container">
 
-    <div class="footer-grid">
+        <div class="footer-grid">
 
-        <!-- About -->
+            <div>
 
-        <div class="footer-about">
+                <h2>
 
-            <h2 class="footer-logo">
+                    TrustGrid
 
-                <i class="bi bi-shield-check"></i>
+                </h2>
 
-                TrustGrid
+                <p>
 
-            </h2>
+                    Trusted Home Service Platform.
 
-            <p>
+                </p>
 
-                TrustGrid provides secure wallet management,
-                fast payments and transparent transaction history
-                for every customer.
+            </div>
 
-            </p>
+            <div>
 
-        </div>
+                <h3>
 
-        <!-- Quick Links -->
+                    Quick Links
 
-        <div>
+                </h3>
 
-            <h3>Quick Links</h3>
+                <a href="customer_dashboard.html">
 
-            <a href="dashboard.html">Dashboard</a>
-
-            <a href="my_bookings.html">My Bookings</a>
-
-            <a href="wallet.html">Wallet</a>
-
-            <a href="reviews.html">Reviews</a>
-
-        </div>
-
-        <!-- Support -->
-
-        <div>
-
-            <h3>Support</h3>
-
-            <a href="#">Help Center</a>
-
-            <a href="#">Terms & Conditions</a>
-
-            <a href="#">Privacy Policy</a>
-
-            <a href="#">Contact Us</a>
-
-        </div>
-
-        <!-- Social -->
-
-        <div>
-
-            <h3>Follow Us</h3>
-
-            <div class="social-icons">
-
-                <a href="#">
-
-                    <i class="bi bi-facebook"></i>
+                    Dashboard
 
                 </a>
 
-                <a href="#">
+                <a href="customer_find_worker.html">
 
-                    <i class="bi bi-instagram"></i>
-
-                </a>
-
-                <a href="#">
-
-                    <i class="bi bi-linkedin"></i>
+                    Find Worker
 
                 </a>
 
-                <a href="#">
+                <a href="customer_my_bookings.html">
 
-                    <i class="bi bi-twitter-x"></i>
+                    My Bookings
+
+                </a>
+
+                <a href="customer_wallet.html">
+
+                    Wallet
 
                 </a>
 
             </div>
 
+            <div>
+
+                <h3>
+
+                    Support
+
+                </h3>
+
+                <a href="customer_help_support.html">
+
+                    Help Center
+
+                </a>
+
+                <a href="customer_settings.html">
+
+                    Settings
+
+                </a>
+
+            </div>
+
+            <div>
+
+                <h3>
+
+                    Follow Us
+
+                </h3>
+
+                <div class="social-links">
+
+                    <a href="#">
+
+                        <i class="bi bi-facebook"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="bi bi-instagram"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="bi bi-linkedin"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="bi bi-twitter-x"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
+
+        <hr>
+
+        <p class="copyright">
+
+            © 2026 TrustGrid. All Rights Reserved.
+
+        </p>
 
     </div>
 
-    <hr>
-
-    <p class="copyright">
-
-        © 2026 TrustGrid. All Rights Reserved.
-
-    </p>
-
-</div>
-
 </footer>
 
-<!-- JS -->
+<!-- ========================================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================================= -->
 
-<script src="../static/js/wallet.js"></script>
+<script src="../static/js/customer_wallet.js"></script>
 
 </body>
 
