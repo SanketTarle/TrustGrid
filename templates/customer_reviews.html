@@ -1,30 +1,53 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
+    <!-- ========================================= -->
+    <!-- META INFORMATION -->
+    <!-- ========================================= -->
+
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
 
-    <title>Reviews | TrustGrid</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font -->
+    <meta name="description"
+          content="TrustGrid Customer Reviews">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>TrustGrid | Reviews & Ratings</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- ========================================= -->
+    <!-- GOOGLE FONT -->
+    <!-- ========================================= -->
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-    <!-- Bootstrap Icons -->
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- ========================================= -->
+    <!-- BOOTSTRAP ICONS -->
+    <!-- ========================================= -->
 
     <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- ========================================= -->
     <!-- CSS -->
+    <!-- ========================================= -->
 
-    <link rel="stylesheet" href="../static/css/reviews.css">
+    <link rel="stylesheet"
+          href="../static/css/customer_reviews.css">
 
 </head>
 
@@ -34,157 +57,80 @@
 <!-- HEADER -->
 <!-- ========================================= -->
 
-<header>
+<header class="header">
 
     <div class="container">
 
-    <!-- Logo -->
+        <a href="customer_dashboard.html"
+           class="logo">
 
-    <a href="dashboard.html" class="logo">
+            <i class="bi bi-shield-check"></i>
 
-        <i class="bi bi-shield-check"></i>
+            <span>TrustGrid</span>
 
-        <span>TrustGrid</span>
+        </a>
 
-    </a>
+        <nav class="navbar">
 
-    <!-- Navigation -->
+            <a href="customer_dashboard.html">
 
-    <nav>
+                Dashboard
 
-        <ul class="nav-links">
+            </a>
 
-            <li>
+            <a href="customer_my_bookings.html">
 
-                <a href="dashboard.html">
+                My Bookings
 
-                    <i class="bi bi-grid"></i>
+            </a>
 
-                    Dashboard
+            <a href="customer_review.html">
 
-                </a>
+                Reviews
 
-            </li>
+            </a>
 
-            <li>
+            <a href="customer_help_support.html">
 
-                <a href="find_worker.html">
+                Help
 
-                    <i class="bi bi-search"></i>
+            </a>
 
-                    Find Worker
+        </nav>
 
-                </a>
+        <div class="header-actions">
 
-            </li>
+            <a href="customer_notifications.html">
 
-            <li>
+                <i class="bi bi-bell-fill"></i>
 
-                <a href="my_bookings.html">
+            </a>
 
-                    <i class="bi bi-calendar-check"></i>
+            <a href="customer_messages.html">
 
-                    My Bookings
+                <i class="bi bi-chat-dots-fill"></i>
 
-                </a>
+            </a>
 
-            </li>
+            <a href="customer_settings.html">
 
-            <li>
+                <i class="bi bi-gear-fill"></i>
 
-                <a href="reviews.html" class="active">
-
-                    <i class="bi bi-star-fill"></i>
-
-                    Reviews
-
-                </a>
-
-            </li>
-
-        </ul>
-
-    </nav>
-
-    <!-- Profile -->
-
-    <div class="profile">
-
-        <div class="profile-img">
-
-            <i class="bi bi-person-fill"></i>
-
-        </div>
-
-        <div>
-
-            <h4>Sanket</h4>
-
-            <small>Customer</small>
+            </a>
 
         </div>
 
     </div>
-
-</div>
 
 </header>
 
 <!-- ========================================= -->
-<!-- BREADCRUMB -->
+<!-- HERO -->
 <!-- ========================================= -->
 
-<section class="breadcrumb-section">
+<section class="review-hero">
 
-    <!-- PART 1 --><div class="container">
-
-    <div class="breadcrumb">
-
-        <a href="dashboard.html">
-
-            Dashboard
-
-        </a>
-
-        <i class="bi bi-chevron-right"></i>
-
-        <span>
-
-            Reviews
-
-        </span>
-
-    </div>
-
-</div>
-
-</section>
-
-<!-- ========================================= -->
-<!-- MAIN -->
-<!-- ========================================= -->
-
-<main>
-
-<section class="reviews-page">
-
-<div class="container">
-
-    <!-- ================================= -->
-    <!-- HERO -->
-    <!-- ================================= -->
-
-    <section class="hero-card">
-
-        <div class="hero-left">
-
-    <div class="hero-icon">
-
-        <i class="bi bi-star-fill"></i>
-
-    </div>
-
-    <div>
+    <div class="container">
 
         <h1>
 
@@ -194,322 +140,266 @@
 
         <p>
 
-            Share your experience with trusted professionals and help other customers make better decisions.
+            Share your experience and help others choose trusted professionals.
 
         </p>
 
     </div>
 
-</div>
+</section>
 
-<div class="hero-right">
+<!-- ========================================= -->
+<!-- MAIN -->
+<!-- ========================================= -->
 
-    <div class="review-summary">
+<main>
+
+<section class="review-page">
+
+<div class="container">
+    <!-- ========================================= -->
+<!-- RATING SUMMARY -->
+<!-- ========================================= -->
+
+<div class="rating-summary">
+
+    <div class="overall-rating">
 
         <h2>
 
-            12
+            4.8
 
         </h2>
 
-        <span>
+        <div class="stars">
 
-            Reviews Given
+            ⭐⭐⭐⭐⭐
 
-        </span>
+        </div>
+
+        <p>
+
+            Based on 248 Reviews
+
+        </p>
+
+    </div>
+
+    <div class="rating-bars">
+
+        <div class="rating-row">
+
+            <span>5 ★</span>
+
+            <div class="bar">
+
+                <div class="fill width-90"></div>
+
+            </div>
+
+            <span>90%</span>
+
+        </div>
+
+        <div class="rating-row">
+
+            <span>4 ★</span>
+
+            <div class="bar">
+
+                <div class="fill width-75"></div>
+
+            </div>
+
+            <span>75%</span>
+
+        </div>
+
+        <div class="rating-row">
+
+            <span>3 ★</span>
+
+            <div class="bar">
+
+                <div class="fill width-40"></div>
+
+            </div>
+
+            <span>40%</span>
+
+        </div>
+
+        <div class="rating-row">
+
+            <span>2 ★</span>
+
+            <div class="bar">
+
+                <div class="fill width-15"></div>
+
+            </div>
+
+            <span>15%</span>
+
+        </div>
+
+        <div class="rating-row">
+
+            <span>1 ★</span>
+
+            <div class="bar">
+
+                <div class="fill width-5"></div>
+
+            </div>
+
+            <span>5%</span>
+
+        </div>
 
     </div>
 
 </div>
 
-    </section>
+<!-- ========================================= -->
+<!-- WRITE REVIEW -->
+<!-- ========================================= -->
 
-    <!-- ================================= -->
-    <!-- REVIEW FORM -->
-    <!-- ================================= -->
+<div class="review-form-card">
 
-    <section class="review-form-card">
+    <h2>
 
-        <div class="section-title">
+        Write Your Review
 
-    <i class="bi bi-pencil-square"></i>
+    </h2>
 
-    <h2>Write a Review</h2>
+    <form class="review-form">
+
+        <input type="text"
+               placeholder="Worker Name"
+               required>
+
+        <select required>
+
+            <option>
+
+                Select Rating
+
+            </option>
+
+            <option>
+
+                ⭐⭐⭐⭐⭐ Excellent
+
+            </option>
+
+            <option>
+
+                ⭐⭐⭐⭐ Very Good
+
+            </option>
+
+            <option>
+
+                ⭐⭐⭐ Good
+
+            </option>
+
+            <option>
+
+                ⭐⭐ Average
+
+            </option>
+
+            <option>
+
+                ⭐ Poor
+
+            </option>
+
+        </select>
+
+        <textarea rows="5"
+                  placeholder="Write your experience..."
+                  required></textarea>
+
+        <button type="submit"
+                class="submit-review">
+
+            <i class="bi bi-star-fill"></i>
+
+            Submit Review
+
+        </button>
+
+    </form>
 
 </div>
+<!-- ========================================= -->
+<!-- REVIEW FILTER -->
+<!-- ========================================= -->
 
-<div class="review-form">
+<div class="review-filter">
 
-    <div class="worker-info">
+    <button class="filter-btn active">
 
-        <div class="worker-avatar">
+        All Reviews
 
-            <i class="bi bi-lightning-charge-fill"></i>
+    </button>
 
-        </div>
+    <button class="filter-btn">
 
-        <div>
+        Latest
 
-            <h3>Rahul Sharma</h3>
+    </button>
 
-            <p>Electrician • Completed Service</p>
+    <button class="filter-btn">
 
-        </div>
+        Highest Rating
 
-    </div>
+    </button>
 
-    <label>Rate Your Experience</label>
+    <button class="filter-btn">
 
-    <div class="star-rating">
-
-        <i class="bi bi-star" data-rating="1"></i>
-
-        <i class="bi bi-star" data-rating="2"></i>
-
-        <i class="bi bi-star" data-rating="3"></i>
-
-        <i class="bi bi-star" data-rating="4"></i>
-
-        <i class="bi bi-star" data-rating="5"></i>
-
-    </div>
-
-    <label>Your Review</label>
-
-    <textarea
-        rows="5"
-        placeholder="Share your experience with this worker..."></textarea>
-
-    <button class="submit-review-btn">
-
-        <i class="bi bi-send-fill"></i>
-
-        Submit Review
+        Lowest Rating
 
     </button>
 
 </div>
 
-    </section>
+<!-- ========================================= -->
+<!-- CUSTOMER REVIEWS -->
+<!-- ========================================= -->
 
-    <!-- ================================= -->
-    <!-- COMPLETED SERVICES -->
-    <!-- ================================= -->
-
-    <section class="completed-services">
-
-        <div class="section-title">
-
-    <i class="bi bi-check-circle-fill"></i>
-
-    <h2>Completed Services</h2>
-
-</div>
-
-<div class="service-grid">
-
-    <!-- Card 1 -->
-
-    <div class="service-card">
-
-        <div class="worker-avatar">
-
-            <i class="bi bi-lightning-charge-fill"></i>
-
-        </div>
-
-        <h3>Rahul Sharma</h3>
-
-        <span class="worker-role">
-
-            Electrician
-
-        </span>
-
-        <div class="rating-display">
-
-            ⭐⭐⭐⭐⭐
-
-        </div>
-
-        <p>
-
-            Service Date:
-            <strong>28 July 2026</strong>
-
-        </p>
-
-        <button class="edit-review-btn">
-
-            <i class="bi bi-pencil-fill"></i>
-
-            Edit Review
-
-        </button>
-
-    </div>
-
-    <!-- Card 2 -->
-
-    <div class="service-card">
-
-        <div class="worker-avatar plumber">
-
-            <i class="bi bi-droplet-fill"></i>
-
-        </div>
-
-        <h3>Amit Patil</h3>
-
-        <span class="worker-role">
-
-            Plumber
-
-        </span>
-
-        <div class="rating-display">
-
-            ⭐⭐⭐⭐☆
-
-        </div>
-
-        <p>
-
-            Service Date:
-            <strong>20 July 2026</strong>
-
-        </p>
-
-        <button class="edit-review-btn">
-
-            <i class="bi bi-pencil-fill"></i>
-
-            Edit Review
-
-        </button>
-
-    </div>
-
-</div>
-    </section>
-
-    <!-- ================================= -->
-    <!-- RECENT REVIEWS -->
-    <!-- ================================= -->
-
-    <section class="recent-reviews">
-
-        <div class="section-title">
-
-    <i class="bi bi-chat-square-quote-fill"></i>
-
-    <h2>Recent Reviews</h2>
-
-</div>
-
-<div class="review-list">
-
-    <!-- Review 1 -->
+<div class="reviews-list">
 
     <div class="review-card">
 
         <div class="review-header">
 
-            <div class="worker-avatar">
-
-                <i class="bi bi-lightning-charge-fill"></i>
-
-            </div>
+            <i class="bi bi-person-circle"></i>
 
             <div>
 
-                <h3>Rahul Sharma</h3>
+                <h3>
 
-                <small>
+                    Amit Patil
 
-                    <i class="bi bi-patch-check-fill"></i>
+                </h3>
 
-                    Verified Worker
+                <span>
 
-                </small>
+                    ⭐⭐⭐⭐⭐ • 2 Days Ago
+
+                </span>
 
             </div>
-
-            <span class="review-date">
-
-                28 Jul 2026
-
-            </span>
-
-        </div>
-
-        <div class="rating-display">
-
-            ⭐⭐⭐⭐⭐
 
         </div>
 
         <p>
 
-            Excellent service! Very professional, arrived on time,
-            fixed the electrical issue quickly and explained everything clearly.
-
-        </p>
-
-        <button class="helpful-btn">
-
-            <i class="bi bi-hand-thumbs-up-fill"></i>
-
-            Helpful (24)
-
-        </button>
-
-    </div>
-
-    <!-- Review 2 -->
-
-    <div class="review-card">
-
-        <div class="review-header">
-
-            <div class="worker-avatar plumber">
-
-                <i class="bi bi-droplet-fill"></i>
-
-            </div>
-
-            <div>
-
-                <h3>Amit Patil</h3>
-
-                <small>
-
-                    <i class="bi bi-patch-check-fill"></i>
-
-                    Verified Worker
-
-                </small>
-
-            </div>
-
-            <span class="review-date">
-
-                20 Jul 2026
-
-            </span>
-
-        </div>
-
-        <div class="rating-display">
-
-            ⭐⭐⭐⭐☆
-
-        </div>
-
-        <p>
-
-            Good service and polite behavior. The plumbing work was
-            completed neatly. Highly recommended.
+            Excellent service. The electrician arrived on time, completed the work professionally and explained everything clearly.
 
         </p>
 
@@ -523,133 +413,254 @@
 
     </div>
 
+    <div class="review-card">
+
+        <div class="review-header">
+
+            <i class="bi bi-person-circle"></i>
+
+            <div>
+
+                <h3>
+
+                    Priya Sharma
+
+                </h3>
+
+                <span>
+
+                    ⭐⭐⭐⭐ • 5 Days Ago
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <p>
+
+            Good quality work and friendly behaviour. Overall satisfied with the service.
+
+        </p>
+
+        <button class="helpful-btn">
+
+            <i class="bi bi-hand-thumbs-up-fill"></i>
+
+            Helpful (12)
+
+        </button>
+
+    </div>
+
+    <div class="review-card">
+
+        <div class="review-header">
+
+            <i class="bi bi-person-circle"></i>
+
+            <div>
+
+                <h3>
+
+                    Rohan Deshmukh
+
+                </h3>
+
+                <span>
+
+                    ⭐⭐⭐⭐⭐ • 1 Week Ago
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <p>
+
+            Highly recommended. Very skilled worker with excellent communication and punctuality.
+
+        </p>
+
+        <button class="helpful-btn">
+
+            <i class="bi bi-hand-thumbs-up-fill"></i>
+
+            Helpful (25)
+
+        </button>
+
+    </div>
+
 </div>
 
-    </section>
+<!-- ========================================= -->
+<!-- LOAD MORE -->
+<!-- ========================================= -->
+
+<div class="load-more-section">
+
+    <button class="load-more-btn">
+
+        <i class="bi bi-arrow-repeat"></i>
+
+        Load More Reviews
+
+    </button>
+
+</div>
 
 </div>
 
 </section>
 
 </main>
-
 <!-- ========================================= -->
 <!-- FOOTER -->
 <!-- ========================================= -->
 
-<footer>
+<footer class="footer">
 
     <div class="container">
 
-    <div class="footer-grid">
+        <div class="footer-grid">
 
-        <!-- About -->
+            <div>
 
-        <div class="footer-about">
+                <h2>
 
-            <h2 class="footer-logo">
+                    TrustGrid
 
-                <i class="bi bi-shield-check"></i>
+                </h2>
 
-                TrustGrid
+                <p>
 
-            </h2>
+                    Connecting customers with trusted and verified professionals across India.
 
-            <p>
+                </p>
 
-                TrustGrid values every customer review. Your ratings and
-                feedback help us improve service quality and build a trusted
-                community of verified professionals.
+            </div>
 
-            </p>
+            <div>
 
-        </div>
+                <h3>
 
-        <!-- Quick Links -->
+                    Quick Links
 
-        <div>
+                </h3>
 
-            <h3>Quick Links</h3>
+                <a href="customer_dashboard.html">
 
-            <a href="dashboard.html">Dashboard</a>
-
-            <a href="find_worker.html">Find Worker</a>
-
-            <a href="my_bookings.html">My Bookings</a>
-
-            <a href="reviews.html">Reviews</a>
-
-        </div>
-
-        <!-- Support -->
-
-        <div>
-
-            <h3>Support</h3>
-
-            <a href="#">Help Center</a>
-
-            <a href="#">Terms & Conditions</a>
-
-            <a href="#">Privacy Policy</a>
-
-            <a href="#">Contact Us</a>
-
-        </div>
-
-        <!-- Social -->
-
-        <div>
-
-            <h3>Follow Us</h3>
-
-            <div class="social-icons">
-
-                <a href="#">
-
-                    <i class="bi bi-facebook"></i>
+                    Dashboard
 
                 </a>
 
-                <a href="#">
+                <a href="customer_my_bookings.html">
 
-                    <i class="bi bi-instagram"></i>
-
-                </a>
-
-                <a href="#">
-
-                    <i class="bi bi-linkedin"></i>
+                    My Bookings
 
                 </a>
 
-                <a href="#">
+                <a href="customer_review.html">
 
-                    <i class="bi bi-twitter-x"></i>
+                    Reviews
+
+                </a>
+
+                <a href="customer_wallet.html">
+
+                    Wallet
 
                 </a>
 
             </div>
 
+            <div>
+
+                <h3>
+
+                    Support
+
+                </h3>
+
+                <a href="customer_help_support.html">
+
+                    Help Center
+
+                </a>
+
+                <a href="customer_settings.html">
+
+                    Settings
+
+                </a>
+
+                <a href="login.html">
+
+                    Logout
+
+                </a>
+
+            </div>
+
+            <div>
+
+                <h3>
+
+                    Follow Us
+
+                </h3>
+
+                <div class="social-links">
+
+                    <a href="#">
+
+                        <i class="bi bi-facebook"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="bi bi-instagram"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="bi bi-linkedin"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="bi bi-twitter-x"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
+
+        <hr>
+
+        <p class="copyright">
+
+            © 2026 TrustGrid. All Rights Reserved.
+
+        </p>
 
     </div>
 
-    <hr>
-
-    <p class="copyright">
-
-        © 2026 TrustGrid. All Rights Reserved.
-
-    </p>
-
-</div>
-
 </footer>
 
-<!-- JS -->
+<!-- ========================================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================================= -->
 
-<script src="../static/js/reviews.js"></script>
+<script src="../static/js/customer_review.js"></script>
 
 </body>
 
