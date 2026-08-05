@@ -1,294 +1,269 @@
-/*==================================================
-            TRUSTGRID BOOK SERVICE
-==================================================*/
-
 /* ==========================================
-   Navigation Hover Effect
+   TRUSTGRID
+   CUSTOMER BOOK SERVICE
+   JAVASCRIPT
 ========================================== */
 
-const navLinks = document.querySelectorAll(".nav-links a");
+/* ==========================================
+   ACTIVE NAVIGATION
+========================================== */
 
-navLinks.forEach(link => {
+const currentPage = window.location.pathname.split("/").pop();
 
-    link.addEventListener("mouseenter", () => {
+document.querySelectorAll(".navbar a").forEach(link => {
 
-        link.style.transform = "translateY(-3px)";
+    if (link.getAttribute("href") === currentPage) {
 
-    });
+        link.classList.add("active");
 
-    link.addEventListener("mouseleave", () => {
-
-        link.style.transform = "translateY(0px)";
-
-    });
+    }
 
 });
 
-
 /* ==========================================
-   Date Selection
+   HEADER SHADOW
 ========================================== */
 
-const dateButtons = document.querySelectorAll(".date-buttons button");
+window.addEventListener("scroll", () => {
 
-dateButtons.forEach(button => {
+    const header = document.querySelector(".header");
 
-    button.addEventListener("click", () => {
+    if (window.scrollY > 40) {
 
-        dateButtons.forEach(btn => {
+        header.style.boxShadow = "0 15px 35px rgba(0,0,0,.12)";
 
-            btn.classList.remove("active");
+    }
 
-        });
+    else {
 
-        button.classList.add("active");
+        header.style.boxShadow = "0 5px 20px rgba(0,0,0,.08)";
 
-    });
+    }
 
 });
 
-
 /* ==========================================
-   Time Slot Selection
+   PAYMENT CARD SELECT
 ========================================== */
 
-const timeButtons = document.querySelectorAll(".time-grid button");
+const paymentCards = document.querySelectorAll(".payment-card");
 
-timeButtons.forEach(button => {
+paymentCards.forEach(card => {
 
-    button.addEventListener("click", () => {
+    card.addEventListener("click", () => {
 
-        timeButtons.forEach(btn => {
-
-            btn.classList.remove("active");
-
-        });
-
-        button.classList.add("active");
-
-    });
-
-});
-/*==================================================
-                PART 2
-==================================================*/
-
-/* ==========================================
-   Payment Method Selection
-========================================== */
-
-const paymentOptions = document.querySelectorAll(".payment-options label");
-
-paymentOptions.forEach(option => {
-
-    option.addEventListener("click", () => {
-
-        paymentOptions.forEach(item => {
+        paymentCards.forEach(item => {
 
             item.style.borderColor = "#E5E7EB";
+
             item.style.background = "#FFFFFF";
 
         });
 
-        option.style.borderColor = "#2ECC71";
-        option.style.background = "#F5FFF9";
+        card.style.borderColor = "#2563EB";
+
+        card.style.background = "#EEF4FF";
+
+        card.querySelector("input").checked = true;
 
     });
 
 });
 
-
 /* ==========================================
-   Input Focus Animation
-========================================== */
-
-const formInputs = document.querySelectorAll(
-    ".form-group input, .form-group textarea, .form-group select"
-);
-
-formInputs.forEach(input => {
-
-    input.addEventListener("focus", () => {
-
-        input.style.transform = "scale(1.02)";
-        input.style.boxShadow = "0 0 10px rgba(46,204,113,0.25)";
-
-    });
-
-    input.addEventListener("blur", () => {
-
-        input.style.transform = "scale(1)";
-        input.style.boxShadow = "none";
-
-    });
-
-});
-
-
-/* ==========================================
-   Smooth Scroll To Top
-========================================== */
-
-const logo = document.querySelector(".logo");
-
-if (logo) {
-
-    logo.addEventListener("click", function (e) {
-
-        e.preventDefault();
-
-        window.scrollTo({
-
-            top: 0,
-
-            behavior: "smooth"
-
-        });
-
-    });
-
-}
-
-
-/* ==========================================
-   Card Hover Animation
-========================================== */
-
-const cards = document.querySelectorAll(
-    ".customer-details, .datetime-card, .address-card, .problem-card, .payment-card, .worker-card, .summary-card"
-);
-
-cards.forEach(card => {
-
-    card.addEventListener("mouseenter", () => {
-
-        card.style.transform = "translateY(-6px)";
-        card.style.transition = "0.3s";
-
-    });
-
-    card.addEventListener("mouseleave", () => {
-
-        card.style.transform = "translateY(0px)";
-
-    });
-
-});
-/*==================================================
-                PART 3
-==================================================*/
-
-/* ==========================================
-   Confirm Booking
+   FORM VALIDATION
 ========================================== */
 
 const confirmBtn = document.querySelector(".confirm-btn");
 
-if (confirmBtn) {
+const bookingForm = document.querySelector(".service-form");
 
-    confirmBtn.addEventListener("click", function () {
+confirmBtn.addEventListener("click", (event) => {
 
-        /* Validation */
+    event.preventDefault();
 
-        const name = document.querySelector('input[type="text"]');
-        const mobile = document.querySelector('input[type="tel"]');
+    const name = bookingForm.querySelector('input[type="text"]').value.trim();
 
-        if (name.value.trim() === "") {
+    const mobile = bookingForm.querySelector('input[type="tel"]').value.trim();
 
-            alert("Please enter your Full Name.");
+    const date = bookingForm.querySelector('input[type="date"]').value;
 
-            name.focus();
+    const time = bookingForm.querySelector('input[type="time"]').value;
 
-            return;
+    const terms = document.querySelector(".terms-box input");
 
-        }
+    if (name === "") {
 
-        if (mobile.value.trim() === "") {
+        alert("Please enter your full name.");
 
-            alert("Please enter your Mobile Number.");
+        return;
 
-            mobile.focus();
+    }
 
-            return;
+    if (mobile.length < 10) {
 
-        }
+        alert("Please enter a valid mobile number.");
 
-        /* Loading */
+        return;
 
-        confirmBtn.disabled = true;
+    }
 
-        confirmBtn.innerHTML = `
-    <i class="bi bi-arrow-repeat"></i>
-    Booking...
-    `;
+    if (date === "") {
 
-        setTimeout(() => {
+        alert("Please select booking date.");
 
-            confirmBtn.innerHTML = `
-        <i class="bi bi-check-circle-fill"></i>
-        Booking Confirmed
-        `;
+        return;
 
-            confirmBtn.style.background = "#27AE60";
+    }
 
-            alert("🎉 Booking Confirmed Successfully!");
+    if (time === "") {
 
-            setTimeout(() => {
+        alert("Please select booking time.");
 
-                window.location.href = "my_bookings.html";
+        return;
 
-            }, 1200);
+    }
 
-        }, 1800);
+    if (!terms.checked) {
+
+        alert("Please accept Terms & Conditions.");
+
+        return;
+
+    }
+
+    alert("🎉 Booking Confirmed Successfully!");
+
+    setTimeout(() => {
+
+        window.location.href = "customer_my_bookings.html";
+
+    }, 800);
+
+});
+
+/* ==========================================
+   MINIMUM DATE
+========================================== */
+
+const dateInput = document.querySelector('input[type="date"]');
+
+if (dateInput) {
+
+    const today = new Date();
+
+    const year = today.getFullYear();
+
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+
+    const day = String(today.getDate()).padStart(2, "0");
+
+    dateInput.min = `${year}-${month}-${day}`;
+
+}
+
+/* ==========================================
+   AUTO RESIZE TEXTAREA
+========================================== */
+
+const textarea = document.querySelector("textarea");
+
+if (textarea) {
+
+    textarea.addEventListener("input", function () {
+
+        this.style.height = "auto";
+
+        this.style.height = this.scrollHeight + "px";
 
     });
 
 }
 
 /* ==========================================
-   Button Hover Animation
+   BUTTON RIPPLE EFFECT
 ========================================== */
 
-document.querySelectorAll("button").forEach(btn => {
+document.querySelectorAll("button").forEach(button => {
 
-    btn.addEventListener("mouseenter", () => {
+    button.addEventListener("click", function (e) {
 
-        btn.style.transform = "translateY(-3px)";
+        const ripple = document.createElement("span");
 
-    });
+        const size = Math.max(this.clientWidth, this.clientHeight);
 
-    btn.addEventListener("mouseleave", () => {
+        ripple.style.width = size + "px";
 
-        btn.style.transform = "translateY(0px)";
+        ripple.style.height = size + "px";
+
+        ripple.style.left = e.offsetX - size / 2 + "px";
+
+        ripple.style.top = e.offsetY - size / 2 + "px";
+
+        ripple.classList.add("ripple");
+
+        this.appendChild(ripple);
+
+        setTimeout(() => {
+
+            ripple.remove();
+
+        }, 600);
 
     });
 
 });
 
 /* ==========================================
-   Fade Animation on Load
+   PAGE LOAD ANIMATION
 ========================================== */
 
 window.addEventListener("load", () => {
 
-    document.querySelectorAll(
-        ".hero-card,.customer-details,.datetime-card,.address-card,.problem-card,.payment-card,.worker-card,.summary-card,.confirm-card"
-    ).forEach((card, index) => {
+    document.body.style.opacity = "1";
 
-        card.style.opacity = "0";
+    console.log("✅ Customer Book Service Loaded");
 
-        card.style.transform = "translateY(25px)";
+});
 
-        setTimeout(() => {
+/* ==========================================
+   SMOOTH REVEAL
+========================================== */
 
-            card.style.transition = "all .6s ease";
+const reveal = document.querySelectorAll(
 
-            card.style.opacity = "1";
+    ".worker-card,.booking-form,.payment-section,.price-summary,.terms-box"
 
-            card.style.transform = "translateY(0)";
+);
 
-        }, index * 120);
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.style.opacity = "1";
+
+            entry.target.style.transform = "translateY(0)";
+
+        }
 
     });
 
 });
+
+reveal.forEach(item => {
+
+    item.style.opacity = "0";
+
+    item.style.transform = "translateY(40px)";
+
+    item.style.transition = ".6s";
+
+    observer.observe(item);
+
+});
+
+/* ==========================================
+   END
+========================================== */
