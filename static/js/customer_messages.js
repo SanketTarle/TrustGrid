@@ -1,117 +1,68 @@
-/*==================================================
+/* ==========================================
+   TRUSTGRID
+   CUSTOMER MESSAGES
+   JAVASCRIPT
+========================================== */
 
-            TRUSTGRID MESSAGES
+/* ==========================================
+   ACTIVE NAVIGATION
+========================================== */
 
-==================================================*/
+const currentPage = window.location.pathname.split("/").pop();
 
-/*=========================================
-        NAVIGATION HOVER
-=========================================*/
+document.querySelectorAll(".navbar a").forEach(link => {
 
-const navLinks = document.querySelectorAll(".nav-links a");
+    if (link.getAttribute("href") === currentPage) {
 
-navLinks.forEach(link => {
+        link.classList.add("active");
 
-    link.addEventListener("mouseenter", () => {
+    }
 
-        link.style.transform = "translateY(-3px)";
+});
 
-    });
+/* ==========================================
+   HEADER SHADOW
+========================================== */
 
-    link.addEventListener("mouseleave", () => {
+window.addEventListener("scroll", () => {
 
-        link.style.transform = "translateY(0px)";
+    const header = document.querySelector(".header");
+
+    header.style.boxShadow = window.scrollY > 40
+        ? "0 15px 35px rgba(0,0,0,.12)"
+        : "0 5px 20px rgba(0,0,0,.08)";
+
+});
+
+/* ==========================================
+   CHAT SELECTION
+========================================== */
+
+document.querySelectorAll(".chat-item").forEach(item => {
+
+    item.addEventListener("click", () => {
+
+        document.querySelectorAll(".chat-item").forEach(chat => {
+
+            chat.classList.remove("active");
+
+        });
+
+        item.classList.add("active");
 
     });
 
 });
 
-/*=========================================
-        SEARCH CHAT
-=========================================*/
-
-const searchInput = document.querySelector(".chat-search input");
-
-const chatItems = document.querySelectorAll(".chat-item");
-
-if (searchInput) {
-
-    searchInput.addEventListener("keyup", () => {
-
-        const value = searchInput.value.toLowerCase();
-
-        chatItems.forEach(chat => {
-
-            if (chat.innerText.toLowerCase().includes(value)) {
-
-                chat.style.display = "flex";
-
-            } else {
-
-                chat.style.display = "none";
-
-            }
-
-        });
-
-    });
-
-}
-
-/*=========================================
-        SELECT CHAT
-=========================================*/
-
-chatItems.forEach(chat => {
-
-    chat.addEventListener("click", () => {
-
-        chatItems.forEach(item => item.classList.remove("active"));
-
-        chat.classList.add("active");
-
-    });
-
-});
-
-/*=========================================
-        LOGO SCROLL
-=========================================*/
-
-const logo = document.querySelector(".logo");
-
-if (logo) {
-
-    logo.addEventListener("click", (e) => {
-
-        e.preventDefault();
-
-        window.scrollTo({
-
-            top: 0,
-
-            behavior: "smooth"
-
-        });
-
-    });
-
-}
-/*==================================================
-
-                PART 2
-
-==================================================*/
-
-/*=========================================
-        SEND MESSAGE
-=========================================*/
+/* ==========================================
+   SEND MESSAGE
+========================================== */
 
 const messageInput = document.querySelector(".chat-input input");
 
-const sendBtn = document.querySelector(".send-btn");
+const sendButton = document.querySelector(".send-btn");
 
-const chatBody = document.querySelector(".chat-body");
+const chatBox = document.querySelector(".chat-messages");
 
 function sendMessage() {
 
@@ -125,225 +76,143 @@ function sendMessage() {
 
     message.innerHTML = `
 
-<div class="message-text">
+        <div class="message-content">
 
-${text}
+            <p>${text}</p>
 
-</div>
-
-<span class="time">
-
-${new Date().toLocaleTimeString([], {
+            <span>${new Date().toLocaleTimeString([], {
 
         hour: "2-digit",
 
         minute: "2-digit"
 
-    })} ✔✔
+    })}</span>
 
-</span>
+        </div>
 
-`;
+    `;
 
-    chatBody.appendChild(message);
+    chatBox.appendChild(message);
 
     messageInput.value = "";
 
-    chatBody.scrollTop = chatBody.scrollHeight;
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+    autoReply();
 
 }
 
-if (sendBtn) {
+sendButton.addEventListener("click", sendMessage);
 
-    sendBtn.addEventListener("click", sendMessage);
+messageInput.addEventListener("keypress", e => {
+
+    if (e.key === "Enter") {
+
+        e.preventDefault();
+
+        sendMessage();
+
+    }
+
+});
+
+/* ==========================================
+   AUTO REPLY DEMO
+========================================== */
+
+function autoReply() {
+
+    setTimeout(() => {
+
+        const reply = document.createElement("div");
+
+        reply.className = "message received";
+
+        reply.innerHTML = `
+
+            <div class="message-content">
+
+                <p>Thank you! I'll get back to you shortly.</p>
+
+                <span>${new Date().toLocaleTimeString([], {
+
+            hour: "2-digit",
+
+            minute: "2-digit"
+
+        })}</span>
+
+            </div>
+
+        `;
+
+        chatBox.appendChild(reply);
+
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+    }, 1500);
 
 }
 
-/*=========================================
-        ENTER KEY
-=========================================*/
+/* ==========================================
+   SEARCH CHAT
+========================================== */
 
-if (messageInput) {
+const searchInput = document.querySelector(".search-box input");
 
-    messageInput.addEventListener("keypress", (e) => {
+searchInput.addEventListener("keyup", () => {
 
-        if (e.key === "Enter") {
+    const value = searchInput.value.toLowerCase();
 
-            sendMessage();
+    document.querySelectorAll(".chat-item").forEach(item => {
 
-        }
+        const name = item.querySelector("h3").textContent.toLowerCase();
+
+        item.style.display = name.includes(value) ? "flex" : "none";
 
     });
 
-}
+});
 
-/*=========================================
-        CHAT ACTION BUTTONS
-=========================================*/
+/* ==========================================
+   CHAT ACTION BUTTONS
+========================================== */
 
 document.querySelectorAll(".chat-actions button").forEach(button => {
 
     button.addEventListener("click", () => {
 
-        showToast("Feature coming soon 🚀");
+        alert("This feature will be available after backend integration.");
 
     });
 
 });
 
-/*=========================================
-        ICON BUTTONS
-=========================================*/
+/* ==========================================
+   ATTACHMENT
+========================================== */
 
-document.querySelectorAll(".icon-btn").forEach(button => {
+document.querySelector(".attach-btn").addEventListener("click", () => {
 
-    button.addEventListener("click", () => {
-
-        showToast("This feature will be available in backend.");
-
-    });
-
-});
-/*==================================================
-
-                PART 3
-
-==================================================*/
-
-/*=========================================
-        PAGE LOAD ANIMATION
-=========================================*/
-
-window.addEventListener("load", () => {
-
-    document.querySelectorAll(
-
-        ".hero-card,.chat-sidebar,.chat-window"
-
-    ).forEach((card, index) => {
-
-        card.style.opacity = "0";
-
-        card.style.transform = "translateY(30px)";
-
-        setTimeout(() => {
-
-            card.style.transition = ".6s";
-
-            card.style.opacity = "1";
-
-            card.style.transform = "translateY(0px)";
-
-        }, index * 120);
-
-    });
+    alert("File attachment feature coming soon.");
 
 });
 
-/*=========================================
-        TOAST
-=========================================*/
+/* ==========================================
+   EMOJI
+========================================== */
 
-function showToast(message) {
+document.querySelector(".emoji-btn").addEventListener("click", () => {
 
-    const toast = document.createElement("div");
+    messageInput.value += "😊 ";
 
-    toast.innerText = message;
+    messageInput.focus();
 
-    toast.style.position = "fixed";
-    toast.style.right = "25px";
-    toast.style.bottom = "25px";
+});
 
-    toast.style.background = "#2ECC71";
-    toast.style.color = "white";
-
-    toast.style.padding = "15px 22px";
-
-    toast.style.borderRadius = "12px";
-
-    toast.style.fontWeight = "600";
-
-    toast.style.boxShadow = "0 10px 30px rgba(0,0,0,.2)";
-
-    toast.style.zIndex = "9999";
-
-    toast.style.opacity = "0";
-
-    toast.style.transition = ".3s";
-
-    document.body.appendChild(toast);
-
-    setTimeout(() => {
-
-        toast.style.opacity = "1";
-
-    }, 100);
-
-    setTimeout(() => {
-
-        toast.style.opacity = "0";
-
-        setTimeout(() => {
-
-            toast.remove();
-
-        }, 300);
-
-    }, 2500);
-
-}
-
-/*=========================================
-        DEMO AUTO REPLY
-=========================================*/
-
-function autoReply() {
-
-    const reply = document.createElement("div");
-
-    reply.className = "message received";
-
-    reply.innerHTML = `
-
-<div class="message-text">
-
-Thank you! I'll check and reply shortly. 😊
-
-</div>
-
-<span class="time">
-
-${new Date().toLocaleTimeString([], {
-
-        hour: "2-digit",
-
-        minute: "2-digit"
-
-    })}
-
-</span>
-
-`;
-
-    chatBody.appendChild(reply);
-
-    chatBody.scrollTop = chatBody.scrollHeight;
-
-}
-
-if (sendBtn) {
-
-    sendBtn.addEventListener("click", () => {
-
-        setTimeout(autoReply, 1500);
-
-    });
-
-}
-
-/*=========================================
-        RIPPLE EFFECT
-=========================================*/
+/* ==========================================
+   RIPPLE EFFECT
+========================================== */
 
 document.querySelectorAll("button").forEach(button => {
 
@@ -351,33 +220,17 @@ document.querySelectorAll("button").forEach(button => {
 
         const ripple = document.createElement("span");
 
-        const rect = this.getBoundingClientRect();
+        const size = Math.max(this.clientWidth, this.clientHeight);
 
-        const size = Math.max(rect.width, rect.height);
+        ripple.classList.add("ripple");
 
         ripple.style.width = size + "px";
 
         ripple.style.height = size + "px";
 
-        ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+        ripple.style.left = e.offsetX - size / 2 + "px";
 
-        ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
-
-        ripple.style.position = "absolute";
-
-        ripple.style.borderRadius = "50%";
-
-        ripple.style.background = "rgba(255,255,255,.35)";
-
-        ripple.style.transform = "scale(0)";
-
-        ripple.style.animation = "ripple .6s linear";
-
-        ripple.style.pointerEvents = "none";
-
-        this.style.position = "relative";
-
-        this.style.overflow = "hidden";
+        ripple.style.top = e.offsetY - size / 2 + "px";
 
         this.appendChild(ripple);
 
@@ -390,3 +243,29 @@ document.querySelectorAll("button").forEach(button => {
     });
 
 });
+
+/* ==========================================
+   SCROLL TO LATEST MESSAGE
+========================================== */
+
+window.addEventListener("load", () => {
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+});
+
+/* ==========================================
+   PAGE LOAD
+========================================== */
+
+window.addEventListener("load", () => {
+
+    document.body.style.opacity = "1";
+
+    console.log("Customer Messages Loaded Successfully");
+
+});
+
+/* ==========================================
+   END
+========================================== */
