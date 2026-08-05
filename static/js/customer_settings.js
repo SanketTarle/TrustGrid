@@ -1,48 +1,158 @@
-/*==================================================
+/* ==========================================
+   TRUSTGRID
+   CUSTOMER SETTINGS
+   JAVASCRIPT
+========================================== */
 
-            TRUSTGRID SETTINGS
+/* ==========================================
+   ACTIVE NAVIGATION
+========================================== */
 
-==================================================*/
+const currentPage = window.location.pathname.split("/").pop();
 
-/*=========================================
-        NAVIGATION HOVER
-=========================================*/
+document.querySelectorAll(".navbar a").forEach(link => {
 
-const navLinks = document.querySelectorAll(".nav-links a");
+    if (link.getAttribute("href") === currentPage) {
 
-navLinks.forEach(link => {
+        link.classList.add("active");
 
-    link.addEventListener("mouseenter", () => {
+    }
 
-        link.style.transform = "translateY(-3px)";
+});
+
+/* ==========================================
+   HEADER SHADOW
+========================================== */
+
+window.addEventListener("scroll", () => {
+
+    const header = document.querySelector(".header");
+
+    header.style.boxShadow = window.scrollY > 40
+
+        ? "0 15px 35px rgba(0,0,0,.12)"
+
+        : "0 5px 20px rgba(0,0,0,.08)";
+
+});
+
+/* ==========================================
+   CHANGE PHOTO
+========================================== */
+
+const photoButton = document.querySelector(".change-photo-btn");
+
+if (photoButton) {
+
+    photoButton.addEventListener("click", () => {
+
+        alert("Profile photo upload will be available after backend integration.");
 
     });
 
-    link.addEventListener("mouseleave", () => {
+}
 
-        link.style.transform = "translateY(0)";
+/* ==========================================
+   SAVE CHANGES
+========================================== */
+
+const saveButton = document.querySelector(".save-btn");
+
+if (saveButton) {
+
+    saveButton.addEventListener("click", () => {
+
+        alert("Your settings have been saved successfully.");
+
+    });
+
+}
+
+/* ==========================================
+   LOGOUT
+========================================== */
+
+const logoutButton = document.querySelector(".logout-btn");
+
+if (logoutButton) {
+
+    logoutButton.addEventListener("click", () => {
+
+        if (confirm("Are you sure you want to logout?")) {
+
+            window.location.href = "login.html";
+
+        }
+
+    });
+
+}
+
+/* ==========================================
+   DELETE ACCOUNT
+========================================== */
+
+const deleteButton = document.querySelector(".delete-btn");
+
+if (deleteButton) {
+
+    deleteButton.addEventListener("click", () => {
+
+        if (confirm("Delete your TrustGrid account permanently?")) {
+
+            alert("Account deletion request submitted.");
+
+        }
+
+    });
+
+}
+
+/* ==========================================
+   DARK MODE
+========================================== */
+
+const switches = document.querySelectorAll(".switch input");
+
+switches.forEach(toggle => {
+
+    toggle.addEventListener("change", () => {
+
+        const title = toggle.closest(".setting-item")
+
+            ?.querySelector("h3")?.textContent;
+
+        console.log(title + " changed.");
 
     });
 
 });
 
-/*=========================================
-        LOGO SCROLL
-=========================================*/
+/* ==========================================
+   FORM VALIDATION
+========================================== */
 
-const logo = document.querySelector(".logo");
+const form = document.querySelector(".settings-form");
 
-if (logo) {
+if (form) {
 
-    logo.addEventListener("click", (e) => {
+    const inputs = form.querySelectorAll("input");
 
-        e.preventDefault();
+    inputs.forEach(input => {
 
-        window.scrollTo({
+        input.addEventListener("blur", () => {
 
-            top: 0,
+            if (input.value.trim() === "") {
 
-            behavior: "smooth"
+                input.style.borderColor = "#EF4444";
+
+            }
+
+            else {
+
+                input.style.borderColor = "#22C55E";
+
+            }
 
         });
 
@@ -50,213 +160,9 @@ if (logo) {
 
 }
 
-/*=========================================
-        SAVE PROFILE
-=========================================*/
-
-const saveBtn = document.querySelector(".save-profile-btn");
-
-if (saveBtn) {
-
-    saveBtn.addEventListener("click", () => {
-
-        showToast("Profile updated successfully ✅");
-
-    });
-
-}
-
-/*=========================================
-        CHANGE PASSWORD
-=========================================*/
-
-const changeBtn = document.querySelector(".setting-btn");
-
-if (changeBtn) {
-
-    changeBtn.addEventListener("click", () => {
-
-        showToast("Password change feature coming soon 🔐");
-
-    });
-
-}
-/*==================================================
-
-                PART 2
-
-====================================================*/
-
-/*=========================================
-        TOGGLE SWITCHES
-=========================================*/
-
-document.querySelectorAll(".switch input").forEach(toggle => {
-
-    toggle.addEventListener("change", () => {
-
-        if (toggle.checked) {
-
-            showToast("Setting Enabled");
-
-        } else {
-
-            showToast("Setting Disabled");
-
-        }
-
-    });
-
-});
-
-/*=========================================
-        DARK MODE DEMO
-=========================================*/
-
-const toggles = document.querySelectorAll(".switch input");
-
-if (toggles.length > 3) {
-
-    toggles[3].addEventListener("change", (e) => {
-
-        if (e.target.checked) {
-
-            document.body.style.background = "#1F2937";
-
-            document.body.style.color = "white";
-
-        } else {
-
-            document.body.style.background = "#F5F7FA";
-
-            document.body.style.color = "#1F2937";
-
-        }
-
-    });
-
-}
-/*==================================================
-
-                PART 3
-
-====================================================*/
-
-/*=========================================
-        DELETE ACCOUNT
-=========================================*/
-
-const deleteBtn = document.querySelector(".delete-account-btn");
-
-if (deleteBtn) {
-
-    deleteBtn.addEventListener("click", () => {
-
-        const confirmDelete = confirm(
-
-            "Are you sure you want to delete your account?"
-
-        );
-
-        if (confirmDelete) {
-
-            showToast("Account deletion request submitted.");
-
-        }
-
-    });
-
-}
-
-/*=========================================
-        PAGE LOAD
-=========================================*/
-
-window.addEventListener("load", () => {
-
-    document.querySelectorAll(
-
-        ".hero-card,.profile-settings,.settings-card"
-
-    ).forEach((card, index) => {
-
-        card.style.opacity = "0";
-
-        card.style.transform = "translateY(30px)";
-
-        setTimeout(() => {
-
-            card.style.transition = ".6s";
-
-            card.style.opacity = "1";
-
-            card.style.transform = "translateY(0)";
-
-        }, index * 120);
-
-    });
-
-});
-
-/*=========================================
-        TOAST
-=========================================*/
-
-function showToast(message) {
-
-    const toast = document.createElement("div");
-
-    toast.innerText = message;
-
-    toast.style.position = "fixed";
-
-    toast.style.bottom = "25px";
-
-    toast.style.right = "25px";
-
-    toast.style.background = "#2ECC71";
-
-    toast.style.color = "white";
-
-    toast.style.padding = "15px 22px";
-
-    toast.style.borderRadius = "12px";
-
-    toast.style.fontWeight = "600";
-
-    toast.style.boxShadow = "0 10px 30px rgba(0,0,0,.2)";
-
-    toast.style.opacity = "0";
-
-    toast.style.transition = ".3s";
-
-    toast.style.zIndex = "9999";
-
-    document.body.appendChild(toast);
-
-    setTimeout(() => {
-
-        toast.style.opacity = "1";
-
-    }, 100);
-
-    setTimeout(() => {
-
-        toast.style.opacity = "0";
-
-        setTimeout(() => {
-
-            toast.remove();
-
-        }, 300);
-
-    }, 2500);
-
-}
-
-/*=========================================
-        RIPPLE EFFECT
-=========================================*/
+/* ==========================================
+   RIPPLE EFFECT
+========================================== */
 
 document.querySelectorAll("button").forEach(button => {
 
@@ -264,33 +170,23 @@ document.querySelectorAll("button").forEach(button => {
 
         const ripple = document.createElement("span");
 
-        const rect = this.getBoundingClientRect();
+        const size = Math.max(
 
-        const size = Math.max(rect.width, rect.height);
+            this.clientWidth,
+
+            this.clientHeight
+
+        );
+
+        ripple.classList.add("ripple");
 
         ripple.style.width = size + "px";
 
         ripple.style.height = size + "px";
 
-        ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+        ripple.style.left = e.offsetX - size / 2 + "px";
 
-        ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
-
-        ripple.style.position = "absolute";
-
-        ripple.style.borderRadius = "50%";
-
-        ripple.style.background = "rgba(255,255,255,.35)";
-
-        ripple.style.transform = "scale(0)";
-
-        ripple.style.animation = "ripple .6s linear";
-
-        ripple.style.pointerEvents = "none";
-
-        this.style.position = "relative";
-
-        this.style.overflow = "hidden";
+        ripple.style.top = e.offsetY - size / 2 + "px";
 
         this.appendChild(ripple);
 
@@ -303,3 +199,57 @@ document.querySelectorAll("button").forEach(button => {
     });
 
 });
+
+/* ==========================================
+   SCROLL REVEAL
+========================================== */
+
+const cards = document.querySelectorAll(
+
+    ".settings-card,.setting-item"
+
+);
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.style.opacity = "1";
+
+            entry.target.style.transform = "translateY(0)";
+
+        }
+
+    });
+
+});
+
+cards.forEach(card => {
+
+    card.style.opacity = "0";
+
+    card.style.transform = "translateY(30px)";
+
+    card.style.transition = ".6s ease";
+
+    observer.observe(card);
+
+});
+
+/* ==========================================
+   PAGE LOAD
+========================================== */
+
+window.addEventListener("load", () => {
+
+    document.body.style.opacity = "1";
+
+    console.log("Customer Settings Loaded Successfully");
+
+});
+
+/* ==========================================
+   END
+========================================== */
