@@ -1,16 +1,29 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
+    <!-- ========================================= -->
+    <!-- META INFORMATION -->
+    <!-- ========================================= -->
+
     <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Help & Support | TrustGrid</title>
+    <meta name="description"
+          content="TrustGrid Customer Help & Support">
 
-    <!-- Google Font -->
+    <title>TrustGrid | Help & Support</title>
+
+    <!-- ========================================= -->
+    <!-- GOOGLE FONT -->
+    <!-- ========================================= -->
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -22,15 +35,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
+    <!-- ========================================= -->
+    <!-- BOOTSTRAP ICONS -->
+    <!-- ========================================= -->
 
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- ========================================= -->
     <!-- CSS -->
+    <!-- ========================================= -->
 
     <link rel="stylesheet"
-          href="../static/css/help_support.css">
+          href="../static/css/customer_help_support.css">
 
 </head>
 
@@ -40,156 +57,80 @@
 <!-- HEADER -->
 <!-- ========================================= -->
 
-<header>
+<header class="header">
 
     <div class="container">
 
-    <!-- Logo -->
+        <a href="customer_dashboard.html"
+           class="logo">
 
-    <a href="dashboard.html" class="logo">
+            <i class="bi bi-shield-check"></i>
 
-        <i class="bi bi-shield-check"></i>
+            <span>TrustGrid</span>
 
-        <span>TrustGrid</span>
+        </a>
 
-    </a>
+        <nav class="navbar">
 
-    <!-- Navigation -->
+            <a href="customer_dashboard.html">
 
-    <nav>
+                Dashboard
 
-        <ul class="nav-links">
+            </a>
 
-            <li>
+            <a href="customer_find_worker.html">
 
-                <a href="dashboard.html">
+                Find Worker
 
-                    <i class="bi bi-grid"></i>
+            </a>
 
-                    Dashboard
+            <a href="customer_help_support.html">
 
-                </a>
+                Help & Support
 
-            </li>
+            </a>
 
-            <li>
+            <a href="customer_messages.html">
 
-                <a href="find_worker.html">
+                Messages
 
-                    <i class="bi bi-search"></i>
+            </a>
 
-                    Find Worker
+        </nav>
 
-                </a>
+        <div class="header-actions">
 
-            </li>
+            <a href="customer_notifications.html">
 
-            <li>
+                <i class="bi bi-bell-fill"></i>
 
-                <a href="my_bookings.html">
+            </a>
 
-                    <i class="bi bi-calendar-check"></i>
+            <a href="customer_wallet.html">
 
-                    My Bookings
+                <i class="bi bi-wallet2"></i>
 
-                </a>
+            </a>
 
-            </li>
+            <a href="customer_settings.html">
 
-            <li>
+                <i class="bi bi-gear-fill"></i>
 
-                <a href="help_support.html" class="active">
-
-                    <i class="bi bi-headset"></i>
-
-                    Help
-
-                </a>
-
-            </li>
-
-        </ul>
-
-    </nav>
-
-    <!-- Profile -->
-
-    <div class="profile">
-
-        <div class="profile-img">
-
-            <i class="bi bi-person-fill"></i>
-
-        </div>
-
-        <div>
-
-            <h4>Sanket</h4>
-
-            <small>Customer</small>
+            </a>
 
         </div>
 
     </div>
-
-</div>
 
 </header>
 
 <!-- ========================================= -->
-<!-- BREADCRUMB -->
+<!-- HERO -->
 <!-- ========================================= -->
 
-<section class="breadcrumb-section">
+<section class="support-hero">
 
     <div class="container">
-
-    <div class="breadcrumb">
-
-        <a href="dashboard.html">
-
-            Dashboard
-
-        </a>
-
-        <i class="bi bi-chevron-right"></i>
-
-        <span>
-
-            Help & Support
-
-        </span>
-
-    </div>
-
-</div>
-</section>
-
-<!-- ========================================= -->
-<!-- MAIN -->
-<!-- ========================================= -->
-
-<main>
-
-<section class="help-page">
-
-<div class="container">
-
-    <!-- ================================= -->
-    <!-- HERO -->
-    <!-- ================================= -->
-
-    <section class="hero-card">
-
-        <div class="hero-left">
-
-    <div class="hero-icon">
-
-        <i class="bi bi-headset"></i>
-
-    </div>
-
-    <div>
 
         <h1>
 
@@ -199,236 +140,46 @@
 
         <p>
 
-            Need assistance? Our support team is available 24×7 to help you with bookings, payments, refunds and account related issues.
+            Need assistance? We're here to help you 24×7.
 
         </p>
 
     </div>
 
-</div>
+</section>
 
-<div class="hero-right">
+<!-- ========================================= -->
+<!-- MAIN -->
+<!-- ========================================= -->
 
-    <div class="support-summary">
+<main>
 
-        <h2>
+<section class="support-page">
 
-            24×7
-
-        </h2>
-
-        <span>
-
-            Customer Support
-
-        </span>
-
-    </div>
-
-</div>
-
-    </section>
-
-    <!-- ================================= -->
-    <!-- SEARCH HELP -->
-    <!-- ================================= -->
-
-    <section class="help-search">
-
-        <div class="section-title">
-
-    <i class="bi bi-search"></i>
-
-    <h2>Search Help</h2>
-
-</div>
-
-<div class="search-box">
-
-    <i class="bi bi-search"></i>
-
-    <input
-        type="text"
-        placeholder="Search your issue...">
-
-</div>
-
-    </section>
-
-    <!-- ================================= -->
-    <!-- FAQ -->
-    <!-- ================================= -->
-
-    <section class="faq-section">
-
-        <div class="section-title">
-
-    <i class="bi bi-question-circle-fill"></i>
-
-    <h2>Frequently Asked Questions</h2>
-
-</div>
-
-<div class="faq-list">
-
-    <!-- FAQ 1 -->
-
-    <div class="faq-item">
-
-        <div class="faq-question">
-
-            <h3>How do I book a worker?</h3>
-
-            <i class="bi bi-plus-lg"></i>
-
-        </div>
-
-        <div class="faq-answer">
-
-            <p>
-
-                Go to Find Worker, choose a verified worker,
-                select your preferred date & time and confirm
-                your booking.
-
-            </p>
-
-        </div>
-
-    </div>
-
-    <!-- FAQ 2 -->
-
-    <div class="faq-item">
-
-        <div class="faq-question">
-
-            <h3>How can I cancel a booking?</h3>
-
-            <i class="bi bi-plus-lg"></i>
-
-        </div>
-
-        <div class="faq-answer">
-
-            <p>
-
-                Open My Bookings, choose your booking and
-                click Cancel Booking before the scheduled time.
-
-            </p>
-
-        </div>
-
-    </div>
-
-    <!-- FAQ 3 -->
-
-    <div class="faq-item">
-
-        <div class="faq-question">
-
-            <h3>How do refunds work?</h3>
-
-            <i class="bi bi-plus-lg"></i>
-
-        </div>
-
-        <div class="faq-answer">
-
-            <p>
-
-                Eligible refunds are processed within
-                3–7 business days directly to your original
-                payment method.
-
-            </p>
-
-        </div>
-
-    </div>
-
-    <!-- FAQ 4 -->
-
-    <div class="faq-item">
-
-        <div class="faq-question">
-
-            <h3>How can I contact customer support?</h3>
-
-            <i class="bi bi-plus-lg"></i>
-
-        </div>
-
-        <div class="faq-answer">
-
-            <p>
-
-                Use Live Chat, email support or raise a
-                support ticket from this page.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
-    </section>
-
-    <!-- ================================= -->
-    <!-- CONTACT SUPPORT -->
-    <!-- ================================= -->
-
-    <section class="contact-support">
-
-        <div class="section-title">
-
-    <i class="bi bi-headset"></i>
-
-    <h2>Contact Support</h2>
-
-</div>
+<div class="container">
+    <!-- ========================================= -->
+<!-- SUPPORT OPTIONS -->
+<!-- ========================================= -->
 
 <div class="support-grid">
 
     <div class="support-card">
 
-        <i class="bi bi-envelope-fill"></i>
-
-        <h3>Email Support</h3>
-
-        <p>support@trustgrid.com</p>
-
-    </div>
-
-    <div class="support-card">
-
-        <i class="bi bi-telephone-fill"></i>
-
-        <h3>Phone Support</h3>
-
-        <p>+91 98765 43210</p>
-
-    </div>
-
-    <div class="support-card">
-
-        <i class="bi bi-clock-fill"></i>
-
-        <h3>Working Hours</h3>
-
-        <p>24 × 7 Customer Support</p>
-
-    </div>
-
-    <div class="support-card">
-
         <i class="bi bi-chat-dots-fill"></i>
 
-        <h3>Live Chat</h3>
+        <h3>
 
-        <button class="chat-btn">
+            Live Chat
+
+        </h3>
+
+        <p>
+
+            Chat instantly with our customer support team.
+
+        </p>
+
+        <button class="support-btn">
 
             Start Chat
 
@@ -436,206 +187,428 @@
 
     </div>
 
+    <div class="support-card">
+
+        <i class="bi bi-headset"></i>
+
+        <h3>
+
+            Call Support
+
+        </h3>
+
+        <p>
+
+            Talk directly with our support executive.
+
+        </p>
+
+        <button class="support-btn">
+
+            Call Now
+
+        </button>
+
+    </div>
+
+    <div class="support-card">
+
+        <i class="bi bi-envelope-paper-fill"></i>
+
+        <h3>
+
+            Raise Ticket
+
+        </h3>
+
+        <p>
+
+            Submit your issue and we'll respond quickly.
+
+        </p>
+
+        <button class="support-btn">
+
+            Create Ticket
+
+        </button>
+
+    </div>
+
 </div>
 
-    </section>
+<!-- ========================================= -->
+<!-- FAQ -->
+<!-- ========================================= -->
 
-    <!-- ================================= -->
-    <!-- SUPPORT TICKET -->
-    <!-- ================================= -->
+<div class="faq-section">
 
-    <section class="support-ticket">
+    <h2>
 
-        <div class="section-title">
+        Frequently Asked Questions
 
-    <i class="bi bi-ticket-perforated-fill"></i>
+    </h2>
 
-    <h2>Raise a Support Ticket</h2>
+    <div class="faq-item">
+
+        <h3>
+
+            How do I book a worker?
+
+        </h3>
+
+        <p>
+
+            Search your preferred worker, open the profile and click the Book Service button.
+
+        </p>
+
+    </div>
+
+    <div class="faq-item">
+
+        <h3>
+
+            How can I cancel my booking?
+
+        </h3>
+
+        <p>
+
+            Go to My Bookings and choose the booking you want to cancel.
+
+        </p>
+
+    </div>
+
+    <div class="faq-item">
+
+        <h3>
+
+            Is online payment secure?
+
+        </h3>
+
+        <p>
+
+            Yes. All payments are protected using secure payment gateways.
+
+        </p>
+
+    </div>
+    <!-- ========================================= -->
+<!-- CONTACT FORM -->
+<!-- ========================================= -->
+
+<div class="contact-section">
+
+    <h2>
+
+        Contact Support
+
+    </h2>
+
+    <form class="support-form">
+
+        <input type="text"
+               placeholder="Full Name"
+               required>
+
+        <input type="email"
+               placeholder="Email Address"
+               required>
+
+        <input type="text"
+               placeholder="Subject"
+               required>
+
+        <textarea rows="6"
+                  placeholder="Describe your issue..."
+                  required></textarea>
+
+        <button type="submit"
+                class="submit-btn">
+
+            <i class="bi bi-send-fill"></i>
+
+            Submit Request
+
+        </button>
+
+    </form>
 
 </div>
 
-<form class="ticket-form">
+<!-- ========================================= -->
+<!-- HELP CATEGORIES -->
+<!-- ========================================= -->
 
-    <div class="form-group">
+<div class="help-categories">
 
-        <label>Subject</label>
+    <h2>
 
-        <input
-            type="text"
-            placeholder="Enter ticket subject">
+        Help Categories
+
+    </h2>
+
+    <div class="category-grid">
+
+        <div class="category-card">
+
+            <i class="bi bi-calendar-check-fill"></i>
+
+            <h3>
+
+                Booking Issues
+
+            </h3>
+
+        </div>
+
+        <div class="category-card">
+
+            <i class="bi bi-wallet-fill"></i>
+
+            <h3>
+
+                Wallet & Payments
+
+            </h3>
+
+        </div>
+
+        <div class="category-card">
+
+            <i class="bi bi-person-workspace"></i>
+
+            <h3>
+
+                Worker Support
+
+            </h3>
+
+        </div>
+
+        <div class="category-card">
+
+            <i class="bi bi-shield-lock-fill"></i>
+
+            <h3>
+
+                Account Security
+
+            </h3>
+
+        </div>
 
     </div>
 
-    <div class="form-group">
+</div>
 
-        <label>Category</label>
+<!-- ========================================= -->
+<!-- SUPPORT DETAILS -->
+<!-- ========================================= -->
 
-        <select>
+<div class="support-info">
 
-            <option>Select Category</option>
+    <div class="info-card">
 
-            <option>Booking Issue</option>
+        <i class="bi bi-clock-fill"></i>
 
-            <option>Payment Issue</option>
+        <h3>
 
-            <option>Refund</option>
+            Support Hours
 
-            <option>Worker Complaint</option>
+        </h3>
 
-            <option>Technical Issue</option>
+        <p>
 
-            <option>Account Problem</option>
+            Monday - Sunday
 
-        </select>
+            <br>
 
-    </div>
+            08:00 AM - 10:00 PM
 
-    <div class="form-group full-width">
-
-        <label>Description</label>
-
-        <textarea
-            rows="6"
-            placeholder="Describe your issue in detail..."></textarea>
+        </p>
 
     </div>
 
-    <button
-        type="submit"
-        class="submit-ticket-btn">
+    <div class="info-card">
 
-        <i class="bi bi-send-fill"></i>
+        <i class="bi bi-telephone-fill"></i>
 
-        Submit Ticket
+        <h3>
 
-    </button>
+            Emergency Contact
 
-</form>
-    </section>
+        </h3>
+
+        <p>
+
+            +91 1800-123-4567
+
+        </p>
+
+    </div>
+
+</div>
 
 </div>
 
 </section>
 
 </main>
-
 <!-- ========================================= -->
 <!-- FOOTER -->
 <!-- ========================================= -->
 
-<footer>
+<footer class="footer">
 
     <div class="container">
 
-    <div class="footer-grid">
+        <div class="footer-grid">
 
-        <!-- About -->
+            <div>
 
-        <div class="footer-about">
+                <h2>
 
-            <h2 class="footer-logo">
+                    TrustGrid
 
-                <i class="bi bi-shield-check"></i>
+                </h2>
 
-                TrustGrid
+                <p>
 
-            </h2>
+                    Connecting customers with trusted and verified professionals across India.
 
-            <p>
+                </p>
 
-                Our support team is committed to providing fast,
-                reliable and secure assistance whenever you need
-                help with TrustGrid services.
+            </div>
 
-            </p>
+            <div>
 
-        </div>
+                <h3>
 
-        <!-- Quick Links -->
+                    Quick Links
 
-        <div>
+                </h3>
 
-            <h3>Quick Links</h3>
+                <a href="customer_dashboard.html">
 
-            <a href="dashboard.html">Dashboard</a>
-
-            <a href="my_bookings.html">My Bookings</a>
-
-            <a href="settings.html">Settings</a>
-
-            <a href="help_support.html">Help & Support</a>
-
-        </div>
-
-        <!-- Support -->
-
-        <div>
-
-            <h3>Support</h3>
-
-            <a href="#">Help Center</a>
-
-            <a href="#">Terms & Conditions</a>
-
-            <a href="#">Privacy Policy</a>
-
-            <a href="#">Contact Us</a>
-
-        </div>
-
-        <!-- Social -->
-
-        <div>
-
-            <h3>Follow Us</h3>
-
-            <div class="social-icons">
-
-                <a href="#">
-
-                    <i class="bi bi-facebook"></i>
+                    Dashboard
 
                 </a>
 
-                <a href="#">
+                <a href="customer_find_worker.html">
 
-                    <i class="bi bi-instagram"></i>
-
-                </a>
-
-                <a href="#">
-
-                    <i class="bi bi-linkedin"></i>
+                    Find Worker
 
                 </a>
 
-                <a href="#">
+                <a href="customer_help_support.html">
 
-                    <i class="bi bi-twitter-x"></i>
+                    Help & Support
+
+                </a>
+
+                <a href="customer_messages.html">
+
+                    Messages
+
+                </a>
+
+                <a href="customer_wallet.html">
+
+                    Wallet
 
                 </a>
 
             </div>
 
+            <div>
+
+                <h3>
+
+                    Support
+
+                </h3>
+
+                <a href="customer_notifications.html">
+
+                    Notifications
+
+                </a>
+
+                <a href="customer_settings.html">
+
+                    Settings
+
+                </a>
+
+                <a href="login.html">
+
+                    Logout
+
+                </a>
+
+            </div>
+
+            <div>
+
+                <h3>
+
+                    Follow Us
+
+                </h3>
+
+                <div class="social-links">
+
+                    <a href="#">
+
+                        <i class="bi bi-facebook"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="bi bi-instagram"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="bi bi-linkedin"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="bi bi-twitter-x"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
+
+        <hr>
+
+        <p class="copyright">
+
+            © 2026 TrustGrid. All Rights Reserved.
+
+        </p>
 
     </div>
 
-    <hr>
-
-    <p class="copyright">
-
-        © 2026 TrustGrid. All Rights Reserved.
-
-    </p>
-
-</div>
-
 </footer>
 
-<!-- JS -->
+<!-- ========================================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================================= -->
 
-<script src="../static/js/help_support.js"></script>
+<script src="../static/js/customer_help_support.js"></script>
 
 </body>
 
