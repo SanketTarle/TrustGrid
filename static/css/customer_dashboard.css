@@ -1,0 +1,881 @@
+/* ==========================================================
+   TRUSTGRID
+   CUSTOMER DASHBOARD CSS
+   PART 1
+========================================================== */
+
+/* ==========================================================
+   GOOGLE FONT
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================================
+   ROOT VARIABLES
+========================================================== */
+
+:root {
+
+    --primary-color: #0B1F3A;
+    --secondary-color: #2563EB;
+    --success-color: #22C55E;
+    --warning-color: #F59E0B;
+    --danger-color: #EF4444;
+
+    --white-color: #FFFFFF;
+    --light-color: #F8FAFC;
+    --border-color: #E5E7EB;
+    --text-color: #374151;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+
+    --border-radius: 16px;
+    --transition: .3s ease;
+
+}
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+    background: #F4F7FC;
+    color: var(--text-color);
+
+}
+
+a {
+
+    text-decoration: none;
+    color: inherit;
+
+}
+
+img {
+
+    max-width: 100%;
+    display: block;
+
+}
+
+button {
+
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+
+}
+
+.container {
+
+    width: 92%;
+    max-width: 1300px;
+    margin: auto;
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.header {
+
+    width: 100%;
+    background: var(--white-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 8px 20px var(--shadow-color);
+
+}
+
+.header .container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 0;
+
+}
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    color: var(--primary-color);
+
+}
+
+.logo i {
+
+    font-size: 30px;
+    color: var(--secondary-color);
+
+}
+
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+.navbar {
+
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+}
+
+.navbar a {
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: var(--transition);
+
+}
+
+.navbar a:hover {
+
+    color: var(--secondary-color);
+
+}
+
+/* ==========================================================
+   HEADER ACTIONS
+========================================================== */
+
+.header-actions {
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+}
+
+.header-actions a i {
+
+    font-size: 20px;
+    color: var(--primary-color);
+
+    transition: var(--transition);
+
+}
+
+.header-actions a:hover i {
+
+    color: var(--secondary-color);
+
+}
+
+.logout-btn {
+
+    background: var(--danger-color);
+    color: var(--white-color);
+
+    padding: 10px 18px;
+
+    border-radius: 10px;
+
+    font-weight: 500;
+
+    transition: var(--transition);
+
+}
+
+.logout-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 20px rgba(239, 68, 68, .25);
+
+}
+
+/* ==========================================================
+   HERO SECTION
+========================================================== */
+
+.hero {
+
+    background: linear-gradient(135deg,
+            #0B1F3A,
+            #2563EB);
+
+    color: white;
+
+    padding: 70px 0;
+
+}
+
+.hero-content h1 {
+
+    font-size: 42px;
+    margin-bottom: 12px;
+
+}
+
+.hero-content span {
+
+    color: #FFD54F;
+
+}
+
+.hero-content p {
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    max-width: 700px;
+
+}
+
+/* ==========================================================
+   TRUSTGRID
+   CUSTOMER DASHBOARD CSS
+   PART 2
+========================================================== */
+
+/* ==========================================================
+   DASHBOARD
+========================================================== */
+
+.dashboard {
+
+    padding: 60px 0;
+
+}
+
+/* ==========================================================
+   SECTION TITLE
+========================================================== */
+
+.section-title {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 45px 0 25px;
+
+}
+
+.section-title h2 {
+
+    font-size: 28px;
+    color: var(--primary-color);
+
+    font-weight: 700;
+
+}
+
+/* ==========================================================
+   STATISTICS GRID
+========================================================== */
+
+.stats-grid {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+
+}
+
+.stat-card {
+
+    background: var(--white-color);
+
+    padding: 30px 25px;
+
+    border-radius: var(--border-radius);
+
+    text-align: center;
+
+    box-shadow: 0 10px 25px var(--shadow-color);
+
+    transition: var(--transition);
+
+}
+
+.stat-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+.stat-card i {
+
+    font-size: 40px;
+
+    color: var(--secondary-color);
+
+    margin-bottom: 15px;
+
+}
+
+.stat-card h2 {
+
+    font-size: 34px;
+
+    color: var(--primary-color);
+
+    margin-bottom: 8px;
+
+}
+
+.stat-card p {
+
+    color: #6B7280;
+
+}
+
+/* ==========================================================
+   QUICK ACTION GRID
+========================================================== */
+
+.action-grid {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+.action-card {
+
+    background: var(--white-color);
+
+    border-radius: var(--border-radius);
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    transition: var(--transition);
+
+    box-shadow: 0 10px 25px var(--shadow-color);
+
+}
+
+.action-card:hover {
+
+    transform: translateY(-8px);
+
+    background: var(--secondary-color);
+
+    color: var(--white-color);
+
+}
+
+.action-card i {
+
+    font-size: 42px;
+
+    margin-bottom: 18px;
+
+    color: var(--secondary-color);
+
+}
+
+.action-card:hover i {
+
+    color: white;
+
+}
+
+.action-card h3 {
+
+    margin-bottom: 10px;
+
+    font-size: 22px;
+
+}
+
+.action-card p {
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+}
+
+/* ==========================================================
+   RECENT BOOKINGS
+========================================================== */
+
+.booking-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+.booking-card {
+
+    background: var(--white-color);
+
+    padding: 22px 25px;
+
+    border-radius: var(--border-radius);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow: 0 8px 20px var(--shadow-color);
+
+}
+
+.booking-card h3 {
+
+    color: var(--primary-color);
+
+    margin-bottom: 6px;
+
+}
+
+.booking-card p {
+
+    color: #6B7280;
+
+    font-size: 14px;
+
+}
+
+/* ==========================================================
+   BOOKING STATUS
+========================================================== */
+
+.status {
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+.completed {
+
+    background: var(--success-color);
+
+}
+
+.pending {
+
+    background: var(--warning-color);
+
+}
+
+.ongoing {
+
+    background: var(--secondary-color);
+
+}
+
+/* ==========================================================
+   WORKER GRID
+========================================================== */
+
+.worker-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+.worker-card {
+
+    background: var(--white-color);
+
+    border-radius: var(--border-radius);
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 25px var(--shadow-color);
+
+    transition: var(--transition);
+
+}
+
+.worker-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+.worker-icon {
+
+    font-size: 70px;
+
+    color: var(--secondary-color);
+
+    margin-bottom: 18px;
+
+}
+
+.worker-card h3 {
+
+    color: var(--primary-color);
+
+    margin-bottom: 8px;
+
+}
+
+.worker-card p {
+
+    color: #6B7280;
+
+    margin-bottom: 10px;
+
+}
+
+.worker-card span {
+
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #F59E0B;
+
+    font-weight: 600;
+
+}
+
+.view-btn {
+
+    display: inline-block;
+
+    background: var(--secondary-color);
+
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 10px;
+
+    transition: var(--transition);
+
+}
+
+.view-btn:hover {
+
+    background: var(--primary-color);
+
+}
+
+/* ==========================================================
+   TRUSTGRID
+   CUSTOMER DASHBOARD CSS
+   PART 3
+========================================================== */
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.footer {
+
+    margin-top: 80px;
+
+    background: var(--primary-color);
+
+    color: var(--white-color);
+
+    padding: 60px 0 25px;
+
+}
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 40px;
+
+}
+
+.footer h2 {
+
+    margin-bottom: 18px;
+
+    font-size: 28px;
+
+}
+
+.footer h3 {
+
+    margin-bottom: 18px;
+
+    font-size: 20px;
+
+}
+
+.footer p {
+
+    line-height: 1.8;
+
+    color: #D1D5DB;
+
+}
+
+.footer a {
+
+    display: block;
+
+    color: #D1D5DB;
+
+    margin-bottom: 12px;
+
+    transition: var(--transition);
+
+}
+
+.footer a:hover {
+
+    color: var(--white-color);
+
+    padding-left: 8px;
+
+}
+
+.footer hr {
+
+    margin: 40px 0 20px;
+
+    border: 1px solid rgba(255, 255, 255, .15);
+
+}
+
+.copyright {
+
+    text-align: center;
+
+    color: #CBD5E1;
+
+}
+
+/* ==========================================================
+   SOCIAL LINKS
+========================================================== */
+
+.social-links {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 15px;
+
+}
+
+.social-links a {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .12);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: var(--transition);
+
+}
+
+.social-links a i {
+
+    font-size: 18px;
+
+    color: white;
+
+}
+
+.social-links a:hover {
+
+    background: var(--secondary-color);
+
+    transform: translateY(-5px);
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .navbar {
+
+        display: none;
+
+    }
+
+    .stats-grid,
+    .action-grid,
+    .worker-grid,
+    .footer-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 34px;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .header .container {
+
+        flex-direction: column;
+
+        gap: 18px;
+
+    }
+
+    .header-actions {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+    .stats-grid,
+    .action-grid,
+    .worker-grid,
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .booking-card {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+    .hero {
+
+        padding: 50px 0;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 28px;
+
+    }
+
+    .hero-content p {
+
+        font-size: 15px;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .container {
+
+        width: 94%;
+
+    }
+
+    .logo {
+
+        font-size: 20px;
+
+    }
+
+    .logo i {
+
+        font-size: 24px;
+
+    }
+
+    .stat-card,
+    .action-card,
+    .worker-card {
+
+        padding: 22px 18px;
+
+    }
+
+    .section-title h2 {
+
+        font-size: 22px;
+
+    }
+
+    .logout-btn {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+}
+
+/* ==========================================================
+   END OF CUSTOMER DASHBOARD CSS
+========================================================== */
