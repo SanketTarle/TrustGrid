@@ -1,42 +1,79 @@
-/*====================================================
+/* ==========================================
+   TRUSTGRID
+   CUSTOMER NOTIFICATIONS
+   CSS PART 1
+========================================== */
 
-            TRUSTGRID NOTIFICATIONS
-
-====================================================*/
+/* ==========================================
+   RESET
+========================================== */
 
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+
 }
 
-:root {
+html {
 
-    --primary: #0B1F3A;
-    --secondary: #2ECC71;
-    --accent: #3B82F6;
-    --danger: #EF4444;
-    --warning: #F59E0B;
-    --bg: #F5F7FA;
-    --card: #ffffff;
-    --text: #1F2937;
-    --gray: #6B7280;
-    --shadow: 0 15px 35px rgba(0, 0, 0, .08);
+    scroll-behavior: smooth;
 
 }
 
 body {
 
-    background: var(--bg);
-    color: var(--text);
+    font-family: "Poppins", sans-serif;
+
+    background: #F5F7FB;
+
+    color: #1F2937;
+
+    line-height: 1.6;
 
 }
 
+/* ==========================================
+   VARIABLES
+========================================== */
+
+:root {
+
+    --primary: #0B1F3A;
+
+    --secondary: #2563EB;
+
+    --success: #22C55E;
+
+    --warning: #F59E0B;
+
+    --danger: #EF4444;
+
+    --gray: #6B7280;
+
+    --border: #E5E7EB;
+
+    --white: #FFFFFF;
+
+    --shadow: 0 12px 30px rgba(0, 0, 0, .08);
+
+    --transition: .35s ease;
+
+}
+
+/* ==========================================
+   COMMON
+========================================== */
+
 .container {
 
-    width: 90%;
-    max-width: 1400px;
+    width: 92%;
+
+    max-width: 1300px;
+
     margin: auto;
 
 }
@@ -45,37 +82,41 @@ a {
 
     text-decoration: none;
 
+    color: inherit;
+
 }
 
 button {
 
     border: none;
+
     cursor: pointer;
-    font-family: 'Poppins', sans-serif;
+
+    font-family: inherit;
 
 }
 
-/*======================================
-            HEADER
-======================================*/
+/* ==========================================
+   HEADER
+========================================== */
 
-header {
-
-    background: var(--primary);
-
-    padding: 18px 0;
+.header {
 
     position: sticky;
 
     top: 0;
 
-    z-index: 1000;
+    z-index: 999;
 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+    background: #FFFFFF;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
 
 }
 
-header .container {
+.header .container {
+
+    height: 80px;
 
     display: flex;
 
@@ -93,426 +134,245 @@ header .container {
 
     gap: 12px;
 
-    font-size: 34px;
-
-    font-weight: 700;
-
-    color: white;
-
-}
-
-.logo i {
-
-    font-size: 38px;
-
-    color: var(--secondary);
-
-}
-
-.nav-links {
-
-    display: flex;
-
-    list-style: none;
-
-    gap: 35px;
-
-}
-
-.nav-links a {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    font-size: 17px;
-
-    color: white;
-
-    transition: .3s;
-
-}
-
-.nav-links a:hover,
-.nav-links .active {
-
-    color: var(--secondary);
-
-}
-
-.profile {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    color: white;
-
-}
-
-.profile-img {
-
-    width: 55px;
-
-    height: 55px;
-
-    border-radius: 50%;
-
-    background: var(--secondary);
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    font-size: 22px;
-
-}
-
-/*======================================
-        BREADCRUMB
-======================================*/
-
-.breadcrumb-section {
-
-    padding: 30px 0 15px;
-
-}
-
-.breadcrumb {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    font-size: 15px;
-
-}
-
-.breadcrumb a {
-
-    color: var(--secondary);
-
-    font-weight: 600;
-
-}
-
-.breadcrumb span {
-
-    color: #444;
-
-}
-
-/*======================================
-            PAGE
-======================================*/
-
-.notifications-page {
-
-    padding-bottom: 80px;
-
-}
-
-/*======================================
-            HERO
-======================================*/
-
-.hero-card {
-
-    background: white;
-
-    padding: 40px;
-
-    border-radius: 20px;
-
-    box-shadow: var(--shadow);
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    margin-bottom: 35px;
-
-}
-
-.hero-left {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 25px;
-
-}
-
-.hero-icon {
-
-    width: 90px;
-
-    height: 90px;
-
-    border-radius: 20px;
-
-    background: linear-gradient(135deg, #0B1F3A, #2ECC71);
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    font-size: 42px;
-
-    color: white;
-
-}
-
-.hero-left h1 {
-
-    font-size: 42px;
-
-    margin-bottom: 10px;
-
-}
-
-.hero-left p {
-
-    font-size: 18px;
-
-    color: #666;
-
-    max-width: 550px;
-
-}
-
-.notification-summary {
-
-    background: #F8FAFC;
-
-    padding: 25px 35px;
-
-    border-radius: 18px;
-
-    text-align: center;
-
-}
-
-.notification-summary h2 {
-
-    font-size: 38px;
-
-    color: var(--secondary);
-
-    margin-bottom: 8px;
-
-}
-
-.notification-summary span {
-
-    color: #666;
-
-    font-weight: 500;
-
-}
-
-/*======================================
-        SEARCH + FILTER
-======================================*/
-
-.search-filter-card {
-
-    background: white;
-
-    padding: 30px;
-
-    border-radius: 20px;
-
-    box-shadow: var(--shadow);
-
-    margin-bottom: 35px;
-
-}
-
-.search-filter-header {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 20px;
-
-    margin-bottom: 25px;
-
-}
-
-.search-box {
-
-    flex: 1;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    padding: 15px 20px;
-
-    border: 2px solid #E5E7EB;
-
-    border-radius: 14px;
-
-}
-
-.search-box i {
-
-    font-size: 20px;
-
-    color: var(--secondary);
-
-}
-
-.search-box input {
-
-    width: 100%;
-
-    border: none;
-
-    outline: none;
-
-    font-size: 16px;
-
-    background: transparent;
-
-}
-
-.clear-btn {
-
-    background: var(--danger);
-
-    color: white;
-
-    padding: 15px 24px;
-
-    border-radius: 14px;
-
-    font-weight: 600;
-
-    transition: .3s;
-
-}
-
-.clear-btn:hover {
-
-    transform: translateY(-3px);
-
-}
-
-.filter-buttons {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 15px;
-
-}
-
-.filter-buttons button {
-
-    padding: 12px 20px;
-
-    border-radius: 25px;
-
-    background: #EEF2F7;
-
-    font-size: 15px;
-
-    font-weight: 600;
-
-    transition: .3s;
-
-}
-
-.filter-buttons button.active,
-
-.filter-buttons button:hover {
-
-    background: var(--secondary);
-
-    color: white;
-
-}
-
-/*====================================================
-
-                PART 2
-
-====================================================*/
-
-/*======================================
-        SECTION HEADING
-======================================*/
-
-.notification-heading {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    font-size: 28px;
+    font-size: 30px;
 
     font-weight: 700;
 
     color: var(--primary);
 
-    margin: 40px 0 25px;
+}
+
+.logo i {
+
+    color: var(--secondary);
+
+    font-size: 34px;
 
 }
 
-.notification-heading i {
+.navbar {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+.navbar a {
+
+    position: relative;
+
+    font-weight: 500;
+
+    transition: var(--transition);
+
+}
+
+.navbar a:hover {
 
     color: var(--secondary);
 
 }
 
-/*======================================
-        NOTIFICATION CARD
-======================================*/
+.navbar a::after {
 
-.notification-card {
+    content: "";
 
-    background: white;
+    position: absolute;
 
-    padding: 25px;
+    left: 0;
 
-    border-radius: 20px;
+    bottom: -8px;
 
-    box-shadow: var(--shadow);
+    width: 0;
+
+    height: 3px;
+
+    background: var(--secondary);
+
+    transition: var(--transition);
+
+}
+
+.navbar a:hover::after {
+
+    width: 100%;
+
+}
+
+.header-actions {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+.header-actions a {
+
+    width: 45px;
+
+    height: 45px;
 
     display: flex;
 
     align-items: center;
 
-    justify-content: space-between;
+    justify-content: center;
 
-    gap: 25px;
+    border-radius: 50%;
 
-    margin-bottom: 20px;
+    background: #EEF4FF;
 
-    transition: .35s;
+    transition: var(--transition);
 
-    border-left: 6px solid transparent;
+}
+
+.header-actions a:hover {
+
+    background: var(--secondary);
+
+    color: #FFFFFF;
+
+    transform: translateY(-4px);
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.notification-hero {
+
+    background: linear-gradient(135deg, #0B1F3A, #2563EB);
+
+    color: #FFFFFF;
+
+    text-align: center;
+
+    padding: 70px 0;
+
+}
+
+.notification-hero h1 {
+
+    font-size: 48px;
+
+    margin-bottom: 15px;
+
+}
+
+.notification-hero p {
+
+    font-size: 17px;
+
+    opacity: .95;
+
+}
+
+/* ==========================================
+   MAIN
+========================================== */
+
+.notification-page {
+
+    padding: 60px 0;
+
+}
+
+/* ==========================================
+   FILTER BUTTONS
+========================================== */
+
+.notification-filter {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 35px;
+
+}
+
+.filter-btn {
+
+    padding: 14px 28px;
+
+    background: #FFFFFF;
+
+    color: var(--primary);
+
+    border-radius: 50px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+
+}
+
+.filter-btn:hover {
+
+    background: var(--secondary);
+
+    color: #FFFFFF;
+
+    transform: translateY(-4px);
+
+}
+
+.filter-btn.active {
+
+    background: var(--secondary);
+
+    color: #FFFFFF;
+
+}
+
+/* ==========================================
+   NOTIFICATION LIST
+========================================== */
+
+.notification-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+}
+
+/* ==========================================
+   NOTIFICATION CARD
+========================================== */
+
+.notification-card {
+
+    background: #FFFFFF;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    box-shadow: var(--shadow);
+
+    transition: var(--transition);
+
+    position: relative;
 
 }
 
@@ -520,53 +380,45 @@ header .container {
 
     transform: translateY(-6px);
 
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .12);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .12);
 
 }
 
-/*======================================
-        CATEGORY COLORS
-======================================*/
+/* ==========================================
+   UNREAD NOTIFICATION
+========================================== */
 
-.booking {
+.notification-card.unread {
 
-    border-left-color: #2ECC71;
+    border-left: 5px solid var(--secondary);
 
-}
-
-.payment {
-
-    border-left-color: #3498DB;
+    background: #F8FBFF;
 
 }
 
-.review {
+.notification-card.unread::after {
 
-    border-left-color: #F39C12;
+    content: "";
 
-}
+    position: absolute;
 
-.offer {
+    top: 25px;
 
-    border-left-color: #9B59B6;
+    right: 25px;
 
-}
+    width: 10px;
 
-.account {
+    height: 10px;
 
-    border-left-color: #1ABC9C;
+    border-radius: 50%;
 
-}
-
-.security {
-
-    border-left-color: #E74C3C;
+    background: var(--secondary);
 
 }
 
-/*======================================
-        ICON
-======================================*/
+/* ==========================================
+   NOTIFICATION ICON
+========================================== */
 
 .notification-icon {
 
@@ -574,27 +426,63 @@ header .container {
 
     height: 70px;
 
-    border-radius: 18px;
-
-    background: linear-gradient(135deg, #0B1F3A, #2ECC71);
+    border-radius: 50%;
 
     display: flex;
 
-    justify-content: center;
-
     align-items: center;
 
-    font-size: 30px;
-
-    color: white;
+    justify-content: center;
 
     flex-shrink: 0;
 
 }
 
-/*======================================
-        CONTENT
-======================================*/
+.notification-icon i {
+
+    font-size: 30px;
+
+    color: #FFFFFF;
+
+}
+
+/* ==========================================
+   ICON COLORS
+========================================== */
+
+.notification-icon.booking {
+
+    background: linear-gradient(135deg, #2563EB, #1D4ED8);
+
+}
+
+.notification-icon.payment {
+
+    background: linear-gradient(135deg, #22C55E, #15803D);
+
+}
+
+.notification-icon.message {
+
+    background: linear-gradient(135deg, #8B5CF6, #6D28D9);
+
+}
+
+.notification-icon.success {
+
+    background: linear-gradient(135deg, #10B981, #059669);
+
+}
+
+.notification-icon.offer {
+
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
 
 .notification-content {
 
@@ -604,149 +492,51 @@ header .container {
 
 .notification-content h3 {
 
-    font-size: 22px;
+    color: var(--primary);
+
+    font-size: 20px;
 
     margin-bottom: 8px;
-
-    color: var(--primary);
 
 }
 
 .notification-content p {
 
-    font-size: 16px;
+    color: var(--gray);
 
-    color: #666;
-
-    line-height: 1.6;
+    line-height: 1.7;
 
     margin-bottom: 10px;
 
 }
 
-.notification-content small {
+.notification-content span {
 
-    color: #999;
+    display: inline-block;
 
-    font-size: 14px;
+    font-size: 13px;
+
+    color: #94A3B8;
+
+    font-weight: 500;
 
 }
 
-/*======================================
-        ACTIONS
-======================================*/
+/* ==========================================
+   ACTION SECTION
+========================================== */
 
 .notification-actions {
 
     display: flex;
 
-    flex-direction: column;
+    justify-content: center;
 
-    align-items: center;
-
-    gap: 15px;
+    margin: 40px 0;
 
 }
 
-/*======================================
-        BADGE
-======================================*/
-
-.badge {
-
-    padding: 8px 18px;
-
-    border-radius: 25px;
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-}
-
-.unread-badge {
-
-    background: #FFE8EC;
-
-    color: #E74C3C;
-
-}
-
-/*======================================
-        MARK AS READ BUTTON
-======================================*/
-
-.read-btn {
-
-    background: var(--secondary);
-
-    color: white;
-
-    padding: 12px 18px;
-
-    border-radius: 12px;
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-    transition: .3s;
-
-}
-
-.read-btn:hover {
-
-    background: #27AE60;
-
-    transform: translateY(-3px);
-
-}
-
-/*======================================
-        UNREAD CARD
-======================================*/
-
-.notification-card.unread {
-
-    background: #FCFFFD;
-
-    border-left-width: 8px;
-
-}
-
-/*====================================================
-
-                PART 3
-
-====================================================*/
-
-/*======================================
-            FOOTER
-======================================*/
-
-footer {
-
-    margin-top: 80px;
-
-    background: var(--primary);
-
-    color: white;
-
-    padding: 60px 0 20px;
-
-}
-
-.footer-grid {
-
-    display: grid;
-
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-
-    gap: 40px;
-
-}
-
-.footer-logo {
+.mark-read-btn {
 
     display: flex;
 
@@ -754,97 +544,144 @@ footer {
 
     gap: 10px;
 
-    font-size: 30px;
+    padding: 15px 32px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(135deg, #2563EB, #0B1F3A);
+
+    color: #FFFFFF;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+.mark-read-btn:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 28px rgba(37, 99, 235, .30);
+
+}
+
+/* ==========================================
+   EMPTY NOTIFICATIONS
+========================================== */
+
+.empty-notifications {
+
+    background: #FFFFFF;
+
+    border-radius: 22px;
+
+    padding: 60px 30px;
+
+    text-align: center;
+
+    box-shadow: var(--shadow);
+
+    margin-top: 30px;
+
+}
+
+.empty-notifications i {
+
+    font-size: 80px;
+
+    color: #2563EB;
 
     margin-bottom: 20px;
 
 }
 
-.footer-logo i {
+.empty-notifications h2 {
 
-    color: var(--secondary);
+    color: var(--primary);
+
+    margin-bottom: 15px;
 
 }
 
-.footer-grid p {
+.empty-notifications p {
 
-    color: #ddd;
+    color: var(--gray);
+
+    max-width: 550px;
+
+    margin: 0 auto;
+
+    line-height: 1.7;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+
+    margin-top: 70px;
+
+    background: #0B1F3A;
+
+    color: #FFFFFF;
+
+    padding: 70px 0 25px;
+
+}
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 35px;
+
+}
+
+.footer h2,
+.footer h3 {
+
+    margin-bottom: 18px;
+
+}
+
+.footer p {
+
+    color: #CBD5E1;
 
     line-height: 1.8;
 
 }
 
-.footer-grid h3 {
-
-    margin-bottom: 20px;
-
-}
-
-.footer-grid a {
+.footer a {
 
     display: block;
 
+    color: #CBD5E1;
+
     margin-bottom: 12px;
 
-    color: #ddd;
-
-    transition: .3s;
+    transition: var(--transition);
 
 }
 
-.footer-grid a:hover {
+.footer a:hover {
 
-    color: var(--secondary);
+    color: #FFFFFF;
 
-    padding-left: 6px;
-
-}
-
-.social-icons {
-
-    display: flex;
-
-    gap: 15px;
-
-    margin-top: 15px;
+    padding-left: 8px;
 
 }
 
-.social-icons a {
+.footer hr {
 
-    width: 45px;
-
-    height: 45px;
-
-    border-radius: 50%;
-
-    background: #173154;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    font-size: 18px;
-
-    color: white;
-
-    transition: .3s;
-
-}
-
-.social-icons a:hover {
-
-    background: var(--secondary);
-
-    transform: translateY(-5px);
-
-}
-
-footer hr {
-
-    margin: 35px 0 20px;
+    margin: 40px 0 20px;
 
     border: none;
 
@@ -856,57 +693,89 @@ footer hr {
 
     text-align: center;
 
-    color: #bbb;
-
-    font-size: 15px;
+    color: #CBD5E1;
 
 }
 
-/*======================================
-            ANIMATIONS
-======================================*/
+/* ==========================================
+   SOCIAL LINKS
+========================================== */
 
-.hero-card,
-.search-filter-card,
-.notification-card {
+.social-links {
 
-    animation: fadeUp .8s ease;
+    display: flex;
 
-}
+    gap: 15px;
 
-@keyframes fadeUp {
-
-    from {
-
-        opacity: 0;
-
-        transform: translateY(35px);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform: translateY(0);
-
-    }
+    margin-top: 15px;
 
 }
 
-/*======================================
-            RIPPLE
-======================================*/
+.social-links a {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .10);
+
+    transition: var(--transition);
+
+}
+
+.social-links a:hover {
+
+    background: var(--secondary);
+
+    transform: translateY(-5px) rotate(8deg);
+
+}
+
+.social-links i {
+
+    color: #FFFFFF;
+
+    font-size: 18px;
+
+}
+
+/* ==========================================
+   RIPPLE EFFECT
+========================================== */
+
+button {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.ripple {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .45);
+
+    transform: scale(0);
+
+    pointer-events: none;
+
+    animation: ripple .6s linear;
+
+}
 
 @keyframes ripple {
-
-    from {
-
-        transform: scale(0);
-
-        opacity: .6;
-
-    }
 
     to {
 
@@ -918,19 +787,27 @@ footer hr {
 
 }
 
-/*======================================
-            RESPONSIVE
-======================================*/
+/* ==========================================
+   RESPONSIVE
+========================================== */
 
-@media(max-width:1100px) {
+@media(max-width:768px) {
 
-    .hero-card {
+    .navbar {
+
+        display: none;
+
+    }
+
+    .header .container {
 
         flex-direction: column;
 
-        align-items: flex-start;
+        height: auto;
 
-        gap: 25px;
+        gap: 20px;
+
+        padding: 20px 0;
 
     }
 
@@ -938,83 +815,13 @@ footer hr {
 
         flex-direction: column;
 
-        align-items: flex-start;
-
-    }
-
-    .notification-actions {
-
-        width: 100%;
-
-        flex-direction: row;
-
-        justify-content: space-between;
-
-    }
-
-    .footer-grid {
-
-        grid-template-columns: repeat(2, 1fr);
-
-    }
-
-}
-
-@media(max-width:768px) {
-
-    .nav-links {
-
-        display: none;
-
-    }
-
-    .search-filter-header {
-
-        flex-direction: column;
-
-    }
-
-    .filter-buttons {
-
-        justify-content: center;
-
-    }
-
-    .notification-heading {
-
-        font-size: 24px;
+        text-align: center;
 
     }
 
     .notification-icon {
 
-        width: 60px;
-
-        height: 60px;
-
-        font-size: 24px;
-
-    }
-
-    .notification-content h3 {
-
-        font-size: 20px;
-
-    }
-
-    .notification-actions {
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        width: 100%;
-
-    }
-
-    .read-btn {
-
-        width: 100%;
+        margin-bottom: 10px;
 
     }
 
@@ -1026,7 +833,7 @@ footer hr {
 
     }
 
-    .social-icons {
+    .social-links {
 
         justify-content: center;
 
@@ -1034,7 +841,7 @@ footer hr {
 
 }
 
-@media(max-width:500px) {
+@media(max-width:480px) {
 
     .container {
 
@@ -1042,39 +849,61 @@ footer hr {
 
     }
 
-    .hero-card {
-
-        padding: 25px;
-
-    }
-
-    .hero-left {
-
-        flex-direction: column;
-
-        text-align: center;
-
-    }
-
-    .hero-left h1 {
+    .notification-hero h1 {
 
         font-size: 34px;
-
-    }
-
-    .hero-icon {
-
-        width: 80px;
-
-        height: 80px;
-
-        font-size: 36px;
 
     }
 
     .notification-card {
 
         padding: 20px;
+
+    }
+
+    .filter-btn {
+
+        width: 100%;
+
+    }
+
+    .mark-read-btn {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+}
+
+/* ==========================================
+   SMOOTH ANIMATION
+========================================== */
+
+.notification-card,
+.empty-notifications,
+.filter-btn {
+
+    animation: fadeUp .6s ease;
+
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
 
     }
 
